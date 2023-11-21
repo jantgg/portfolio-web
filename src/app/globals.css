@@ -2,26 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: 'Telegraf';
+  src: url('/fonts/PPTelegraf-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: 'Telegraf';
+  src: url('/fonts/PPTelegraf-UltraBold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
+
+@font-face {
+  font-family: 'Telegraf';
+  src: url('/fonts/PPTelegraf-UltraLight.otf') format('opentype');
+  font-weight: 200; /* o el valor que corresponda a "UltraLight" */
+  font-style: normal;
+  font-display: swap;
+}
+
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Telegraf', sans-serif;
+
+}
+
+.bold-text {
+  font-family: 'Telegraf';
+  font-weight: bold;
+}
+
+.light-text {
+  font-family: 'Telegraf';
+  font-weight: 200;
 }
