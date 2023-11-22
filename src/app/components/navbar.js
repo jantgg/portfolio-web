@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <section className={`navbar ${isVisible ? 'visible' : 'hidden'}`}>
-      <div className="navbar-name telegraf">ANTONIO G.</div>
+      <div className="navbar-name telegraf">JANT G.</div>
       <div className="navbar-mid">
         <a className="navbar-mid-btn light-text">PROYECTOS</a>
         <a className="navbar-mid-btn light-text">SOBRE MÍ</a>

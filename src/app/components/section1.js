@@ -1,13 +1,16 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import "./section1.css";
+import { MdArrowDownward } from "react-icons/md";
+
 
 const Section1 = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const lastScrollY = useRef(0);
 
   return (
     <section className="section1">
+      <div className="side-tittle">
+        <span className="side-tittle-inner">01 // 04 &nbsp; -  &nbsp;SCROLL&nbsp;&nbsp; <MdArrowDownward/> </span>
+      </div>
       <div className="tittles ">
         {" "}
         <span className="t-1 light-text">DESARROLLADOR</span>

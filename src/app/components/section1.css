@@ -13,6 +13,7 @@
   flex-wrap: wrap;
   color: white;
   text-align: center;
+  transform: translateX(-12%);
 }
 .t-1 {
   font-size: 3.5vw;
@@ -50,6 +51,7 @@
   margin-top: 1vh;
   display: flex;
   flex-direction: column;
+  transform: translateX(-1.7vw) translateY(-1vw);
 }
 .t-p-child1 {
   text-align: right;
@@ -70,4 +72,18 @@
 .t-p-child5 {
   text-align: left;
   width: 100%;
+}
+
+.side-tittle{
+  width:20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.side-tittle-inner{
+  padding-left: 3.7vw;
+  color: white;
+  display: flex;
+padding-bottom: 40vh;
+font-size: 1vw;
 }
