@@ -11,9 +11,25 @@ const Section1 = () => {
       <div className="tittles ">
         {" "}
         <span className="t-1 light-text">DESARROLLADOR</span>
-        <span className="t-2 blod-text">FULL-STACK</span>
-        <span className="t-3 light-text">ENFOCADO EN</span>
-        <span className="t-4 blod-text">FRONT</span>
+        <span className="t-2 ">FULL-STACK</span>
+        <span className="t-3 ">
+          <span className="t-3-1 light-text">ENFOCADO EN</span>
+          <span className="t-3-2">FRONT</span>
+        </span>
+        <span className="t-p">
+          <span className="t-p-child1">CREO INTERFACES DE USUARIO</span>
+          <span className="t-p-child2">
+            {" "}
+            ATRACTIVAS&nbsp; Y&nbsp; &nbsp;FUNCIONALES&nbsp;&nbsp; CON
+            &nbsp;&nbsp;UNA
+          </span>
+          <span className="t-p-child3">
+            SÓLIDA &nbsp;&nbsp;&nbsp;COMPRENSIÓN&nbsp;&nbsp; DEL&nbsp;&nbsp;
+            BACK-END
+          </span>
+          <span className="t-p-child4">PARA OFRECER SOLUCIONES INTEGRALES</span>
+          <span className="t-p-child5">Y EFICIENTES.</span>
+        </span>
       </div>
       {/* <span className="first-line">
         <span className="first-line-t">
