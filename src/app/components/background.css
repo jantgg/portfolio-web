@@ -5,7 +5,7 @@
     width: 100vw;
     height: 100vh;
     content: "";
-    opacity: 0.03;  
+    opacity: 0.02;  
     z-index: 1000;
     pointer-events: none;
     background: url(noise.gif) ;

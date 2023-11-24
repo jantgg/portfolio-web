@@ -1,7 +1,6 @@
 .at-container {
   position: relative;
   white-space: pre; /* Asegúrate de que los espacios se mantienen */
-  color: white;
   display: flex;
   overflow:hidden;
   width: 100%;
