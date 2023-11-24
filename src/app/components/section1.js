@@ -10,30 +10,105 @@ const Section1 = () => {
     <section className="section1">
       <div className="side-tittle">
         <span className="side-tittle-inner">
-          01 // 04 &nbsp; - &nbsp;SCROLL&nbsp;&nbsp; <MdArrowDownward />{" "}
+        <AnimatedText 
+            texto={<><span>01 // 04 &nbsp; - &nbsp;SCROLL&nbsp;&nbsp;</span><MdArrowDownward /></>}
+            width="auto" 
+            justifyContent="start" 
+            fontSize="0.8vw" 
+            textAlign="left" 
+        /> 
+          {" "}
         </span>
       </div>
       <div className="tittles ">
         {" "}
-        <span className="t-1 light-text"><AnimatedText texto="DESARROLLADOR"/></span>
-        <span className="t-2 "><AnimatedText texto="FULL-STACK"/></span>
-        <span className="t-3 ">
-          <span className="t-3-1 light-text">ENFOCADO EN</span>
-          <span className="t-3-2">FRONT</span>
+        <span className="t-1 light-text">
+                  <AnimatedText 
+              texto="DESARROLLADOR" 
+              width="100%" 
+              justifyContent="center" 
+              fontSize="3.5vw" 
+              textAlign="center" 
+          />   </span>
+        <span className="t-2">
+        <AnimatedText 
+              texto="FULL-STACK" 
+              width="100%" 
+              justifyContent="center" 
+              fontSize="10vw" 
+              textAlign="center" 
+          />
+       </span>
+        <span className="t-3">
+          <span className="t-3-1 light-text"> 
+             <AnimatedText 
+              texto="ENFOCADO EN" 
+              width="100%" 
+              justifyContent="end" 
+              fontSize="3.5vw" 
+              textAlign="right" 
+          /> 
+          </span>
+          <span className="t-3-2">     
+           <AnimatedText 
+              texto="FRONT" 
+              width="100%" 
+              justifyContent="end" 
+              fontSize="10vw" 
+              textAlign="right" 
+          /> </span>
         </span>
         <span className="t-p">
-          <span className="t-p-child1">INTERFACES DE USUARIO</span>
+          <span className="t-p-child1">
+          <AnimatedText 
+              texto="INTERFACES DE USUARIO" 
+              width="100%" 
+              justifyContent="end" 
+              fontSize="1.5vw" 
+              textAlign="right" 
+          /> 
+           </span>
           <span className="t-p-child2">
+          <AnimatedText 
+              texto="ATRACTIVAS&nbsp;&nbsp; Y &nbsp;&nbsp;FUNCIONALES&nbsp;&nbsp; CON&nbsp;UNA" 
+              width="auto" 
+              justifyContent="end" 
+              fontSize="1.5vw" 
+              textAlign="right" 
+          /> 
             {" "}
-            ATRACTIVAS&nbsp; Y&nbsp; &nbsp;FUNCIONALES&nbsp;&nbsp; CON
-            &nbsp;&nbsp;UNA
+       
+      
           </span>
           <span className="t-p-child3">
-            SÓLIDA &nbsp;&nbsp;&nbsp;COMPRENSIÓN&nbsp;&nbsp; DEL&nbsp;&nbsp;
-            BACK-END
+          <AnimatedText 
+              texto="SÓLIDA&nbsp;&nbsp;&nbsp;&nbsp;COMPRENSIÓN&nbsp;&nbsp;&nbsp;&nbsp;DEL&nbsp;&nbsp;&nbsp;BACK-END"
+              width="auto" 
+              justifyContent="end" 
+              fontSize="1.5vw" 
+              textAlign="right" 
+          /> 
+  
+           
           </span>
-          <span className="t-p-child4">PARA OFRECER SOLUCIONES INTEGRALES</span>
-          <span className="t-p-child5">Y EFICIENTES.</span>
+          <span className="t-p-child4">
+          <AnimatedText 
+              texto="PARA OFRECER SOLUCIONES INTEGRALES"
+              width="auto" 
+              justifyContent="end" 
+              fontSize="1.5vw" 
+              textAlign="right"
+          /> 
+        </span>
+          <span className="t-p-child5">
+          <AnimatedText 
+              texto=" &nbsp;Y EFICIENTES."
+              width="auto" 
+              justifyContent="start" 
+              fontSize="1.5vw" 
+              textAlign="left" 
+          /> 
+           </span>
         </span>
         <div
           style={{

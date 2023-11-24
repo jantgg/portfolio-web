@@ -35,7 +35,7 @@ const Circulo = ({ children, ruta, hacerScroll }) => {
         gsap.to(circulo, {
           strokeDashoffset: 0,
           duration: 1,
-          ease: "power2.out",
+          ease: "power2.linear",
         }),
     });
   }, []);
