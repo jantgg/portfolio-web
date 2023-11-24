@@ -2,14 +2,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./section1.css";
 import { MdArrowDownward } from "react-icons/md";
-
+import Circulo from "src/app/components/circulo.js";
 
 const Section1 = () => {
-
   return (
     <section className="section1">
       <div className="side-tittle">
-        <span className="side-tittle-inner">01 // 04 &nbsp; -  &nbsp;SCROLL&nbsp;&nbsp; <MdArrowDownward/> </span>
+        <span className="side-tittle-inner">
+          01 // 04 &nbsp; - &nbsp;SCROLL&nbsp;&nbsp; <MdArrowDownward />{" "}
+        </span>
       </div>
       <div className="tittles ">
         {" "}
@@ -20,7 +21,7 @@ const Section1 = () => {
           <span className="t-3-2">FRONT</span>
         </span>
         <span className="t-p">
-          <span className="t-p-child1">CREO INTERFACES DE USUARIO</span>
+          <span className="t-p-child1">INTERFACES DE USUARIO</span>
           <span className="t-p-child2">
             {" "}
             ATRACTIVAS&nbsp; Y&nbsp; &nbsp;FUNCIONALES&nbsp;&nbsp; CON
@@ -33,7 +34,20 @@ const Section1 = () => {
           <span className="t-p-child4">PARA OFRECER SOLUCIONES INTEGRALES</span>
           <span className="t-p-child5">Y EFICIENTES.</span>
         </span>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            width: "100%",
+            marginTop: "5vh",
+            transform: "translateX(-0.45%)",
+          }}
+        >
+          {" "}
+          <Circulo hacerScroll={true}> <MdArrowDownward /></Circulo>
+        </div>
       </div>
+
       {/* <span className="first-line">
         <span className="first-line-t">
           <span style="">F</span>

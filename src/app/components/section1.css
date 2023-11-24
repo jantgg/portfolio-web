@@ -6,7 +6,9 @@
   justify-content: center;
   height: 100vh;
 }
+
 .tittles {
+  margin-top: 20vh;
   width: 80%;
   display: flex;
   flex-direction: ROW;
@@ -84,6 +86,6 @@
   padding-left: 3.7vw;
   color: white;
   display: flex;
-padding-bottom: 40vh;
-font-size: 1vw;
+padding-bottom: 37vh;
+font-size: 0.8vw;
 }

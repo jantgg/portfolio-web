@@ -42,3 +42,14 @@ body {
   font-family: 'Telegraf';
   font-weight: 200;
 }
+
+.linea-roja {
+  position: absolute; /* O 'fixed' si necesitas que permanezca en su lugar durante el desplazamiento */
+  top: 0;
+  left: 50%; /* Ajusta esto para alinear con tu sección */
+  width: 1px; /* O el grosor que desees para la línea */
+  height: 100vh;
+  background-color: red;
+  z-index: 10; /* Asegúrate de que esté por encima de otros elementos si es necesario */
+}
+/* <div className="linea-roja"></div> */

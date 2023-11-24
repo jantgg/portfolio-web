@@ -23,13 +23,14 @@ const Navbar = () => {
 
   return (
     <section className={`navbar ${isVisible ? 'visible' : 'hidden'}`}>
-      <div className="navbar-name telegraf">JANT G.</div>
+      <div className="navbar-name telegraf"><span>JANT G.</span></div>
       <div className="navbar-mid">
-        <a className="navbar-mid-btn light-text">PROYECTOS</a>
-        <a className="navbar-mid-btn light-text">SOBRE MÍ</a>
+        <a className="navbar-mid-btn navbar-btn light-text">PROYECTOS</a>
+        <a className="navbar-mid-btn navbar-btn light-text">SOBRE MÍ</a>
       </div>
-      <button className="navbar-mid-btn navbar-end light-text">DISPONIBLE PARA FREELANCE</button>
-    </section>
+      <div className='navbar-end'> <button className="navbar-end-btn navbar-btn light-text">DISPONIBLE PARA FREELANCE</button>
+ </div>
+        </section>
   );
 };
 
