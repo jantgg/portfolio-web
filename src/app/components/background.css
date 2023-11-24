@@ -5,8 +5,7 @@
     width: 100vw;
     height: 100vh;
     content: "";
-
-    opacity: 0.04;  
+    opacity: 0.03;  
     z-index: 1000;
     pointer-events: none;
     background: url(noise.gif) ;
@@ -20,7 +19,6 @@
     top: 0;
     left: 0;
     z-index: -1;
-    background: #040404;
     -webkit-overflow-Y: hidden;
     -moz-overflow-Y: hidden;
     -o-overflow-Y: hidden;
@@ -32,17 +30,17 @@
 }
 .light {
     position: absolute;
-    width: 0px;
-    opacity: .75;
+    width: 1px;
+    opacity: 0.75;
     background-color: rgb(255, 255, 255);
-    box-shadow: #9c9c9cd8 0px 0px 20px 2px;
+    box-shadow: #E3E4E5 0px 0px 20px 2px;
     opacity: 0;
     top: 100vh;
     bottom: 0px;
     left: 0px;
     right: 0px;
     margin: auto;
-    filter: blur(10px);
+    filter: blur(25px);
 }
 
 .x1{

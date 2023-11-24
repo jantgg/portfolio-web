@@ -176,7 +176,7 @@ const Circulo = ({ children, ruta, hacerScroll }) => {
           cy="50"
           r="45"
           stroke="white"
-          strokeWidth="0.4"
+          strokeWidth="0.8"
           fill="transparent"
         />
       </svg>
@@ -193,7 +193,7 @@ const Circulo = ({ children, ruta, hacerScroll }) => {
           cy="50"
           r="45"
           stroke="white"
-          strokeWidth="0.4"
+          strokeWidth="0.8"
           fill="transparent"
         />
       </svg>

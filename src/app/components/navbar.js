@@ -3,10 +3,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import './navbar.css';
 
 const Navbar = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
   const lastScrollY = useRef(0);
 
   useEffect(() => {
+    setIsVisible(true);
     // Solo ejecutar en el lado del cliente
     if (typeof window !== 'undefined') {
       const handleScroll = () => {

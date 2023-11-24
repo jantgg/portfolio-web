@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./section1.css";
 import { MdArrowDownward } from "react-icons/md";
 import Circulo from "src/app/components/circulo.js";
+import AnimatedText from "src/app/components/animatedText.js";
 
 const Section1 = () => {
   return (
@@ -14,8 +15,8 @@ const Section1 = () => {
       </div>
       <div className="tittles ">
         {" "}
-        <span className="t-1 light-text">DESARROLLADOR</span>
-        <span className="t-2 ">FULL-STACK</span>
+        <span className="t-1 light-text"><AnimatedText texto="DESARROLLADOR"/></span>
+        <span className="t-2 "><AnimatedText texto="FULL-STACK"/></span>
         <span className="t-3 ">
           <span className="t-3-1 light-text">ENFOCADO EN</span>
           <span className="t-3-2">FRONT</span>
