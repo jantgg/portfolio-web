@@ -30,7 +30,7 @@ const Section1 = () => {
               fontSize="3.5vw" 
               textAlign="center" 
           />   </span>
-        <span className="t-2">
+        <span className="t-2 bold-text">
         <AnimatedText 
               texto="FULL-STACK" 
               width="100%" 
@@ -49,7 +49,7 @@ const Section1 = () => {
               textAlign="right" 
           /> 
           </span>
-          <span className="t-3-2">     
+          <span className="t-3-2 bold-text">     
            <AnimatedText 
               texto="FRONT" 
               width="100%" 
@@ -64,7 +64,7 @@ const Section1 = () => {
               texto="INTERFACES DE USUARIO" 
               width="100%" 
               justifyContent="end" 
-              fontSize="1.5vw" 
+              fontSize="1.2vw" 
               textAlign="right" 
           /> 
            </span>
@@ -73,7 +73,7 @@ const Section1 = () => {
               texto="ATRACTIVAS&nbsp;&nbsp; Y &nbsp;&nbsp;FUNCIONALES&nbsp;&nbsp; CON&nbsp;UNA" 
               width="auto" 
               justifyContent="end" 
-              fontSize="1.5vw" 
+              fontSize="1.2vw" 
               textAlign="right" 
           /> 
             {" "}
@@ -82,10 +82,10 @@ const Section1 = () => {
           </span>
           <span className="t-p-child3">
           <AnimatedText 
-              texto="SÓLIDA&nbsp;&nbsp;&nbsp;&nbsp;COMPRENSIÓN&nbsp;&nbsp;&nbsp;&nbsp;DEL&nbsp;&nbsp;&nbsp;BACK-END"
+              texto="SÓLIDA&nbsp;&nbsp;&nbsp;&nbsp;COMPRENSIÓN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DE&nbsp;&nbsp;&nbsp;&nbsp;BACK-END"
               width="auto" 
               justifyContent="end" 
-              fontSize="1.5vw" 
+              fontSize="1.2vw" 
               textAlign="right" 
           /> 
   
@@ -96,16 +96,16 @@ const Section1 = () => {
               texto="PARA OFRECER SOLUCIONES INTEGRALES"
               width="auto" 
               justifyContent="end" 
-              fontSize="1.5vw" 
+              fontSize="1.2vw" 
               textAlign="right"
           /> 
         </span>
           <span className="t-p-child5">
           <AnimatedText 
-              texto=" &nbsp;Y EFICIENTES."
+              texto=" Y EFICIENTES."
               width="auto" 
               justifyContent="start" 
-              fontSize="1.5vw" 
+              fontSize="1.2vw" 
               textAlign="left" 
           /> 
            </span>

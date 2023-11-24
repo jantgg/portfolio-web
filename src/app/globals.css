@@ -1,5 +1,14 @@
 
+body::-webkit-scrollbar {
+  display: none; /* Oculta la barra de desplazamiento */
+}
 
+/* Para IE, Edge y Firefox */
+body {
+  -ms-overflow-style: none;  /* Para Internet Explorer y Edge */
+  scrollbar-width: none;  /* Para Firefox */
+  overflow-y: scroll; /* Mantiene la funcionalidad de desplazamiento */
+}
 @font-face {
   font-family: 'Telegraf';
   src: url('/fonts/PPTelegraf-Regular.otf') format('opentype');

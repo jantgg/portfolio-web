@@ -31,7 +31,7 @@ const AnimatedText = ({
                     toggleActions: "play none none none",
                 }
             })
-            .to(spansLinea1[i], { yPercent: -100, opacity: 0, duration: duration, delay: i * delay, ease: "Power1.easeOut" })
+            .fromTo(spansLinea1[i], { yPercent: 0, opacity: 0.3 },{ yPercent: -100, opacity: 0, duration: duration, delay: i * delay, ease: "Power1.easeOut" }, 0)
             .fromTo(spansLinea2[i], { yPercent: 100, opacity: 0 }, { yPercent: 0, opacity: 1, duration: duration, delay: i * delay, ease: "Power1.easeOut" }, 0);
         }
     }, [texto]);
