@@ -1,0 +1,44 @@
+.s2c-main {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.s2c-p1 {
+  grid-area: 3 / 2 / 6 / 7;
+  border-radius: 40px;
+  color: white;
+}
+.s2c-p1-h2{
+width: 100%;
+margin: 0px;
+}
+.s2c-p2 {
+  grid-area: 7 / 2 / 10 / 7;
+  background-color: aqua;
+  border-radius: 40px;
+}
+.s2c-photo {
+  grid-area: 3 / 8 / 12 / 12;
+  background-color: aqua;
+  border-radius: 40px;
+  display: flex;
+  overflow: hidden;
+}
+.s2c-photo-inner{
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+
+}
+.s2c-text {
+  grid-area: 11 / 1 / 13 / 13;
+  background-color: aqua;
+}

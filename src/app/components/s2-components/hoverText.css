@@ -1,0 +1,23 @@
+.ath-container {
+    position: relative;
+    white-space: pre; /* Asegúrate de que los espacios se mantienen */
+    display: flex;
+    overflow:hidden;
+    width: 100%;
+    justify-content: center;
+    color: white;
+  }
+  
+  .ath-linea1 {
+      display: flex;
+    position: relative;
+    cursor: pointer;
+  }
+  .ath-linea2 {
+      display: flex;
+    position: absolute;
+    cursor: pointer;
+  }
+
+
+  

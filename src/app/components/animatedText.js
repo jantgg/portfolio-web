@@ -11,7 +11,8 @@ const AnimatedText = ({
     width = '100%', // Corregido el valor predeterminado
     justifyContent = 'center',
     fontSize = '1vw',
-    textAlign = 'center'
+    textAlign = 'center',
+    marginBottom = '0px',
 }) => {
     const linea1Ref = useRef();
     const linea2Ref = useRef();
@@ -40,8 +41,10 @@ const AnimatedText = ({
         width: width,
         justifyContent: justifyContent,
         fontSize: fontSize,
-        textAlign: textAlign
+        textAlign: textAlign,
+        marginBottom: marginBottom,
     };
+ 
 
     const renderContent = (content) => {
         if (typeof content === 'string') {
