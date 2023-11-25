@@ -21,14 +21,15 @@ margin: 0px;
 .s2c-p2 {
   grid-area: 7 / 2 / 10 / 7;
   background-color: aqua;
-  border-radius: 40px;
+
+
 }
 .s2c-photo {
   grid-area: 3 / 8 / 12 / 12;
   background-color: aqua;
-  border-radius: 40px;
   display: flex;
   overflow: hidden;
+  border-radius: 40px;
 }
 .s2c-photo-inner{
     object-position: center;

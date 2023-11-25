@@ -61,7 +61,7 @@ const Section1 = () => {
         <span className="t-p">
           <span className="t-p-child1">
           <AnimatedText 
-              texto="INTERFACES DE USUARIO" 
+              texto="CREO INTERFACES DE USUARIO" 
               width="100%" 
               justifyContent="end" 
               fontSize="1.2vw" 
