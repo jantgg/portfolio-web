@@ -25,6 +25,12 @@ z-index: 1;
   display: flex;
   align-items: center;
 }
+.s2-upbar-count2 {
+  padding-right: 3.7vw;
+  color: white;
+  display: flex;
+  align-items: center;
+}
 .s2-upbar-about {
   color: white;
   display: flex;
@@ -35,7 +41,7 @@ z-index: 1;
   display: flex;
   font-size: 1vw;
   align-items: center;
-  padding-right: 3.7vw;
+
 }
 .s2-upbar-social span {
   color: white;

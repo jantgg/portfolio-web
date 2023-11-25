@@ -20,7 +20,7 @@ const Section2 = () => {
       <div className="s2-upbar">
           <span className="s2-upbar-count">
             <AnimatedText
-              texto="01 // 04"
+              texto="01 /"
               width="auto"
               justifyContent="start"
               fontSize="1vw"
@@ -41,6 +41,15 @@ const Section2 = () => {
             <a>  <HoverText texto="LINKEDIN" /></a><span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
             <a>  <HoverText texto="GITHUB" /></a>
           </div>
+          <span className="s2-upbar-count2">
+            <AnimatedText
+              texto="/ 04"
+              width="auto"
+              justifyContent="start"
+              fontSize="1vw"
+              textAlign="left"
+            />{" "}
+          </span>
         </div>
         <S2Content/>
     </section>
