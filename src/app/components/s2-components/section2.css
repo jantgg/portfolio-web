@@ -50,21 +50,50 @@ z-index: 1;
 }
 .s2c-text-m {
   color: #f8fafb !important;
-  font-size: 12vw;
-  white-space: nowrap; /* Evita que el texto se ajuste a la siguiente línea */
-  display: block; /* Opcional, asegura que el div ocupe todo el ancho */
-  width: 100%; /* Hace que el div ocupe todo el ancho de la pantalla */
-  /* Animación */
-  animation: scroll-left 30s linear infinite;
-  margin-top: 82vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 5vw;
+  line-height: 0.8;
+position: absolute;
+  margin-top: 75vh;
+  width: 100vw;
+}
+.s2c-text-m-l {
+  white-space: nowrap;
+
+  width: 100%;
+  animation: scroll-left 20s linear infinite;
+  cursor: crosshair;
+}
+
+.s2c-text-m-r {
+  white-space: nowrap;
+
+  width: 100%;
+  animation: scroll-right 200s linear infinite;
+  cursor: crosshair;
+}
+
+/* Pausar animación al hacer hover */
+.s2c-text-m-l:hover, .s2c-text-m-r:hover {
+  animation-play-state: paused;
 }
 
 /* Clave de animación para mover el texto de derecha a izquierda */
 @keyframes scroll-left {
   0% {
-    transform: translateX(0);
+      transform: translateX(0);
   }
   100% {
-    transform: translateX(-1200%);
+      transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+      transform: translateX(-800%);
+  }
+  100% {
+      transform: translateX(100%);
   }
 }

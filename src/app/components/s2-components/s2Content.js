@@ -21,7 +21,7 @@ const S2Content = () => {
             justifyContent="end"
             fontSize="2vw"
             textAlign="right"
-            texto="DESARROLLADOR FULL STACK"
+            texto="JUAN ANTONIO GÓMEZ GIL"
           />
         </h2>
         <AnimatedP
@@ -30,7 +30,7 @@ const S2Content = () => {
           textAlign="justify"
         />
       </div>
-      <div className="s2c-p2">
+      {/* <div className="s2c-p2">
         <h2 className="bold-text s2c-p2-h2">
           {" "}
           <AnimatedText
@@ -42,7 +42,7 @@ const S2Content = () => {
         </h2>
 
 <AnimatedP2/>
-      </div>
+      </div> */}
       <div className="s2c-photo">
         <Image src={photo} className="s2c-photo-inner" contain />
       </div>

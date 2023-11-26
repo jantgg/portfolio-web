@@ -60,27 +60,42 @@ const Section2 = () => {
         </span>
       </div>
       <S2Content />
-      <div className="s2c-text-m ">
-        JUAN ANTONIO GÓMEZ GIL &nbsp;&nbsp;&nbsp;&nbsp; JUAN ANTONIO GÓMEZ GIL
-        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
-        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
-        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
-        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
-        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
-        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
-        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
-        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
-        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
-        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
-        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
-        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
-        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
-        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
-        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
-        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
-        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
-        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL &nbsp;&nbsp;&nbsp;&nbsp;
-      </div>
+      <p className="s2c-text-m ">
+        <span className="s2c-text-m-l">
+          <strong>NEXT.JS</strong> / REACT / <strong>JAVASCRIPT</strong> / HTML5
+          / <strong>CSS</strong> / <strong>NEXT.JS</strong> / REACT /{" "}
+          <strong>JAVASCRIPT</strong> / HTML5 / <strong>CSS</strong> /
+          <strong>NEXT.JS</strong> / REACT / <strong>JAVASCRIPT</strong> / HTML5
+          / <strong>CSS</strong> /<strong>NEXT.JS</strong> / REACT /{" "}
+          <strong>JAVASCRIPT</strong> / HTML5 / <strong>CSS</strong> /
+          <strong>NEXT.JS</strong> / REACT / <strong>JAVASCRIPT</strong> / HTML5
+          / <strong>CSS</strong> /<strong>NEXT.JS</strong> / REACT /{" "}
+          <strong>JAVASCRIPT</strong> / HTML5 / <strong>CSS</strong> /
+        </span>
+        <span className="s2c-text-m-r">
+          <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+          MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /{" "}
+          <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+          MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /{" "}
+          <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+          MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /{" "}
+          <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+          MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /{" "}
+          <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+          MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /
+        </span>
+        <span className="s2c-text-m-l">
+          GSAP / FRAMER MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> /
+          WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+          <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP /GSAP / FRAMER
+          MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
+          PHOTOSHOP /GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+          <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP /GSAP / FRAMER
+          MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
+          PHOTOSHOP /GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+          <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP /
+        </span>
+      </p>
     </section>
   );
 };
