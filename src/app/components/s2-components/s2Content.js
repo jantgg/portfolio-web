@@ -40,23 +40,23 @@ const S2Content = () => {
           />
         </h2>
 
-        <div className="s2c-ts">
-          <HoverText texto="NEXT.JS" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false' /> <span className="light-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-          <HoverText texto="REACT" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="light-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-          <HoverText texto="FLASK" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="light-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-          <HoverText texto="NODE.JS" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="light-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+        <div className="s2c-ts light-text">
+          <HoverText texto="NEXT.JS" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false' /> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+          <HoverText texto="REACT" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+          <HoverText texto="FLASK" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+          <HoverText texto="NODE.JS" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
           <HoverText texto="JAVASCRIPT" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> 
-          <HoverText texto="PYTHON" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="light-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-          <HoverText texto="HTML5" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="light-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-          <HoverText texto="CSS" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="light-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-          <HoverText texto="MySQL" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="light-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+          <HoverText texto="PYTHON" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+          <HoverText texto="HTML5" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+          <HoverText texto="CSS" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+          <HoverText texto="MySQL" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
           <HoverText texto="MONGOOSE" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/>
-          <HoverText texto="MONGO-DB" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="light-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-          <HoverText texto="GSAP" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="light-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-          <HoverText texto="FRAMER-MOTION" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="light-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+          <HoverText texto="MONGO-DB" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+          <HoverText texto="GSAP" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+          <HoverText texto="FRAMERMOTION" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
           <HoverText texto="DISEÑO-UX" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> 
-          <HoverText texto="DISEÑO-WEB&MÓVIL" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="light-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-          <HoverText texto="ANIMACIÓN" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="light-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+          <HoverText texto="WEB&MÓVIL" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+          <HoverText texto="ANIMACIÓN" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
           <HoverText texto="PHOTOSHOP" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/>
         </div>
       </div>
