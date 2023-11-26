@@ -7,6 +7,7 @@ import Linea from "src/app/components/linea.js";
 import Circulo from "src/app/components/circulo.js";
 import AnimatedText from "src/app/components/animatedText.js";
 import AnimatedP from "src/app/components/s2-components/animatedP.js";
+import AnimatedP2 from "src/app/components/s2-components/animatedP2.js";
 import HoverText from "src/app/components/s2-components/hoverText.js";
 import photo from "src/app/components/img/photo.jpg";
 
@@ -40,25 +41,7 @@ const S2Content = () => {
           />
         </h2>
 
-        <div className="s2c-ts light-text">
-          <HoverText texto="NEXT.JS" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false' /> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-          <HoverText texto="REACT" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-          <HoverText texto="FLASK" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-          <HoverText texto="NODE.JS" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-          <HoverText texto="JAVASCRIPT" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> 
-          <HoverText texto="PYTHON" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-          <HoverText texto="HTML5" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-          <HoverText texto="CSS" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-          <HoverText texto="MySQL" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-          <HoverText texto="MONGOOSE" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/>
-          <HoverText texto="MONGO-DB" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-          <HoverText texto="GSAP" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-          <HoverText texto="FRAMERMOTION" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-          <HoverText texto="DISEÑO-UX" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> 
-          <HoverText texto="WEB&MÓVIL" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-          <HoverText texto="ANIMACIÓN" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-          <HoverText texto="PHOTOSHOP" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/>
-        </div>
+<AnimatedP2/>
       </div>
       <div className="s2c-photo">
         <Image src={photo} className="s2c-photo-inner" contain />

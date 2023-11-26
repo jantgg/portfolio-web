@@ -4,21 +4,17 @@ import gsap from "gsap";
 import "./animatedP2.css";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
+import HoverText from "src/app/components/s2-components/hoverText.js";
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-const AnimatedP = ({
-  texto,
-  width = "100%", // Corregido el valor predeterminado
-  justifyContent = "center",
-  fontSize = "1vw",
-  textAlign = "center",
-  marginBottom = "0px",
-}) => {
-  const paragraphRef = useRef();
+const AnimatedP = (
+
+) => {
+  const paragraphRef2 = useRef();
 
   useEffect(() => {
-    const paragraph = paragraphRef.current;
-    // Calcula la duración de la animación en función de la longitud del texto
+    const paragraph = paragraphRef2.current;
+ 
     const duration = 1;
 
     gsap
@@ -34,33 +30,28 @@ const AnimatedP = ({
         { yPercent: 100, opacity: 0 },
         { yPercent: 0, opacity: 1, duration: duration, ease: "Power1.easeOut" }
       );
-  }, [texto]);
-
-  const containerStyles = {
-    width: width,
-    justifyContent: justifyContent,
-    fontSize: fontSize,
-    textAlign: textAlign,
-    marginBottom: marginBottom,
-  };
+  }, []);
 
   return (
-    <div className="ap-container" style={containerStyles}>
-      <p ref={paragraphRef} className="ap-paragraph light-text">
-        Ofrezco soluciones <strong>completas</strong> y{" "}
-        <strong>eficientes</strong> centradas en el <strong>usuario.</strong>{" "}
-        desarrollo interfaces que ofrecen una{" "}
-        <strong>experiencia excepcional</strong> en cada proyecto. Armonía entre <strong>funcionalidad</strong> y{" "}
-          <strong>diseño.</strong>
-      </p>
-
-      {/* <p ref={paragraphRef} className="ap-paragraph light-text">
-            Ofrezco soluciones <strong>completas</strong> y <strong>eficientes</strong> centradas en el <strong>usuario,</strong> siendo mi
-            pasión el <strong>Front-End</strong>, donde centro mi desarrollo en crear interfaces
-            que ofrezcan una <strong>experiencia excepcional .</strong> En cada proyecto, me esfuerzo por lograr una
-            perfecta armonía entre la <strong>funcionalidad</strong> y la <strong>estética visual .</strong>
-            </p> */}
-    </div>
+    <div className="s2c-ts light-text" ref={paragraphRef2}>
+    <HoverText texto="NEXT.JS" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false' /> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+    <HoverText texto="REACT" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+    <HoverText texto="FLASK" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+    <HoverText texto="NODE.JS" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+    <HoverText texto="JAVASCRIPT" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> 
+    <HoverText texto="PYTHON" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+    <HoverText texto="HTML5" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+    <HoverText texto="CSS" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+    <HoverText texto="MySQL" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+    <HoverText texto="MONGOOSE" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/>
+    <HoverText texto="MONGO-DB" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+    <HoverText texto="GSAP" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+    <HoverText texto="FRAMERMOTION" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+    <HoverText texto="DISEÑO-UX" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> 
+    <HoverText texto="WEB&MÓVIL" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+    <HoverText texto="ANIMACIÓN" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/> <span className="bold-text">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+    <HoverText texto="PHOTOSHOP" width = 'auto' fontSize = '1.5vw' cursor='crosshair' delay='false'/>
+  </div>
   );
 };
 
