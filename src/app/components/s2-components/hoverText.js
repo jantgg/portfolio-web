@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import "./hoverText.css";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -11,26 +11,30 @@ const HoverText = ({
     width = '100%', // Valor predeterminado
     justifyContent = 'center',
     fontSize = '1vw',
-    textAlign = 'center'
+    textAlign = 'center',
+    cursor = 'pointer',
+    delay= 'true',
 }) => {
     const containerRef = useRef();
     const linea1Ref = useRef();
     const linea2Ref = useRef();
 
+
     useEffect(() => {
         const spansLinea1 = linea1Ref.current.children;
         const spansLinea2 = linea2Ref.current.children;
         // Calcula el delay en función de la longitud del texto
-        const delay = texto.length > 13 ? 0 : 0.01;
-        const duration = texto.length > 13 ? 1.5 : 0.2;
+  
+        const delayc = delay != 'true' ? 0 : 0.01;
+        const duration = 0.2;
     
         // Establece la posición inicial de linea2
         gsap.set(spansLinea2, { yPercent: 100, opacity: 1 });
     
         containerRef.current.addEventListener('mouseenter', () => {
             for (let i = 0; i < spansLinea1.length; i++) {
-                gsap.to(spansLinea1[i], { yPercent: -100, opacity: 0, duration: duration, delay: i * delay, ease: "Power1.easeOut" });
-                gsap.to(spansLinea2[i], { yPercent: 0, opacity: 1, duration: duration, delay: i * delay, ease: "Power1.easeOut" });
+                gsap.to(spansLinea1[i], { yPercent: -100, opacity: 0, duration: duration, delay: i * delayc, ease: "Power1.easeOut" });
+                gsap.to(spansLinea2[i], { yPercent: 0, opacity: 1, duration: duration, delay: i * delayc, ease: "Power1.easeOut" });
             }
         });
     
@@ -45,7 +49,8 @@ const HoverText = ({
         width: width,
         justifyContent: justifyContent,
         fontSize: fontSize,
-        textAlign: textAlign
+        textAlign: textAlign,
+        cursor: cursor,
     };
 
     const renderContent = (content) => {

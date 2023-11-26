@@ -11,7 +11,7 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
   /* <Circulo hacerScroll={true}>Bajar una Pantalla</Circulo> */
 }
 
-const Circulo = ({ children, ruta, hacerScroll }) => {
+const Circulo = ({ children, ruta, hacerScroll, fontSize= '3vw', }) => {
   const router = useRouter();
   const circuloRef = useRef(null);
   const secondCircleRef = useRef(null);
@@ -149,10 +149,11 @@ const Circulo = ({ children, ruta, hacerScroll }) => {
         height: "7.5vw",
         borderRadius: "50%",
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         position: "relative",
-        fontSize: "3vw",
+        fontSize: fontSize,
         color: "white",
         backgroundColor: "rgba(255, 255, 255, 0)",
         border: "none",

@@ -13,45 +13,74 @@ const Section2 = () => {
     <section className="section2">
       <div className="linea-container">
         <Linea />
-   
-
-      
       </div>
       <div className="s2-upbar">
-          <span className="s2-upbar-count">
-            <AnimatedText
-              texto="01 /"
-              width="auto"
-              justifyContent="start"
-              fontSize="1vw"
-              textAlign="left"
-            />{" "}
-          </span>
-          <span className="s2-upbar-about bold-text">
-            <AnimatedText
-              texto="ABOUT"
-              width="auto"
-              justifyContent="start"
-              fontSize="1vw"
-              textAlign="left"
-            />{" "}
-          </span>
-          <div className="s2-upbar-social">
-            <a>  <HoverText texto="EMAIL" /></a><span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-            <a>  <HoverText texto="LINKEDIN" /></a><span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-            <a>  <HoverText texto="GITHUB" /></a>
-          </div>
-          <span className="s2-upbar-count2">
-            <AnimatedText
-              texto="/ 04"
-              width="auto"
-              justifyContent="start"
-              fontSize="1vw"
-              textAlign="left"
-            />{" "}
-          </span>
+        <span className="s2-upbar-count">
+          <AnimatedText
+            texto="02 /"
+            width="auto"
+            justifyContent="start"
+            fontSize="1vw"
+            textAlign="left"
+          />{" "}
+        </span>
+        <span className="s2-upbar-about bold-text">
+          <AnimatedText
+            texto="SOBRE MÍ"
+            width="auto"
+            justifyContent="start"
+            fontSize="1vw"
+            textAlign="left"
+          />{" "}
+        </span>
+        <div className="s2-upbar-social">
+          <a>
+            {" "}
+            <HoverText texto="EMAIL" />
+          </a>
+          <span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+          <a>
+            {" "}
+            <HoverText texto="LINKEDIN" />
+          </a>
+          <span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+          <a>
+            {" "}
+            <HoverText texto="GITHUB" />
+          </a>
         </div>
-        <S2Content/>
+        <span className="s2-upbar-count2">
+          <AnimatedText
+            texto="/ 04"
+            width="auto"
+            justifyContent="start"
+            fontSize="1vw"
+            textAlign="left"
+          />{" "}
+        </span>
+      </div>
+      <S2Content />
+      <div className="s2c-text-m ">
+        JUAN ANTONIO GÓMEZ GIL &nbsp;&nbsp;&nbsp;&nbsp; JUAN ANTONIO GÓMEZ GIL
+        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
+        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
+        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
+        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
+        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
+        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
+        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
+        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
+        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
+        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
+        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
+        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
+        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
+        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
+        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
+        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
+        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL
+        &nbsp;&nbsp;&nbsp;&nbsp;JUAN ANTONIO GÓMEZ GIL &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
     </section>
   );
 };

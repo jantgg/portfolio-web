@@ -48,3 +48,23 @@ z-index: 1;
   display: flex;
 
 }
+.s2c-text-m {
+  color: #f8fafb !important;
+  font-size: 12vw;
+  white-space: nowrap; /* Evita que el texto se ajuste a la siguiente línea */
+  display: block; /* Opcional, asegura que el div ocupe todo el ancho */
+  width: 100%; /* Hace que el div ocupe todo el ancho de la pantalla */
+  /* Animación */
+  animation: scroll-left 30s linear infinite;
+  margin-top: 82vh;
+}
+
+/* Clave de animación para mover el texto de derecha a izquierda */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1200%);
+  }
+}

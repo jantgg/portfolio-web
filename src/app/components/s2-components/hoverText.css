@@ -6,17 +6,18 @@
     width: 100%;
     justify-content: center;
     color: white;
+    line-height: 1.2;
   }
   
   .ath-linea1 {
       display: flex;
     position: relative;
-    cursor: pointer;
+
   }
   .ath-linea2 {
       display: flex;
     position: absolute;
-    cursor: pointer;
+
   }
 
 

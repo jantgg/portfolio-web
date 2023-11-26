@@ -11,7 +11,8 @@ const Linea = () => {
             { transform: 'translateX(-100%)' },
             {
                 transform: 'translateX(0)',
-                duration: 1,
+                duration: 2,
+                ease: "power2.inOut",
                 scrollTrigger: {
                     trigger: ".mi-linea",
                     start: "top bottom",
