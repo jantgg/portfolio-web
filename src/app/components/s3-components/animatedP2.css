@@ -1,0 +1,17 @@
+.ap-container2 {
+    position: relative;
+    white-space: pre; /* Asegúrate de que los espacios se mantienen */
+
+    overflow:hidden;
+    width: 100%;
+
+  }
+  
+  .ap-paragraph2 {
+    text-transform: uppercase;
+line-height: 1;
+ width: 100%;
+ text-wrap:wrap;
+    position: relative;
+    color: white;
+  }

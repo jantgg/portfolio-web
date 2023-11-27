@@ -7,7 +7,6 @@ import Linea from "src/app/components/linea.js";
 import Circulo from "src/app/components/circulo.js";
 import AnimatedText from "src/app/components/animatedText.js";
 import AnimatedP from "src/app/components/s2-components/animatedP.js";
-import AnimatedP2 from "src/app/components/s2-components/animatedP2.js";
 import HoverText from "src/app/components/s2-components/hoverText.js";
 import photo from "src/app/components/img/photo.jpg";
 
@@ -44,9 +43,20 @@ const S2Content = () => {
 <AnimatedP2/>
       </div> */}
       <div className="s2c-photo">
-        <Image src={photo} className="s2c-photo-inner" contain="true" alt="Juan Antonio Gomez Gil personal photo" />
+        <Image
+          src={photo}
+          className="s2c-photo-inner"
+          contain="true"
+          alt="Juan Antonio Gomez Gil personal photo"
+        />
       </div>
-      <div className="s2c-button"><Circulo hacerScroll={true} fontSize='1vw'> SABER&nbsp;&nbsp;&nbsp;<br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MÁS</Circulo></div>
+      <div className="s2c-button">
+        <Circulo hacerScroll={true} fontSize="1vw">
+          {" "}
+          SABER&nbsp;&nbsp;&nbsp;<br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          MÁS
+        </Circulo>
+      </div>
     </div>
   );
 };

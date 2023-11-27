@@ -8,6 +8,7 @@ import AnimatedText from "src/app/components/animatedText.js";
 import HoverText from "src/app/components/s2-components/hoverText.js";
 import S3Content from "src/app/components/s3-components/s3Content.js";
 
+
 const Section3 = () => {
   return (
     <section className="section3">
