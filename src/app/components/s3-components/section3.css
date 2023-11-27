@@ -1,0 +1,43 @@
+.section3 {
+  position: relative;
+  height: 100vh;
+  width: 95%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+}
+.line-container-s3 {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+}
+
+.s3-upbar {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 4vh;
+  z-index: 1;
+}
+.s3-upbar-count {
+  padding-left: 1vw;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.s3-upbar-count2 {
+  padding-right: 1vw;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.s3-upbar-projects {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+

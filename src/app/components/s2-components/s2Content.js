@@ -44,7 +44,7 @@ const S2Content = () => {
 <AnimatedP2/>
       </div> */}
       <div className="s2c-photo">
-        <Image src={photo} className="s2c-photo-inner" contain />
+        <Image src={photo} className="s2c-photo-inner" contain="true" alt="Juan Antonio Gomez Gil personal photo" />
       </div>
       <div className="s2c-button"><Circulo hacerScroll={true} fontSize='1vw'> SABER&nbsp;&nbsp;&nbsp;<br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MÁS</Circulo></div>
     </div>
