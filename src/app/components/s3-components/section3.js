@@ -6,7 +6,7 @@ import Linea2 from "src/app/components/s3-components/linea2.js";
 import Circulo from "src/app/components/circulo.js";
 import AnimatedText from "src/app/components/animatedText.js";
 import HoverText from "src/app/components/s2-components/hoverText.js";
-import S3Content from "src/app/components/s3-components/s3Content.js";
+import S3Content from "src/app/components/s3-components/s3content.js";
 
 
 const Section3 = () => {
