@@ -1,0 +1,55 @@
+.section4 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  margin-top: 10vh;
+  justify-content: center;
+}
+.line-container-s4 {
+  position: absolute;
+  height: 2px;
+  width: 95%;
+}
+
+.s4-content {
+  position: absolute;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.s4-content p{
+  margin-bottom: 5vh;
+}
+.downbar {
+  
+  width: 95%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  align-self: end;
+  margin-bottom: 7vh;
+
+}
+.downbar span{
+  font-size: 1.3vw;
+  padding-top: 0.1vw;
+  padding-left: 1vw;
+}
+
+.downbar-socials{
+width: 15%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}

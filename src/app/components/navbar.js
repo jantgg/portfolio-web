@@ -7,12 +7,18 @@ const Navbar = () => {
   const lastScrollY = useRef(0);
 
   useEffect(() => {
-    setIsVisible(true);
     // Solo ejecutar en el lado del cliente
     if (typeof window !== 'undefined') {
       const handleScroll = () => {
         const currentScrollY = window.scrollY;
-        setIsVisible(currentScrollY < lastScrollY.current || currentScrollY < 10);
+        const isAtBottom = window.innerHeight + currentScrollY >= document.body.offsetHeight;
+
+        if (isAtBottom) {
+          setIsVisible(true); // Hacer visible el Navbar cuando se está en el fondo de la página
+        } else {
+          setIsVisible(currentScrollY < lastScrollY.current || currentScrollY < 10);
+        }
+
         lastScrollY.current = currentScrollY;
       };
 

@@ -4,6 +4,7 @@ import "./page.css";
 import Section1 from "src/app/components/section1.js";
 import Section2 from "src/app/components/s2-components/section2.js";
 import Section3 from "src/app/components/s3-components/section3.js";
+import Section4 from "src/app/components/s4-components/section4.js";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Section1 />
       <Section2 />
       <Section3 />
+      <Section4 />
     </main>
   );
 }

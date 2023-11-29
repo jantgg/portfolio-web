@@ -7,7 +7,7 @@ import Navbar from "src/app/components/navbar.js";
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className="background">
+      <body>
         {" "}
         <Navbar />
         <AnimatedBackground />

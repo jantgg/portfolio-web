@@ -5,6 +5,8 @@ body::-webkit-scrollbar {
 
 /* Para IE, Edge y Firefox */
 body {
+  justify-content: center;
+  display: flex;
   margin: 0 !important;
   -ms-overflow-style: none;  /* Para Internet Explorer y Edge */
   scrollbar-width: none;  /* Para Firefox */
