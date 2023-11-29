@@ -1,0 +1,19 @@
+.s2c-p2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.bg-blue{
+    border: solid 2px rgb(9, 255, 0);
+}
+.bg-red{
+    border: solid 2px rgb(255, 9, 0);
+}
+
+.p2-exp{
+
+}
+.p2-est{
+    
+}

@@ -1,12 +1,11 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import "./section4.css";
-import { MdArrowDownward } from "react-icons/md";
 import Linea2 from "src/app/components/s3-components/linea2.js";
 import Circulo from "src/app/components/circulo.js";
 import AnimatedText from "src/app/components/animatedText.js";
-import HoverText from "src/app/components/s2-components/hoverText.js";
-import S3Content from "src/app/components/s3-components/s3Content.js";
+
+
 
 const Section4 = () => {
   return (
@@ -15,7 +14,7 @@ const Section4 = () => {
         <Linea2 />
       </div>
       <div className="s4-content">
-        <h3 className="light-text">
+        <h3 className="light-text mb-5vh">
           {" "}
           <AnimatedText
             justifyContent="center"
@@ -24,15 +23,15 @@ const Section4 = () => {
             texto="¿TIENES UN PROYECTO EN MENTE?"
           />
         </h3>
-        <p className="bold-text">
+        <div className=" mb-5vh">
           {" "}
           <AnimatedText
             justifyContent="center"
-            fontSize="4vw"
+            fontSize="5vw"
             textAlign="center"
             texto="TRABAJEMOS JUNTOS"
           />
-        </p>
+        </div>
         <Circulo hacerScroll={true} fontSize="0.8vw">
           {" "}
           ESCRIBIR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></br>{" "}

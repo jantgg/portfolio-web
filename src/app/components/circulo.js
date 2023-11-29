@@ -11,7 +11,13 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
   /* <Circulo hacerScroll={true}>Bajar una Pantalla</Circulo> */
 }
 
-const Circulo = ({ children, ruta, hacerScroll, fontSize= '3vw', }) => {
+{/* <Circulo 
+  ruta="/otra-pagina" 
+  onCustomClick={() => console.log('Botón personalizado clickeado')}>
+  Ir a Otra Pagina
+</Circulo> */}
+
+const Circulo = ({ children, ruta, hacerScroll, onCustomClick, fontSize= '3vw' }) => {
   const router = useRouter();
   const circuloRef = useRef(null);
   const secondCircleRef = useRef(null);
@@ -128,6 +134,10 @@ const Circulo = ({ children, ruta, hacerScroll, fontSize= '3vw', }) => {
   }, [isClient, isWithinMargin]);
 
   const handleClick = () => {
+    if (onCustomClick) {
+      onCustomClick(); // Llama a la función personalizada
+    }
+
     if (isClient && ruta) {
       router.push(ruta);
     }

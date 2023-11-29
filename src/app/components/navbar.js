@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './navbar.css';
 
 const Navbar = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const lastScrollY = useRef(0);
 
   useEffect(() => {
