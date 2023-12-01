@@ -209,7 +209,7 @@ const Circulo = ({ children, ruta, hacerScroll, onCustomClick, fontSize= '3vw' }
         />
       </svg>
 
-      <div ref={childrenRef} style={{ position: "absolute",marginTop:'1vh' }}>
+      <div ref={childrenRef} style={{ position: "absolute" }}>
         {children}
       </div>
     </button>

@@ -11,7 +11,7 @@ import S2Content from "src/app/components/s2-components/s2Content.js";
 import { Section2Context } from 'src/app/components/s2-components/s2-context.js';
 
 const Section2 = () => {
-  const { textoMovil, changeTextoMovil } = useContext(Section2Context);
+  const { boton, changeTextoMovil } = useContext(Section2Context);
 
   return (
 
@@ -66,7 +66,7 @@ const Section2 = () => {
           </span>
         </div>
         <S2Content />
-        <p className={`s2c-text-m ${textoMovil ? "":""}`} >
+        <p className={`s2c-text-m ${boton ? "":"s2c-text-m-small"}`} >
           <span className="s2c-text-m-l">
             <strong>NEXT.JS</strong> / REACT / <strong>JAVASCRIPT</strong> /
             HTML5 / <strong>CSS</strong> / <strong>NEXT.JS</strong> / REACT /{" "}
@@ -76,7 +76,40 @@ const Section2 = () => {
             <strong>JAVASCRIPT</strong> / HTML5 / <strong>CSS</strong> /
             <strong>NEXT.JS</strong> / REACT / <strong>JAVASCRIPT</strong> /
             HTML5 / <strong>CSS</strong> /<strong>NEXT.JS</strong> / REACT /{" "}
+            <strong>JAVASCRIPT</strong> / HTML5 / <strong>CSS</strong> /       <strong>NEXT.JS</strong> / REACT / <strong>JAVASCRIPT</strong> /
+            HTML5 / <strong>CSS</strong> / <strong>NEXT.JS</strong> / REACT /{" "}
             <strong>JAVASCRIPT</strong> / HTML5 / <strong>CSS</strong> /
+            <strong>NEXT.JS</strong> / REACT / <strong>JAVASCRIPT</strong> /
+            HTML5 / <strong>CSS</strong> /<strong>NEXT.JS</strong> / REACT /{" "}
+            <strong>JAVASCRIPT</strong> / HTML5 / <strong>CSS</strong> /
+            <strong>NEXT.JS</strong> / REACT / <strong>JAVASCRIPT</strong> /
+            HTML5 / <strong>CSS</strong> /<strong>NEXT.JS</strong> / REACT /{" "}
+            <strong>JAVASCRIPT</strong> / HTML5 / <strong>CSS</strong> / 
+            <strong>NEXT.JS</strong> / REACT / <strong>JAVASCRIPT</strong> /
+            HTML5 / <strong>CSS</strong> / <strong>NEXT.JS</strong> / REACT /{" "}
+            <strong>JAVASCRIPT</strong> / HTML5 / <strong>CSS</strong> /
+            <strong>NEXT.JS</strong> / REACT / <strong>JAVASCRIPT</strong> /
+            HTML5 / <strong>CSS</strong> /<strong>NEXT.JS</strong> / REACT /{" "}
+            <strong>JAVASCRIPT</strong> / HTML5 / <strong>CSS</strong> /
+            <strong>NEXT.JS</strong> / REACT / <strong>JAVASCRIPT</strong> /
+            HTML5 / <strong>CSS</strong> /<strong>NEXT.JS</strong> / REACT /{" "}
+            <strong>JAVASCRIPT</strong> / HTML5 / <strong>CSS</strong> /       <strong>NEXT.JS</strong> / REACT / <strong>JAVASCRIPT</strong> /
+            HTML5 / <strong>CSS</strong> / <strong>NEXT.JS</strong> / REACT /{" "}
+            <strong>JAVASCRIPT</strong> / HTML5 / <strong>CSS</strong> /
+            <strong>NEXT.JS</strong> / REACT / <strong>JAVASCRIPT</strong> /
+            HTML5 / <strong>CSS</strong> /<strong>NEXT.JS</strong> / REACT /{" "}
+            <strong>JAVASCRIPT</strong> / HTML5 / <strong>CSS</strong> /
+            <strong>NEXT.JS</strong> / REACT / <strong>JAVASCRIPT</strong> /
+            HTML5 / <strong>CSS</strong> /<strong>NEXT.JS</strong> / REACT /{" "}
+            <strong>JAVASCRIPT</strong> / HTML5 / <strong>CSS</strong> /       <strong>NEXT.JS</strong> / REACT / <strong>JAVASCRIPT</strong> /
+            HTML5 / <strong>CSS</strong> / <strong>NEXT.JS</strong> / REACT /{" "}
+            <strong>JAVASCRIPT</strong> / HTML5 / <strong>CSS</strong> /
+            <strong>NEXT.JS</strong> / REACT / <strong>JAVASCRIPT</strong> /
+            HTML5 / <strong>CSS</strong> /<strong>NEXT.JS</strong> / REACT /{" "}
+            <strong>JAVASCRIPT</strong> / HTML5 / <strong>CSS</strong> /
+            <strong>NEXT.JS</strong> / REACT / <strong>JAVASCRIPT</strong> /
+            HTML5 / <strong>CSS</strong> /<strong>NEXT.JS</strong> / REACT /{" "}
+            <strong>JAVASCRIPT</strong> / HTML5 / <strong>CSS</strong> / 
           </span>
           <span className="s2c-text-m-r">
             <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
@@ -88,7 +121,43 @@ const Section2 = () => {
             <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
             MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /{" "}
             <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
-            MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /
+            MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA / <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+            MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /{" "}
+            <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+            MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /{" "}
+            <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+            MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /{" "}
+            <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+            MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /{" "}
+            <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+            MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA / <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+            MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /{" "}
+            <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+            MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /{" "}
+            <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+            MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /{" "}
+            <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+            MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /{" "}
+            <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+            MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA / <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+            MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /{" "}
+            <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+            MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /{" "}
+            <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+            MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /{" "}
+            <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+            MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /{" "}
+            <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+            MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA / <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+            MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /{" "}
+            <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+            MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /{" "}
+            <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+            MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /{" "}
+            <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+            MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA /{" "}
+            <strong>PYTHON</strong> / <strong>NODE.JS</strong> / MONGOOSE /
+            MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA / 
           </span>
           <span className="s2c-text-m-l">
             GSAP / FRAMER MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> /
@@ -99,7 +168,47 @@ const Section2 = () => {
             <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
             MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
             PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
-            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP /
+            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP /  GSAP / FRAMER MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> /
+            WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
+            MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
+            PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
+            MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
+            PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP /  GSAP / FRAMER MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> /
+            WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
+            MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
+            PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
+            MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
+            PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP /  GSAP / FRAMER MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> /
+            WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
+            MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
+            PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
+            MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
+            PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP /  GSAP / FRAMER MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> /
+            WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
+            MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
+            PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
+            MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
+            PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP /  GSAP / FRAMER MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> /
+            WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
+            MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
+            PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
+            MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
+            PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / 
           </span>
         </p>
       </section>

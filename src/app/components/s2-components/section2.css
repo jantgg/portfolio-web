@@ -54,13 +54,18 @@ z-index: 1;
   flex-direction: column;
   font-size: 5vw;
   line-height: 0.8;
-position: absolute;
+ position: absolute;
   margin-top: 75vh;
   width: 100vw;
+  opacity: 1;
+  transition: transform 0.5s ease-in-out;
+}
+.s2c-text-m-small{
+
+transform: scale(0.5) translateY(50%);
 }
 .s2c-text-m-l {
   white-space: nowrap;
-
   width: 100%;
   animation: scroll-left 20s linear infinite;
   cursor: crosshair;
@@ -70,7 +75,7 @@ position: absolute;
   white-space: nowrap;
 
   width: 100%;
-  animation: scroll-right 200s linear infinite;
+  animation: scroll-right 300s linear infinite;
   cursor: crosshair;
 }
 
@@ -82,7 +87,7 @@ position: absolute;
 /* Clave de animación para mover el texto de derecha a izquierda */
 @keyframes scroll-left {
   0% {
-      transform: translateX(0);
+      transform: translateX(-55%);
   }
   100% {
       transform: translateX(-100%);

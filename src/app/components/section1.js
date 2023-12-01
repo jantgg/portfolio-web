@@ -10,105 +10,106 @@ const Section1 = () => {
     <section className="section1">
       <div className="side-tittle">
         <span className="side-tittle-inner">
-        <AnimatedText 
-            texto={<><span>01 // 04 &nbsp; - &nbsp;SCROLL&nbsp;&nbsp;</span><MdArrowDownward /></>}
-            width="auto" 
-            justifyContent="start" 
-            fontSize="0.8vw" 
-            textAlign="left" 
-        /> 
-          {" "}
+          <AnimatedText
+            texto={
+              <>
+                <span>01 // 04 &nbsp; - &nbsp;SCROLL&nbsp;&nbsp;</span>
+                <MdArrowDownward />
+              </>
+            }
+            width="auto"
+            justifyContent="start"
+            fontSize="0.8vw"
+            textAlign="left"
+          />{" "}
         </span>
       </div>
       <div className="tittles ">
         {" "}
         <span className="t-1 light-text">
-                  <AnimatedText 
-              texto="DESARROLLADOR" 
-              width="100%" 
-              justifyContent="center" 
-              fontSize="3.5vw" 
-              textAlign="center" 
-          />   </span>
+          <AnimatedText
+            texto="DESARROLLADOR"
+            width="100%"
+            justifyContent="center"
+            fontSize="3.5vw"
+            textAlign="center"
+          />{" "}
+        </span>
         <span className="t-2 bold-text">
-        <AnimatedText 
-              texto="FULL-STACK" 
-              width="100%" 
-              justifyContent="center" 
-              fontSize="10vw" 
-              textAlign="center" 
+          <AnimatedText
+            texto="FULL-STACK"
+            width="100%"
+            justifyContent="center"
+            fontSize="10vw"
+            textAlign="center"
           />
-       </span>
+        </span>
         <span className="t-3">
-          <span className="t-3-1 light-text"> 
-             <AnimatedText 
-              texto="ENFOCADO EN" 
-              width="100%" 
-              justifyContent="end" 
-              fontSize="3.5vw" 
-              textAlign="right" 
-          /> 
+          <span className="t-3-1 light-text">
+            <AnimatedText
+              texto="ENFOCADO EN"
+              width="100%"
+              justifyContent="end"
+              fontSize="3.5vw"
+              textAlign="right"
+            />
           </span>
-          <span className="t-3-2 bold-text">     
-           <AnimatedText 
-              texto="FRONT" 
-              width="100%" 
-              justifyContent="end" 
-              fontSize="10vw" 
-              textAlign="right" 
-          /> </span>
+          <span className="t-3-2 bold-text">
+            <AnimatedText
+              texto="FRONT"
+              width="100%"
+              justifyContent="end"
+              fontSize="10vw"
+              textAlign="right"
+            />{" "}
+          </span>
         </span>
         <span className="t-p">
           <span className="t-p-child1">
-          <AnimatedText 
-              texto="CREO INTERFACES DE USUARIO" 
-              width="100%" 
-              justifyContent="end" 
-              fontSize="1.2vw" 
-              textAlign="right" 
-          /> 
-           </span>
+            <AnimatedText
+              texto="CREO INTERFACES DE USUARIO"
+              width="100%"
+              justifyContent="end"
+              fontSize="1.2vw"
+              textAlign="right"
+            />
+          </span>
           <span className="t-p-child2">
-          <AnimatedText 
-              texto="ATRACTIVAS&nbsp;&nbsp; Y &nbsp;&nbsp;FUNCIONALES&nbsp;&nbsp; CON&nbsp;UNA" 
-              width="auto" 
-              justifyContent="end" 
-              fontSize="1.2vw" 
-              textAlign="right" 
-          /> 
-            {" "}
-       
-      
+            <AnimatedText
+              texto="ATRACTIVAS&nbsp;&nbsp; Y &nbsp;&nbsp;FUNCIONALES&nbsp;&nbsp; CON&nbsp;UNA"
+              width="auto"
+              justifyContent="end"
+              fontSize="1.2vw"
+              textAlign="right"
+            />{" "}
           </span>
           <span className="t-p-child3">
-          <AnimatedText 
+            <AnimatedText
               texto="SÓLIDA&nbsp;&nbsp;&nbsp;&nbsp;COMPRENSIÓN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DE&nbsp;&nbsp;&nbsp;&nbsp;BACK-END"
-              width="auto" 
-              justifyContent="end" 
-              fontSize="1.2vw" 
-              textAlign="right" 
-          /> 
-  
-           
+              width="auto"
+              justifyContent="end"
+              fontSize="1.2vw"
+              textAlign="right"
+            />
           </span>
           <span className="t-p-child4">
-          <AnimatedText 
+            <AnimatedText
               texto="PARA OFRECER SOLUCIONES INTEGRALES"
-              width="auto" 
-              justifyContent="end" 
-              fontSize="1.2vw" 
+              width="auto"
+              justifyContent="end"
+              fontSize="1.2vw"
               textAlign="right"
-          /> 
-        </span>
+            />
+          </span>
           <span className="t-p-child5">
-          <AnimatedText 
+            <AnimatedText
               texto=" Y EFICIENTES."
-              width="auto" 
-              justifyContent="start" 
-              fontSize="1.2vw" 
-              textAlign="left" 
-          /> 
-           </span>
+              width="auto"
+              justifyContent="start"
+              fontSize="1.2vw"
+              textAlign="left"
+            />
+          </span>
         </span>
         <div
           style={{
@@ -120,7 +121,11 @@ const Section1 = () => {
           }}
         >
           {" "}
-          <Circulo hacerScroll={true}> <MdArrowDownward /></Circulo>
+          <Circulo hacerScroll={true}>
+            {" "}
+            <div className="espacio-fantasma"></div>
+            <MdArrowDownward />
+          </Circulo>
         </div>
       </div>
 

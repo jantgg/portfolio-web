@@ -1,12 +1,15 @@
 .inner-circle {
     background-color: white;
-    width: 60%;
-    height: 60%;
+    width: 40%;
+    height: 40%;
     border-radius: 50%;
-    transform: translateY(-1%) translateX(1%);
+    transform: translateY(0%) translateX(0%);
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
 }
 .hided {
     opacity: 0;
+}
+.circulito{
+    rotate: -90deg;
 }

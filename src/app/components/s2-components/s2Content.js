@@ -24,7 +24,7 @@ if (boton === false) {
 
   return (
     <div className="s2c-main">
-      <div className={`s2c-p1 ${boton ? "": "opa0"}`}>
+      <div className={`s2c-p1 ${boton ? "": "s2c-p1-off"}`}>
         <h2 className="bold-text s2c-p1-h2">
           {" "}
           <AnimatedText
@@ -54,7 +54,7 @@ if (boton === false) {
        
         </Circulo>
       </div>
-      <S2P2 isActive={!textoMovil}/>
+      <S2P2 isActive={!boton}/>
     </div>
   );
 };

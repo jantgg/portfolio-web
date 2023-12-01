@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
@@ -8,7 +8,7 @@ const LineaV = ({ active, length = "5vw" }) => {
 
   useEffect(() => {
     const linea = lineaRef.current;
-    gsap.set(linea, { transform: 'scaleY(0)' });
+    gsap.set(linea, { transform: "scaleY(0)" });
     setIsInitialized(true);
   }, []);
 
@@ -18,9 +18,10 @@ const LineaV = ({ active, length = "5vw" }) => {
 
       // Animación para la línea
       gsap.to(linea, {
-        transform: 'scaleY(1)',
-        duration: 1,
-        ease: "power2.linear"
+        transform: "scaleY(1)",
+        duration: 0.5,
+        ease: "power2.linear",
+        delay: 0.5,
       });
     }
   }, [active, isInitialized]);
@@ -30,7 +31,7 @@ const LineaV = ({ active, length = "5vw" }) => {
       <div
         ref={lineaRef}
         style={{
-          width: "1px",
+          width: "2px",
           height: "100%",
           backgroundColor: "white",
           transformOrigin: "top",

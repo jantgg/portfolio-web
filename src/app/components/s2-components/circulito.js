@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import "./circulito.css";
 
-const Circulito = ({ active }) => {
+const Circulito = ({ active, delay = 0.5 }) => {
   const circuloRef = useRef(null);
   const [isInitialized, setIsInitialized] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
@@ -22,7 +22,8 @@ const Circulito = ({ active }) => {
       // Animación para el primer círculo
       gsap.to(circulo, {
         strokeDashoffset: 0,
-        duration: 1,
+        duration: 0.5,
+        delay: delay,
         ease: "power2.linear",
         onComplete: () => setIsFinished(true),
       });
@@ -31,9 +32,10 @@ const Circulito = ({ active }) => {
 
   return (
     <button
+    className="circulito"
       style={{
-        width: "7.5vw",
-        height: "7.5vw",
+        width: "1vw",
+        height: "1vw",
         borderRadius: "50%",
         display: "flex",
         flexDirection: "column",
@@ -65,7 +67,7 @@ const Circulito = ({ active }) => {
           cy="50"
           r="45"
           stroke="white"
-          strokeWidth="0.8"
+          strokeWidth="4"
           fill="transparent"
         />
       </svg>

@@ -19,11 +19,12 @@
   color: white;
   padding-right: 3vw;
   z-index: -1;
-  transition: opacity 0.5s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.opa0{
-  opacity: 0;
+.s2c-p1-off{
+opacity: 0;
+  transform: translateY(50%);
 }
 
 .s2c-p1-h2 {
@@ -31,7 +32,7 @@
   margin: 0px;
 }
 .s2c-p2 {
-  grid-area: 2 / 5 / 11 / 10; 
+  grid-area: 2 / 5 / 11 / 11; 
   color: white;
   padding-right: 3vw;
 }
