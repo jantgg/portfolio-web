@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import "./section3.css";
 import { MdArrowDownward } from "react-icons/md";
 import Linea2 from "src/app/components/s3-components/linea2.js";
@@ -7,9 +7,11 @@ import Circulo from "src/app/components/circulo.js";
 import AnimatedText from "src/app/components/animatedText.js";
 import HoverText from "src/app/components/s2-components/hoverText.js";
 import S3Content from "src/app/components/s3-components/s3content.js";
-
+import { Section3Context } from 'src/app/components/s3-components/s3-context.js';
 
 const Section3 = () => {
+  const { boton3, changeTextoMovil3 } = useContext(Section3Context);
+
   return (
     <section className="section3">
       <div className="line-container-s3">

@@ -56,6 +56,13 @@ body {
   font-family: 'Telegraf';
   font-weight: 200;
 }
+.normal-text{
+  font-family: 'Telegraf';
+  font-weight: 400;
+}
+.bold{
+  font-weight: bold;
+}
 
 .linea-roja {
   position: absolute; /* O 'fixed' si necesitas que permanezca en su lugar durante el desplazamiento */

@@ -1,0 +1,40 @@
+/* .banner{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(20, 20, 20);
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  
+
+}
+.banner span{
+    width: 100%;
+ 
+    font-size: 2vw;
+    color: white;
+    text-align: right;
+
+}
+.b-t{
+    font-size: 7vw !important;
+    color: white;
+    text-align: center !important;
+    
+}
+.line-b{
+    height: 2px;
+    background-color: white;
+   width: 91% !important;
+   margin-bottom: 2vh;
+   transform: translateX(-3%);
+}
+.txb{
+    transform: translateX(-7%);
+}
+.size-m-b{
+    font-size: 2.5vw !important;
+    margin-bottom: 2vh;
+} */

@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const HoverText = ({ 
     texto, 
-    width = '100%', // Valor predeterminado
+    width = '100%',
     justifyContent = 'center',
     fontSize = '1vw',
     textAlign = 'center',
@@ -51,6 +51,8 @@ const HoverText = ({
         fontSize: fontSize,
         textAlign: textAlign,
         cursor: cursor,
+        textDecoration: 'none',
+        color: 'inherit',
     };
 
     const renderContent = (content) => {

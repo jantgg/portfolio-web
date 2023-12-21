@@ -160,54 +160,54 @@ const Section2 = () => {
             MONGO-DB / <strong>FLASK</strong> / POSTGRE-SQL / PRISMA / 
           </span>
           <span className="s2c-text-m-l">
-            GSAP / FRAMER MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> /
-            WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            GSAP / ANIMACIÓN / <strong>DISEÑO UX</strong> /
+            WEB&MÓVIL / PHOTOSHOP / GSAP / ANIMACIÓN /{" "}
             <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
             MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
-            PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            PHOTOSHOP / GSAP / ANIMACIÓN /{" "}
             <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
             MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
-            PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
-            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP /  GSAP / FRAMER MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> /
-            WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            PHOTOSHOP / GSAP / ANIMACIÓN /{" "}
+            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP /  GSAP / ANIMACIÓN / <strong>DISEÑO UX</strong> /
+            WEB&MÓVIL / PHOTOSHOP / GSAP / ANIMACIÓN /{" "}
             <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
             MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
-            PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            PHOTOSHOP / GSAP / ANIMACIÓN /{" "}
             <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
             MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
-            PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
-            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP /  GSAP / FRAMER MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> /
-            WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            PHOTOSHOP / GSAP / ANIMACIÓN /{" "}
+            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP /  GSAP / ANIMACIÓN / <strong>DISEÑO UX</strong> /
+            WEB&MÓVIL / PHOTOSHOP / GSAP / ANIMACIÓN /{" "}
             <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
             MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
-            PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            PHOTOSHOP / GSAP / ANIMACIÓN /{" "}
             <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
             MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
-            PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
-            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP /  GSAP / FRAMER MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> /
-            WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            PHOTOSHOP / GSAP / ANIMACIÓN /{" "}
+            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP /  GSAP / ANIMACIÓN / <strong>DISEÑO UX</strong> /
+            WEB&MÓVIL / PHOTOSHOP / GSAP / ANIMACIÓN /{" "}
             <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
             MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
-            PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            PHOTOSHOP / GSAP / ANIMACIÓN /{" "}
             <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
             MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
-            PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
-            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP /  GSAP / FRAMER MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> /
-            WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            PHOTOSHOP / GSAP / ANIMACIÓN /{" "}
+            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP /  GSAP / ANIMACIÓN / <strong>DISEÑO UX</strong> /
+            WEB&MÓVIL / PHOTOSHOP / GSAP / ANIMACIÓN /{" "}
             <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
             MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
-            PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            PHOTOSHOP / GSAP / ANIMACIÓN /{" "}
             <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
             MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
-            PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
-            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP /  GSAP / FRAMER MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> /
-            WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            PHOTOSHOP / GSAP / ANIMACIÓN /{" "}
+            <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP /  GSAP / ANIMACIÓN / <strong>DISEÑO UX</strong> /
+            WEB&MÓVIL / PHOTOSHOP / GSAP / ANIMACIÓN /{" "}
             <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
             MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
-            PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            PHOTOSHOP / GSAP / ANIMACIÓN /{" "}
             <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / GSAP / FRAMER
             MOTION / ANIMACIÓN / <strong>DISEÑO UX</strong> / WEB&MÓVIL /
-            PHOTOSHOP / GSAP / FRAMER MOTION / ANIMACIÓN /{" "}
+            PHOTOSHOP / GSAP / ANIMACIÓN /{" "}
             <strong>DISEÑO UX</strong> / WEB&MÓVIL / PHOTOSHOP / 
           </span>
         </p>

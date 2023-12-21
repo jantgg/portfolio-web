@@ -21,28 +21,28 @@
   grid-area: 5 / 1 / 13 / 4;
   display: flex;
   flex-direction: column;
-    transition: opacity 0.4s;
+  transition: opacity 0.4s;
 }
 .s3c-div4 {
   grid-area: 5 / 4 / 13 / 7;
   display: flex;
   flex-direction: column;
-    transition: opacity 0.4s;
+  transition: opacity 0.4s;
 }
 .s3c-div5 {
   grid-area: 5 / 7 / 13 / 10;
   display: flex;
   flex-direction: column;
-    transition: opacity 0.4s;
+  transition: opacity 0.4s;
 }
-.s3c-div3:hover{
-  cursor:pointer;
+.s3c-div3:hover {
+  cursor: pointer;
 }
-.s3c-div4:hover{
-  cursor:pointer;
+.s3c-div4:hover {
+  cursor: pointer;
 }
-.s3c-div5:hover{
-  cursor:pointer;
+.s3c-div5:hover {
+  cursor: pointer;
 }
 .s3c-div6 {
   grid-area: 7 / 2 / 11 / 9;
@@ -54,27 +54,20 @@
   pointer-events: none;
   overflow: hidden;
 }
-.s3c-div6 h3 {
-  padding-bottom: 20vh;
-  position: absolute;
-  color: white;
-  font-size: 2vw;
-  margin: 0;
-}
 .s3c-div6 p {
-  padding-top: 5vh;
+  padding-top: 0;
   position: absolute;
   font-size: 10vw;
   margin: 0;
   transform: translateY(100%);
 }
-.s3c-img{
+.s3c-img {
   width: 100%;
   height: 90%;
   object-fit: cover;
   border-radius: 20px;
 }
-.s3c-project-details{
+.s3c-project-details {
   padding-top: 2vh;
   display: flex;
   flex-direction: row;
@@ -84,12 +77,154 @@
   opacity: 0;
   transition: opacity 0.4s;
 }
-.s3c-project-details span{
+.s3c-project-details span {
   cursor: crosshair;
 }
-.opa1{
+.opa1 {
   opacity: 1 !important;
 }
-.oscuro{
+.opa3{
+  opacity: 1 !important;
+  z-index: 2 !important;
+}
+.hided3{
+  opacity: 0 !important;
+  z-index: -2 !important;
+}
+.oscuro {
   opacity: 0.4 !important;
+}
+
+
+.s3c-div7 {
+  grid-area: 5 / 1 / 13 / 4;
+  display: flex;
+  transition: opacity 0.4s;
+  position: relative;
+}
+.s3c-div8 {
+  grid-area: 2 / 4 / 13 / 10;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.4s;
+padding-top: 4vh;
+padding-bottom: 4vh;
+  position: relative;
+}
+.div8-son {
+  flex: 1; /* Esto hace que cada div hijo ocupe el espacio vertical disponible por igual */
+background-color: rgba(229, 134, 134, 0);
+color: white;
+transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+position: relative;
+border-radius: 15px;
+}
+
+.contrast-div8-son{
+background-color:#f8fafb;
+color: black;
+
+}
+
+.div8-son-l{
+  width: 90%;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+.s3c-p-name{
+width: 100%;
+text-align: left;
+padding: 0;
+margin: 0;
+font-size: 2.4vw;
+padding-left: 0.7vw;
+padding-top: 0.5vh;
+display: flex;
+
+}
+.s3c-span-name{
+  transition: transform 0.5s ease-in-out;
+}
+.s3c-p-desc{
+width: 100%;
+text-align: left;
+padding-left: 0.7vw;
+font-size: 1.7vw;
+margin: 0;
+display: flex;
+flex-direction: column;
+gap: 0.5vh;
+transition: opacity 0.5s ease-in-out;
+}
+.smaller-desc{
+  font-size: 1vw !important;
+  margin-left: 0.7vw;
+ margin-top: 2vh;
+ transition: opacity 0.5s ease-in-out;
+}
+
+.div8-son-socials{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  width: 9%;
+  padding-right: 1%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+.container-img-div7{
+  position: absolute;
+  width: 100%;
+  height: 94%;
+  object-fit: cover;
+  border-radius: 20px;
+ transition: opacity 0.3s ease-in-out, z-index 0.3s ease-in-out;
+}
+
+.s3c-img-div7 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+
+}
+
+
+
+
+.s3c-p-opa1{
+opacity: 1;
+}
+.s3c-p-opa0{
+  opacity: 0;
+}
+.s3c-p-tittle-center{
+  transform: translateX(150%) translateY(70%);
+}
+
+.s3c-top-line{
+  width: 40%;
+  height: 2px;
+  background-color:#f8fafb;
+  position: absolute;
+  top:0;
+  left:50%;
+
+  transform: translateX(-50%);
+}
+.s3c-bot-line{
+  width: 40%;
+  height: 2px;
+  background-color:#f8fafb;
+  position: absolute;
+  bottom:0;
+  left:50%;
+  margin-top: 4vh;
+  transform: translateX(-50%);
 }

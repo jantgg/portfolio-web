@@ -51,7 +51,6 @@ if (boton === false) {
       <div className={`s2c-button ${boton ? "": ""}`}>
         <Circulo onCustomClick={() => changeBoton(!boton)} fontSize="1vw">
           {boton ? <>SABER&nbsp;&nbsp;&nbsp;<br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MÁS</>:<>VOLVER</>}
-       
         </Circulo>
       </div>
       <S2P2 isActive={!boton}/>
