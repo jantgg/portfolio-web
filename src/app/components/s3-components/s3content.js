@@ -139,9 +139,9 @@ const S3Content = () => {
       <div className={`s3c-div2  ${boton3 ? "opa3" :"hided3"}`}>
         <AnimatedP2 />
       </div>
-      <a className={`s3c-div3 ${pTittle2 || pTittle3 ? "oscuro" :""} ${boton3 ? "opa3" :"hided3"}  `} ref={div3Ref}>
+      <a href="https://youtu.be/KnRoTVy80_8" target="_blank" className={`s3c-div3 ${pTittle2 || pTittle3 ? "oscuro" :""} ${boton3 ? "opa3" :"hided3"}  `} ref={div3Ref}>
         <Image src={Dapaolo} contain="true" className="s3c-img" />
-        <div className={`s3c-project-details ${pTittle1 ? "opa1" : ""}`}>
+        <div className={`s3c-project-details white-text ${pTittle1 ? "opa1" : ""}`}>
           <span>
             {" "}
             <HoverText texto="REACT" />
@@ -156,10 +156,10 @@ const S3Content = () => {
           </span>
         </div>
       </a>
-      <a className={`s3c-div4 ${pTittle1 || pTittle3 ? "oscuro" :""} ${boton3 ? "opa3" :"hided3"}  `} ref={div4Ref}>
+      <a href="https://www.youtube.com/watch?v=eVDP6W3bXG0" target="_blank" className={`s3c-div4 ${pTittle1 || pTittle3 ? "oscuro" :""} ${boton3 ? "opa3" :"hided3"}  `} ref={div4Ref}>
       <Image src={Dapaolo} contain="true" className="s3c-img" />
         {" "}
-        <div className={`s3c-project-details ${pTittle2 ? "opa1" : ""}`}>
+        <div className={`s3c-project-details white-text ${pTittle2 ? "opa1" : ""}`}>
           <span>
             {" "}
             <HoverText texto="NEXT.JS" />
@@ -174,10 +174,10 @@ const S3Content = () => {
           </span>
         </div>
       </a>
-      <a className={`s3c-div5 ${pTittle1 || pTittle2 ? "oscuro" :""} ${boton3 ? "opa3" :"hided3"}  `} ref={div5Ref}>
+      <a href="https://nextjs-restaurant-dapaolo.vercel.app/" target="_blank" className={`s3c-div5 ${pTittle1 || pTittle2 ? "oscuro" :""} ${boton3 ? "opa3" :"hided3"}  `} ref={div5Ref}>
       <Image src={Dapaolo} contain="true" className="s3c-img" />
         {" "}
-        <div className={`s3c-project-details ${pTittle3 ? "opa1" : ""}`}>
+        <div className={`s3c-project-details white-text ${pTittle3 ? "opa1" : ""}`}>
           <span>
             {" "}
             <HoverText texto="NEXT.JS" />
@@ -208,7 +208,7 @@ const S3Content = () => {
           className="bold-text"
           style={{ opacity: 0, transform: "translateY(100%)" }}
         >
-              DASHBOARD
+              MI NEGOCIO
         </p>
         <p
           ref={p3Ref}
@@ -240,94 +240,99 @@ const S3Content = () => {
       </div>
       <div className={`s3c-div8 ${boton3 ?  "hided3" : "opa3"}`}>
       <div className={`div8-son ${project1 ? "contrast-div8-son":""}`} onMouseEnter={() => {setProject1(true); setProject2(false); setProject3(false); setProject4(false); setProject5(false); setProject6(false)}}>
-       
+      <h4 className={`center-title-project ${project1 ? "opa0":"opa1"}`}>MI NEGOCIO</h4>
        <div className="div8-son-l">      
-       <h4 className={`s3c-p-name bold `}><span className={`s3c-span-name ${project1 ? "":"s3c-p-tittle-center"}`}>DASHBOARD</span> <span className={`smaller-desc ${project1 ? "s3c-p-opa1":"s3c-p-opa0"}`}>NEXT.JS / NODE.JS / MONGODB / MONGOOSE</span></h4>
+       <h4 className={`s3c-p-name bold `}><span className={`s3c-span-name ${project1 ? "opa1":"opa0"}`}>MI NEGOCIO</span> <span className={`smaller-desc ${project1 ? "s3c-p-opa1":"s3c-p-opa0"}`}>NEXT.JS / NODE.JS / MONGODB / MONGOOSE</span></h4>
        <p className={`s3c-p-desc light-text ${project1 ? "s3c-p-opa1":"s3c-p-opa0"}`}>
         <span className="normal-text">CONTROL Y GESTIÓN DE CLIENTES, PROVEEDORES, PRODUCTOS, SERVICIOS, TAREAS, GASTOS Y VENTAS</span>
        </p>
        </div>
        <div className={`div8-son-socials ${project1 ? "s3c-p-opa1":"s3c-p-opa0"}`}>
-        <span><HoverText texto="LINK" /></span>
-        <span><HoverText texto="LINKEDIN" /></span>
-        <span><HoverText texto="GITHUB" /></span>
-        <span><HoverText texto="VIDEO" /></span>
+        <a><HoverText texto="LINK" /></a>
+        <a><HoverText texto="LINKEDIN" /></a>
+        <a><HoverText texto="GITHUB" /></a>
+        <a><HoverText texto="VIDEO" /></a>
        </div>
 
         </div>
       <div className={`div8-son ${project2 ? "contrast-div8-son":""}`} onMouseEnter={() => {setProject1(false); setProject2(true); setProject3(false); setProject4(false); setProject5(false); setProject6(false)}}>
       <div className="s3c-top-line"></div>
+       <h4 className={`center-title-project ${project2 ? "opa0":"opa1"}`}>ONBIKES</h4>
        <div className="div8-son-l">      
-       <h4 className={`s3c-p-name bold `}><span className={`s3c-span-name ${project2 ? "":"s3c-p-tittle-center"}`}>DASHBOARD</span> <span className={`smaller-desc ${project2 ? "s3c-p-opa1":"s3c-p-opa0"}`}>NEXT.JS / NODE.JS / MONGODB / MONGOOSE</span></h4>
+       <h4 className={`s3c-p-name bold `}><span className={`s3c-span-name ${project2 ? "opa1":"opa0"}`}>ONBIKES</span> <span className={`smaller-desc ${project2 ? "s3c-p-opa1":"s3c-p-opa0"}`}>REACT.JS / FLASK / CSS3 / SQL</span></h4>
        <p className={`s3c-p-desc light-text ${project2 ? "s3c-p-opa1":"s3c-p-opa0"}`}>
-        <span className="normal-text">CONTROL Y GESTIÓN DE CLIENTES, PROVEEDORES, PRODUCTOS, SERVICIOS, TAREAS, GASTOS Y VENTAS</span>
+        <span className="normal-text">TEST CON SUGERENCIAS, CREACIÓN DE RUTAS CON MAPS, REGISTRO COMO FOTÓGRAFO, SECCIÓN FAVS, Y MÁS </span>
        </p>
        </div>
        <div className={`div8-son-socials ${project2 ? "s3c-p-opa1":"s3c-p-opa0"}`}>
-        <span><HoverText texto="LINK" /></span>
-        <span><HoverText texto="LINKEDIN" /></span>
-        <span><HoverText texto="GITHUB" /></span>
-        <span><HoverText texto="VIDEO" /></span>
+        <a><HoverText texto="LINK" /></a>
+        <a><HoverText texto="LINKEDIN" /></a>
+        <a><HoverText texto="GITHUB" /></a>
+        <a><HoverText texto="VIDEO" /></a>
        </div>
       </div>
       <div className={`div8-son ${project3 ? "contrast-div8-son":""}`} onMouseEnter={() => {setProject1(false); setProject2(false); setProject3(true); setProject4(false); setProject5(false); setProject6(false)}}>
                <div className="s3c-top-line"></div>
+               <h4 className={`center-title-project ${project3 ? "opa0":"opa1"}`}>DA PAOLO</h4>
        <div className="div8-son-l">      
-       <h4 className={`s3c-p-name bold `}><span className={`s3c-span-name ${project3 ? "":"s3c-p-tittle-center"}`}>DASHBOARD</span> <span className={`smaller-desc ${project3 ? "s3c-p-opa1":"s3c-p-opa0"}`}>NEXT.JS / NODE.JS / MONGODB / MONGOOSE</span></h4>
+       <h4 className={`s3c-p-name bold `}><span className={`s3c-span-name ${project3 ? "opa1":"opa0"}`}>DA PAOLO</span> <span className={`smaller-desc ${project3 ? "s3c-p-opa1":"s3c-p-opa0"}`}>NEXT.JS / PHOTOSHOP / CSS3 / HTML5</span></h4>
        <p className={`s3c-p-desc light-text ${project3 ? "s3c-p-opa1":"s3c-p-opa0"}`}>
-        <span className="normal-text">CONTROL Y GESTIÓN DE CLIENTES, PROVEEDORES, PRODUCTOS, SERVICIOS, TAREAS, GASTOS Y VENTAS</span>
+        <span className="normal-text">EFECTO PARALLAX CSS3, OPTIMIZACIÓN CON NEXT.JS, CINCO VISTAS ÚNICAS</span>
        </p>
        </div>
        <div className={`div8-son-socials ${project3 ? "s3c-p-opa1":"s3c-p-opa0"}`}>
-        <span><HoverText texto="LINK" /></span>
-        <span><HoverText texto="LINKEDIN" /></span>
-        <span><HoverText texto="GITHUB" /></span>
-        <span><HoverText texto="VIDEO" /></span>
+        <a><HoverText texto="LINK" /></a>
+        <a><HoverText texto="LINKEDIN" /></a>
+        <a><HoverText texto="GITHUB" /></a>
+        <a><HoverText texto="VIDEO" /></a>
        </div>
       </div>
       <div className={`div8-son ${project4 ? "contrast-div8-son":""}`} onMouseEnter={() => {setProject1(false); setProject2(false); setProject3(false); setProject4(true); setProject5(false); setProject6(false)}}>
                <div className="s3c-top-line"></div>
+               <h4 className={`center-title-project ${project4 ? "opa0":"opa1"}`}>SK FILMS</h4>
        <div className="div8-son-l">      
-       <h4 className={`s3c-p-name bold `}><span className={`s3c-span-name ${project4 ? "":"s3c-p-tittle-center"}`}>DASHBOARD</span> <span className={`smaller-desc ${project4 ? "s3c-p-opa1":"s3c-p-opa0"}`}>NEXT.JS / NODE.JS / MONGODB / MONGOOSE</span></h4>
+       <h4 className={`s3c-p-name bold `}><span className={`s3c-span-name ${project4 ? "opa1":"opa0"}`}>SK FILMS</span> <span className={`smaller-desc ${project4 ? "s3c-p-opa1":"s3c-p-opa0"}`}>NEXT.JS / JAVASCRIPT / CSS3 / HTML5</span></h4>
        <p className={`s3c-p-desc light-text ${project4 ? "s3c-p-opa1":"s3c-p-opa0"}`}>
-        <span className="normal-text">CONTROL Y GESTIÓN DE CLIENTES, PROVEEDORES, PRODUCTOS, SERVICIOS, TAREAS, GASTOS Y VENTAS</span>
+        <span className="normal-text">DISEÑO SINGLE PAGE, SIN NAVEGACIONES, ENFOQUE VISUAL DIRECTO</span>
        </p>
        </div>
        <div className={`div8-son-socials ${project4 ? "s3c-p-opa1":"s3c-p-opa0"}`}>
-        <span><HoverText texto="LINK" /></span>
-        <span><HoverText texto="LINKEDIN" /></span>
-        <span><HoverText texto="GITHUB" /></span>
-        <span><HoverText texto="VIDEO" /></span>
+        <a><HoverText texto="LINK" /></a>
+        <a><HoverText texto="LINKEDIN" /></a>
+        <a><HoverText texto="GITHUB" /></a>
+        <a><HoverText texto="VIDEO" /></a>
        </div>
       </div>
       <div className={`div8-son ${project5 ? "contrast-div8-son":""}`} onMouseEnter={() => {setProject1(false); setProject2(false); setProject3(false); setProject4(false); setProject5(true); setProject6(false)}}>
                <div className="s3c-top-line"></div>
+               <h4 className={`center-title-project ${project5 ? "opa0":"opa1"}`}>INKREDIBLE</h4>
        <div className="div8-son-l">      
-       <h4 className={`s3c-p-name bold `}><span className={`s3c-span-name ${project5 ? "":"s3c-p-tittle-center"}`}>DASHBOARD</span> <span className={`smaller-desc ${project5 ? "s3c-p-opa1":"s3c-p-opa0"}`}>NEXT.JS / NODE.JS / MONGODB / MONGOOSE</span></h4>
+       <h4 className={`s3c-p-name bold `}><span className={`s3c-span-name ${project5 ? "opa1":"opa0"}`}>INKREDIBLE</span> <span className={`smaller-desc ${project5 ? "s3c-p-opa1":"s3c-p-opa0"}`}>NEXT.JS / JARALLAX / FLICKITY / FANCYBOX</span></h4>
        <p className={`s3c-p-desc light-text ${project5 ? "s3c-p-opa1":"s3c-p-opa0"}`}>
-        <span className="normal-text">CONTROL Y GESTIÓN DE CLIENTES, PROVEEDORES, PRODUCTOS, SERVICIOS, TAREAS, GASTOS Y VENTAS</span>
+        <span className="normal-text">SINGLE PAGE, PARALLAX, CAROUSELS, SCROLL INTERACTIVO, IMPACTO VISUAL ALTO</span>
        </p>
        </div>
        <div className={`div8-son-socials ${project5 ? "s3c-p-opa1":"s3c-p-opa0"}`}>
-        <span><HoverText texto="LINK" /></span>
-        <span><HoverText texto="LINKEDIN" /></span>
-        <span><HoverText texto="GITHUB" /></span>
-        <span><HoverText texto="VIDEO" /></span>
+        <a><HoverText texto="LINK" /></a>
+        <a><HoverText texto="LINKEDIN" /></a>
+        <a><HoverText texto="GITHUB" /></a>
+        <a><HoverText texto="VIDEO" /></a>
        </div>
       </div>
       <div className={`div8-son ${project6 ? "contrast-div8-son":""}`} onMouseEnter={() => {setProject1(false); setProject2(false); setProject3(false); setProject4(false); setProject5(false); setProject6(true)}}>
                <div className="s3c-top-line"></div>
+               <h4 className={`center-title-project ${project6 ? "opa0":"opa1"}`}>NETFLIX CLONE</h4>
        <div className="div8-son-l">      
-       <h4 className={`s3c-p-name bold `}><span className={`s3c-span-name ${project6 ? "":"s3c-p-tittle-center"}`}>DASHBOARD</span> <span className={`smaller-desc ${project6 ? "s3c-p-opa1":"s3c-p-opa0"}`}>NEXT.JS / NODE.JS / MONGODB / MONGOOSE</span></h4>
+       <h4 className={`s3c-p-name bold `}><span className={`s3c-span-name ${project6 ? "opa1":"opa0"}`}>NETFLIX CLONE</span> <span className={`smaller-desc ${project6 ? "s3c-p-opa1":"s3c-p-opa0"}`}>NEXT.JS / NODE.JS / TYPESCRIPT / TAILWINDCSS</span></h4>
        <p className={`s3c-p-desc light-text ${project6 ? "s3c-p-opa1":"s3c-p-opa0"}`}>
-        <span className="normal-text">CONTROL Y GESTIÓN DE CLIENTES, PROVEEDORES, PRODUCTOS, SERVICIOS, TAREAS, GASTOS Y VENTAS</span>
+        <span className="normal-text">AUTENTICACIÓN OAUTH, REGISTRO DE FAVORITOS, STREAMING FUNCIONAL</span>
        </p>
        </div>
        <div className={`div8-son-socials ${project6 ? "s3c-p-opa1":"s3c-p-opa0"}`}>
-        <span><HoverText texto="LINK" /></span>
-        <span><HoverText texto="LINKEDIN" /></span>
-        <span><HoverText texto="GITHUB" /></span>
-        <span><HoverText texto="VIDEO" /></span>
+        <a><HoverText texto="LINK" /></a>
+        <a><HoverText texto="LINKEDIN" /></a>
+        <a><HoverText texto="GITHUB" /></a>
+        <a><HoverText texto="VIDEO" /></a>
        </div>
       </div>
       </div>

@@ -134,6 +134,7 @@ color: black;
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
+cursor: crosshair;
 }
 .s3c-p-name{
 width: 100%;
@@ -147,7 +148,7 @@ display: flex;
 
 }
 .s3c-span-name{
-  transition: transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 .s3c-p-desc{
 width: 100%;
@@ -227,4 +228,12 @@ opacity: 1;
   left:50%;
   margin-top: 4vh;
   transform: translateX(-50%);
+}
+.center-title-project{
+  position: absolute;
+  transition: opacity 0.3s ease-in-out;
+  top:50%;
+ left:50%;
+font-size: 2.4vw;
+transform: translate(-50%,-150%);
 }
