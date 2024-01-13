@@ -23,6 +23,7 @@ const LoadText = ({
      setVisible(true)
      setTimeout(() => { 
         setIniciar(true)
+
      }, 1000)
     }, []);
 
@@ -61,6 +62,15 @@ const LoadText = ({
             return <>{content}</>;
         }
     };
+    const renderContentLoader2 = (content) => {
+        if (typeof content === 'string') {
+            return content.split("").map((char, index) => (
+                <span key={`line-${index}`}></span>
+            ));
+        } else {
+            return <>{content}</>;
+        }
+    };
   
     return (
         <div className={`atL-container ${visible ? "opa1":""}`} style={containerStylesLoader}>
@@ -68,7 +78,7 @@ const LoadText = ({
                 {renderContentLoader(texto)}
             </div>
             <div className="atL-linea2" ref={linea2RefL}>
-                
+            {renderContentLoader2(texto)}
             </div>
         </div>
     );

@@ -172,20 +172,7 @@ const S3Content = () => {
         ref={div3Ref}
       >
         <Image alt="imagen" src={onbikes} contain="true" className="s3c-img" />
-        {/* <div className={`s3c-project-details white-text ${pTittle1 ? "opa1" : ""}`}>
-          <span>
-            {" "}
-            <HoverText texto="REACT" />
-          </span>
-          <span>
-            {" "}
-            <HoverText texto="FLASK" />
-          </span>
-          <span>
-            {" "}
-            <HoverText texto="SQL" />
-          </span>
-        </div> */}
+
       </a>
       <a
         href="https://www.youtube.com/watch?v=eVDP6W3bXG0"
@@ -196,20 +183,7 @@ const S3Content = () => {
         ref={div4Ref}
       >
         <Image alt="imagen" src={negocio} contain="true" className="s3c-img" />{" "}
-        {/* <div className={`s3c-project-details white-text ${pTittle2 ? "opa1" : ""}`}>
-          <span>
-            {" "}
-            <HoverText texto="NEXT.JS" />
-          </span>
-          <span>
-            {" "}
-            <HoverText texto="NODE.JS" />
-          </span>
-          <span>
-            {" "}
-            <HoverText texto="MONGO-DB" />
-          </span>
-        </div> */}
+ 
       </a>
       <a
         href="https://nextjs-restaurant-dapaolo.vercel.app/"
@@ -220,44 +194,31 @@ const S3Content = () => {
         ref={div5Ref}
       >
         <Image alt="imagen" src={Dapaolo} contain="true" className="s3c-img" />{" "}
-        {/* <div className={`s3c-project-details white-text ${pTittle3 ? "opa1" : ""}`}>
-          <span>
-            {" "}
-            <HoverText texto="NEXT.JS" />
-          </span>
-          <span>
-            {" "}
-            <HoverText texto="PARALLAX" />
-          </span>
-          <span>
-            {" "}
-            <HoverText texto="PHOTOSHOP" />
-          </span>
-        </div> */}
+    
       </a>
       <div className={`s3c-div6 ${boton3 ? "opa3" : "hided3"}`}>
-        <p
+        <span
           ref={p1Ref}
           className="bold-text"
           style={{ opacity: 0, transform: "translateY(100%)" }}
         >
           ONBIKES
-        </p>
+        </span>
 
-        <p
+        <span
           ref={p2Ref}
           className="bold-text"
           style={{ opacity: 0, transform: "translateY(100%)" }}
         >
           MI NEGOCIO
-        </p>
-        <p
+        </span>
+        <span
           ref={p3Ref}
           className="bold-text"
           style={{ opacity: 0, transform: "translateY(100%)" }}
         >
           DA PAOLO
-        </p>
+        </span>
       </div>
       <div className={`s3c-div7 ${boton3 ? "hided3" : "opa3"}`}>
         <div className={`container-img-div7 ${project1 ? "opa3" : "hided3"}`}>

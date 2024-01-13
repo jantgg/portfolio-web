@@ -7,6 +7,10 @@ import Circulo from "src/app/components/circulo.js";
 import LoadText from "src/app/components/loader/loadText.js";
 import HoverText from "src/app/components/s2-components/hoverText.js";
 import S2Content from "src/app/components/s2-components/s2Content.js";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import ScrollToPlugin from "gsap/ScrollToPlugin";
+
 
 import { Section1Context } from "src/app/components/loader/s1-context.js";
 
