@@ -6,7 +6,7 @@ import Dapaolo from "src/app/components/img/dapaolod.png";
 import onbikes from "src/app/components/img/onbikes.png";
 import skfilms from "src/app/components/img/skfilms.png";
 import tatoo from "src/app/components/img/tatoo.png";
-import negocio from "src/app/components/img/negocio.png";
+import negocio from "src/app/components/img/negocio2.png";
 import netflix from "src/app/components/img/netflix.png";
 import AnimatedP2 from "src/app/components/s3-components/animatedP2.js";
 import HoverText from "src/app/components/s2-components/hoverText.js";
