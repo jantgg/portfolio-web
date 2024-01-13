@@ -36,11 +36,11 @@ const Loader = () => {
    }, [iniciarContador]);
 
    useEffect(() => {
-     setTimeout(() => {
-       setDesvanecer(true);
-       setTimeout(() => { changeLoaded(true)}, 100)
-     }, 2400);
-   }, []);
+    setTimeout(() => {
+      setDesvanecer(true);
+      setTimeout(() => { changeLoaded(true)}, 100)
+    }, 2400);
+  }, [changeLoaded]);
 
 
   return (

@@ -42,7 +42,7 @@ const HoverText = ({
             gsap.to(spansLinea1, { yPercent: 0, opacity: 1, duration: duration, ease: "Power1.easeOut" });
             gsap.to( spansLinea2, { yPercent: 100, opacity: 1, duration: duration, ease: "Power1.easeOut" });
         });
-    }, [texto]);
+    }, [texto, delay]);
     
 
     const containerStyles = {

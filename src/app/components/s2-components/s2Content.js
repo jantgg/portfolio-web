@@ -20,7 +20,7 @@ if (boton === false) {
 } else {
   changeTextoMovil(boton);
 }
-  }, [boton]);
+  }, [boton, changeTextoMovil]);
 
   return (
     <div className="s2c-main">

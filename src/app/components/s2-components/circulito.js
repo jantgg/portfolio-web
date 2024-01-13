@@ -28,7 +28,7 @@ const Circulito = ({ active, delay = 0.5 }) => {
         onComplete: () => setIsFinished(true),
       });
     }
-  }, [active, isInitialized]);
+  }, [active, isInitialized, delay]);
 
   return (
     <button
