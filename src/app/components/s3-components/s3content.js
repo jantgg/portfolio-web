@@ -25,7 +25,6 @@ const S3Content = () => {
   const p1Ref = useRef(null);
   const p2Ref = useRef(null);
   const p3Ref = useRef(null);
-  const h3Ref = useRef(null);
 
   const [project1, setProject1] = useState(false);
   const [project2, setProject2] = useState(false);
@@ -53,10 +52,10 @@ const S3Content = () => {
     const currentDiv5 = div5Ref.current;
 
     // Establecer el estado inicial
-    gsap.set([p1Ref.current, p2Ref.current, p3Ref.current, h3Ref.current], {
+    gsap.set([p1Ref.current, p2Ref.current, p3Ref.current], {
       opacity: 0,
     });
-    gsap.set(h3Ref.current, { opacity: 0 });
+
 
     // Funciones para manejar la animación
     const handleMouseEnter = (ref, titleNumber) => {
@@ -66,7 +65,7 @@ const S3Content = () => {
         ease: "power2.out",
         duration: 0.5,
       });
-      gsap.to(h3Ref.current, { opacity: 1, duration: 0.5 });
+    
 
       if (titleNumber === 1) setPTittle1(true);
       if (titleNumber === 2) setPTittle2(true);
@@ -80,7 +79,7 @@ const S3Content = () => {
         ease: "power2.out",
         duration: 0.5,
       });
-      gsap.to(h3Ref.current, { opacity: 0, duration: 0.5 });
+  
 
       if (titleNumber === 1) setPTittle1(false);
       if (titleNumber === 2) setPTittle2(false);
@@ -197,28 +196,28 @@ const S3Content = () => {
     
       </a>
       <div className={`s3c-div6 ${boton3 ? "opa3" : "hided3"}`}>
-        <span
+        <p
           ref={p1Ref}
           className="bold-text"
           style={{ opacity: 0, transform: "translateY(100%)" }}
         >
           ONBIKES
-        </span>
+        </p>
 
-        <span
+        <p
           ref={p2Ref}
           className="bold-text"
           style={{ opacity: 0, transform: "translateY(100%)" }}
         >
           MI NEGOCIO
-        </span>
-        <span
+        </p>
+        <p
           ref={p3Ref}
           className="bold-text"
           style={{ opacity: 0, transform: "translateY(100%)" }}
         >
           DA PAOLO
-        </span>
+        </p>
       </div>
       <div className={`s3c-div7 ${boton3 ? "hided3" : "opa3"}`}>
         <div className={`container-img-div7 ${project1 ? "opa3" : "hided3"}`}>

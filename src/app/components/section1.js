@@ -13,7 +13,7 @@ const Section1 = () => {
 
   return (
     <section className="section1">
-      <Loader/>
+      {/* <Loader/> */}
       <div className="side-tittle">
         <span className="side-tittle-inner">
           <AnimatedTextS1
