@@ -64,12 +64,16 @@ const S2P2 = ({ isActive }) => {
             <LineaV active={row1} length="4vw" />
           </div>
           <p className={`p2-exp-p ${row1 ? "opa1" : ""}`}>
-            <span className="p2-exp-p-tittle">ENTRENADOR Y NUTRICIONISTA</span>
+          <span className="p2-exp-p-tittle">PROGRAMADOR FULL STACK</span>
             <span className="p2-exp-p-description light-text">
-              {" "}
-              POR CUENTA PROPIA
+              FREELANCE
             </span>
-            <span className="p2-exp-p-description light-text"> 2015-2023</span>
+            <span className="p2-exp-p-description light-text">
+              DESARROLLO / DISEÑO
+            </span>
+            <span className="p2-exp-p-description light-text">
+              2023-ACTUALIDAD
+            </span>
           </p>
         </div>
         <div className={`p2-exp-1 ${isActive ? "opa1" : "opa0"}`}>
@@ -109,16 +113,12 @@ const S2P2 = ({ isActive }) => {
             <Circulito active={row4} />
           </div>
           <p className={`p2-exp-p ${row4 ? "opa1" : ""}`}>
-            <span className="p2-exp-p-tittle">PROGRAMADOR FULL STACK</span>
+          <span className="p2-exp-p-tittle">ENTRENADOR Y NUTRICIONISTA</span>
             <span className="p2-exp-p-description light-text">
-              POR CUENTA PROPIA
+              {" "}
+              FREELANCE
             </span>
-            <span className="p2-exp-p-description light-text">
-              DESARROLLO / DISEÑO
-            </span>
-            <span className="p2-exp-p-description light-text">
-              2023-ACTUALIDAD
-            </span>
+            <span className="p2-exp-p-description light-text"> 2015-2023</span>
           </p>
         </div>
       </div>
@@ -130,12 +130,17 @@ const S2P2 = ({ isActive }) => {
             <LineaV active={row1} length="4vw" />
           </div>
           <p className={`p2-exp-p ${row1 ? "opa1" : ""}`}>
-            <span className="p2-exp-p-tittle">TÉCNICO SUPERIOR DEPORTE</span>
-            <span className="p2-exp-p-description light-text">
+          <span className="p2-exp-p-tittle">
               {" "}
-              FP SUPERIOR, MEDAC, MÁLAGA
+             FULL STACK DEVELOPER
             </span>
-            <span className="p2-exp-p-description light-text"> 2015-2017</span>
+            <span className="p2-exp-p-description light-text">
+              4GEEKS ACADEMY ESPAÑA
+            </span>
+            <span className="p2-exp-p-description light-text">
+              LEARN BY DOING
+            </span>
+            <span className="p2-exp-p-description light-text">2022-2023</span>
           </p>
         </div>
         <div className={`p2-exp-1 ${isActive ? "opa1" : "opa0"}`}>
@@ -156,17 +161,12 @@ const S2P2 = ({ isActive }) => {
             <Circulito active={row3} />
           </div>
           <p className={`p2-exp-p ${row3 ? "opa1" : ""}`}>
-            <span className="p2-exp-p-tittle">
+          <span className="p2-exp-p-tittle">TÉCNICO SUPERIOR DEPORTE</span>
+            <span className="p2-exp-p-description light-text">
               {" "}
-              BOOTCAMP FULL STACK DEVELOPER
+              FP SUPERIOR, MEDAC, MÁLAGA
             </span>
-            <span className="p2-exp-p-description light-text">
-              4GEEKS ACADEMY ESPAÑA
-            </span>
-            <span className="p2-exp-p-description light-text">
-              LEARN BY DOING
-            </span>
-            <span className="p2-exp-p-description light-text">2022-2023</span>
+            <span className="p2-exp-p-description light-text"> 2015-2017</span>
           </p>
         </div>
       </div>
