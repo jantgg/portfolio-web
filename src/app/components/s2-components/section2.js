@@ -40,19 +40,19 @@ const Section2 = () => {
             />{" "}
           </span>
           <div className="s2-upbar-social">
-            <a>
+            <a href="mailto:jantgomezgil@hotmail.com">
               {" "}
-              <HoverText texto="EMAIL" />
+              <HoverText texto="EMAIL"   />
             </a>
             <span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-            <a>
+            <a target="_blank"  href="https://www.linkedin.com/in/jant-gg/">
               {" "}
-              <HoverText texto="LINKEDIN" />
+              <HoverText texto="LINKEDIN"  />
             </a>
             <span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-            <a>
+            <a target="_blank" href="https://github.com/jantgg">
               {" "}
-              <HoverText texto="GITHUB" />
+              <HoverText texto="GITHUB"  />
             </a>
           </div>
           <span className="s2-upbar-count2">

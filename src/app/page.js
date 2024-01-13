@@ -14,7 +14,7 @@ import { Section3Provider } from "src/app/components/s3-components/s3-context.js
 export default function Home() {
   return (
     <main className="mainhome">
-        <Section1Provider>
+      <Section1Provider>
         <Section1 />
       </Section1Provider>
       <Section2Provider>

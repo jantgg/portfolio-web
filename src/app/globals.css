@@ -13,6 +13,9 @@ body {
   scrollbar-width: none;  /* Para Firefox */
   overflow-y: scroll; /* Mantiene la funcionalidad de desplazamiento */
 }
+a{
+  text-decoration: none;
+}
 @font-face {
   font-family: 'Telegraf';
   src: url('/fonts/PPTelegraf-Regular.otf') format('opentype');
