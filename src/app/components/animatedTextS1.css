@@ -1,0 +1,19 @@
+.ats1-container {
+  position: relative;
+  white-space: pre; /* Asegúrate de que los espacios se mantienen */
+  display: flex;
+  overflow:hidden;
+  width: 100%;
+  justify-content: center;
+}
+
+.ats1-linea1 {
+  display: flex;
+  position: relative;
+  opacity: 0;
+}
+.ats1-linea2 {
+  display: flex;
+  position: absolute;
+}
+

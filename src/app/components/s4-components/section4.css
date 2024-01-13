@@ -52,3 +52,10 @@ width: 15%;
   align-items: center;
   color: white;
 }
+.navbar-mid-btn, .navbar-btn, .navbar-mid-btn:hover, .navbar-btn:hover, .navbar-mid-btn:active, .navbar-btn:active, .navbar-mid-btn:visited, .navbar-btn:visited {
+  text-decoration: none; /* Aplica a todas las pseudo-clases */
+}
+.navbar-mid-btn, .navbar-btn {
+  text-decoration: none; /* Elimina el subrayado */
+  /* Tus otros estilos aquí */
+}

@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./section4.css";
 import Linea2 from "src/app/components/s3-components/linea2.js";
-import Circulo from "src/app/components/circulo.js";
+import CirculoS4 from "src/app/components/s4-components/circulos4.js";
 import AnimatedText from "src/app/components/animatedText.js";
 
 
@@ -32,18 +32,18 @@ const Section4 = () => {
             texto="TRABAJEMOS JUNTOS"
           />
         </div>
-        <Circulo hacerScroll={true} fontSize="0.8vw">
+        <CirculoS4 hacerScroll={true} fontSize="0.8vw">
           {" "}
           ESCRIBIR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></br>{" "}
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MENSAJE
-        </Circulo>
+        </CirculoS4>
       </div>
       <div className="downbar">
         <span className=""> SIÉNTETE LIBRE DE CONTACTAR CONMIGO EN REDES</span>
         <div className="downbar-socials">
           {" "}
-          <a className="navbar-mid-btn navbar-btn ">EMAIL</a>
-          <a className="navbar-mid-btn navbar-btn ">LINKEDIN</a>
+          <a className="navbar-mid-btn navbar-btn " href="mailto:jantgomezgil@hotmail.com">EMAIL</a>
+          <a className="navbar-mid-btn navbar-btn " href="https://www.linkedin.com/in/jant-gg/" target="_blank" >LINKEDIN</a>
         </div>
       </div>
     </section>

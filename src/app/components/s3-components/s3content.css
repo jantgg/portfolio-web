@@ -106,16 +106,16 @@
   grid-area: 2 / 4 / 13 / 10;
   display: flex;
   flex-direction: column;
-  transition: opacity 0.4s;
+
 padding-top: 4vh;
 padding-bottom: 4vh;
   position: relative;
 }
 .div8-son {
-  flex: 1; /* Esto hace que cada div hijo ocupe el espacio vertical disponible por igual */
+flex: 1;
 background-color: rgba(229, 134, 134, 0);
 color: white;
-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
@@ -147,9 +147,7 @@ padding-top: 0.5vh;
 display: flex;
 
 }
-.s3c-span-name{
-  transition: opacity 0.5s ease-in-out;
-}
+
 .s3c-p-desc{
 width: 100%;
 text-align: left;
@@ -159,13 +157,13 @@ margin: 0;
 display: flex;
 flex-direction: column;
 gap: 0.5vh;
-transition: opacity 0.5s ease-in-out;
+
 }
 .smaller-desc{
   font-size: 1vw !important;
   margin-left: 0.7vw;
  margin-top: 2vh;
- transition: opacity 0.5s ease-in-out;
+
 }
 
 .div8-son-socials{
@@ -175,7 +173,7 @@ transition: opacity 0.5s ease-in-out;
   align-items: flex-end;
   width: 9%;
   padding-right: 1%;
-  transition: opacity 0.5s ease-in-out;
+ 
 }
 
 
@@ -185,7 +183,7 @@ transition: opacity 0.5s ease-in-out;
   height: 94%;
   object-fit: cover;
   border-radius: 20px;
- transition: opacity 0.3s ease-in-out, z-index 0.3s ease-in-out;
+
 }
 
 .s3c-img-div7 {
@@ -231,7 +229,6 @@ opacity: 1;
 }
 .center-title-project{
   position: absolute;
-  transition: opacity 0.3s ease-in-out;
   top:50%;
  left:50%;
 font-size: 2.4vw;

@@ -2,7 +2,12 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
 import "./s3content.css";
 import Circulo from "src/app/components/circulo.js";
-import Dapaolo from "src/app/components/img/dapaolo1.jpg";
+import Dapaolo from "src/app/components/img/dapaolod.png";
+import onbikes from "src/app/components/img/onbikes.png";
+import skfilms from "src/app/components/img/skfilms.png";
+import tatoo from "src/app/components/img/tatoo.png";
+import negocio from "src/app/components/img/negocio.png";
+import netflix from "src/app/components/img/netflix.png";
 import AnimatedP2 from "src/app/components/s3-components/animatedP2.js";
 import HoverText from "src/app/components/s2-components/hoverText.js";
 import gsap from "gsap";
@@ -10,8 +15,7 @@ import Image from "next/image";
 import { Section3Context } from 'src/app/components/s3-components/s3-context.js';
 
 const S3Content = () => {
-  const { textoMovil3, changeTextoMovil3, textoL3, changeTextoL3, photo3, changePhoto3, boton3, changeBoton3 } = useContext(Section3Context);
-
+  const { boton3, changeBoton3 } = useContext(Section3Context);
   const [pTittle1, setPTittle1] = useState(false);
   const [pTittle2, setPTittle2] = useState(false);
   const [pTittle3, setPTittle3] = useState(false);
@@ -29,6 +33,7 @@ const S3Content = () => {
   const [project4, setProject4] = useState(false);
   const [project5, setProject5] = useState(false);
   const [project6, setProject6] = useState(false);
+  
 
 
   useEffect(() => {
@@ -140,8 +145,8 @@ const S3Content = () => {
         <AnimatedP2 />
       </div>
       <a href="https://youtu.be/KnRoTVy80_8" target="_blank" className={`s3c-div3 ${pTittle2 || pTittle3 ? "oscuro" :""} ${boton3 ? "opa3" :"hided3"}  `} ref={div3Ref}>
-        <Image src={Dapaolo} contain="true" className="s3c-img" />
-        <div className={`s3c-project-details white-text ${pTittle1 ? "opa1" : ""}`}>
+        <Image src={onbikes} contain="true" className="s3c-img" />
+        {/* <div className={`s3c-project-details white-text ${pTittle1 ? "opa1" : ""}`}>
           <span>
             {" "}
             <HoverText texto="REACT" />
@@ -154,12 +159,12 @@ const S3Content = () => {
             {" "}
             <HoverText texto="SQL" />
           </span>
-        </div>
+        </div> */}
       </a>
       <a href="https://www.youtube.com/watch?v=eVDP6W3bXG0" target="_blank" className={`s3c-div4 ${pTittle1 || pTittle3 ? "oscuro" :""} ${boton3 ? "opa3" :"hided3"}  `} ref={div4Ref}>
-      <Image src={Dapaolo} contain="true" className="s3c-img" />
+      <Image src={negocio} contain="true" className="s3c-img" />
         {" "}
-        <div className={`s3c-project-details white-text ${pTittle2 ? "opa1" : ""}`}>
+        {/* <div className={`s3c-project-details white-text ${pTittle2 ? "opa1" : ""}`}>
           <span>
             {" "}
             <HoverText texto="NEXT.JS" />
@@ -172,12 +177,12 @@ const S3Content = () => {
             {" "}
             <HoverText texto="MONGO-DB" />
           </span>
-        </div>
+        </div> */}
       </a>
       <a href="https://nextjs-restaurant-dapaolo.vercel.app/" target="_blank" className={`s3c-div5 ${pTittle1 || pTittle2 ? "oscuro" :""} ${boton3 ? "opa3" :"hided3"}  `} ref={div5Ref}>
       <Image src={Dapaolo} contain="true" className="s3c-img" />
         {" "}
-        <div className={`s3c-project-details white-text ${pTittle3 ? "opa1" : ""}`}>
+        {/* <div className={`s3c-project-details white-text ${pTittle3 ? "opa1" : ""}`}>
           <span>
             {" "}
             <HoverText texto="NEXT.JS" />
@@ -190,7 +195,7 @@ const S3Content = () => {
             {" "}
             <HoverText texto="PHOTOSHOP" />
           </span>
-        </div>
+        </div> */}
       </a>
       <div className={`s3c-div6 ${boton3 ? "opa3" :"hided3"}`}>
  
@@ -220,22 +225,22 @@ const S3Content = () => {
       </div>
       <div className={`s3c-div7 ${boton3 ?  "hided3":"opa3"}`}>
         <div className={`container-img-div7 ${project1 ? "opa3":"hided3"}`}>
-        <Image src={Dapaolo} contain="true" className="s3c-img-div7" />
+        <Image src={negocio} contain="true" className="s3c-img-div7" />
         </div>
         <div className={`container-img-div7 ${project2 ? "opa3":"hided3"}`}>
-        <Image src={Dapaolo} contain="true" className="s3c-img-div7" />
+        <Image src={onbikes} contain="true" className="s3c-img-div7" />
         </div>
         <div className={`container-img-div7 ${project3 ? "opa3":"hided3"}`}>
         <Image src={Dapaolo} contain="true" className="s3c-img-div7" />
         </div>
         <div className={`container-img-div7 ${project4 ? "opa3":"hided3"}`}>
-        <Image src={Dapaolo} contain="true" className="s3c-img-div7" />
+        <Image src={skfilms} contain="true" className="s3c-img-div7" />
         </div>
         <div className={`container-img-div7 ${project5 ? "opa3":"hided3"}`}>
-        <Image src={Dapaolo} contain="true" className="s3c-img-div7" />
+        <Image src={tatoo} contain="true" className="s3c-img-div7" />
         </div>
         <div className={`container-img-div7 ${project6 ? "opa3":"hided3"}`}>
-        <Image src={Dapaolo} contain="true" className="s3c-img-div7" />
+        <Image src={netflix} contain="true" className="s3c-img-div7" />
         </div>
       </div>
       <div className={`s3c-div8 ${boton3 ?  "hided3" : "opa3"}`}>
@@ -248,10 +253,9 @@ const S3Content = () => {
        </p>
        </div>
        <div className={`div8-son-socials ${project1 ? "s3c-p-opa1":"s3c-p-opa0"}`}>
-        <a><HoverText texto="LINK" /></a>
-        <a><HoverText texto="LINKEDIN" /></a>
-        <a><HoverText texto="GITHUB" /></a>
-        <a><HoverText texto="VIDEO" /></a>
+        <a><HoverText target="_blank" href="https://www.linkedin.com/feed/update/urn:li:activity:7143984188545822720/" texto="LINKEDIN" /></a>
+        <a><HoverText target="_blank" href="https://github.com/jantgg/mi_negocio" texto="GITHUB" /></a>
+        <a><HoverText target="_blank" href="https://youtu.be/eVDP6W3bXG0" texto="VIDEO" /></a>
        </div>
 
         </div>
@@ -265,10 +269,9 @@ const S3Content = () => {
        </p>
        </div>
        <div className={`div8-son-socials ${project2 ? "s3c-p-opa1":"s3c-p-opa0"}`}>
-        <a><HoverText texto="LINK" /></a>
-        <a><HoverText texto="LINKEDIN" /></a>
-        <a><HoverText texto="GITHUB" /></a>
-        <a><HoverText texto="VIDEO" /></a>
+        <a><HoverText target="_blank" href="https://www.linkedin.com/feed/update/urn:li:activity:7142841278521683969/" texto="LINKEDIN" /></a>
+        <a><HoverText target="_blank" href="https://github.com/jantgg/Onbikes" texto="GITHUB" /></a>
+        <a><HoverText target="_blank" href="https://youtu.be/KnRoTVy80_8" texto="VIDEO" /></a>
        </div>
       </div>
       <div className={`div8-son ${project3 ? "contrast-div8-son":""}`} onMouseEnter={() => {setProject1(false); setProject2(false); setProject3(true); setProject4(false); setProject5(false); setProject6(false)}}>
@@ -281,10 +284,9 @@ const S3Content = () => {
        </p>
        </div>
        <div className={`div8-son-socials ${project3 ? "s3c-p-opa1":"s3c-p-opa0"}`}>
-        <a><HoverText texto="LINK" /></a>
-        <a><HoverText texto="LINKEDIN" /></a>
-        <a><HoverText texto="GITHUB" /></a>
-        <a><HoverText texto="VIDEO" /></a>
+        <a><HoverText target="_blank" href="https://nextjs-restaurant-dapaolo.vercel.app/" texto="LINK" /></a>
+        <a><HoverText target="_blank" href="https://github.com/jantgg/nextjs-restaurant-dapaolo" texto="GITHUB" /></a>
+        <a><HoverText target="_blank" href="https://youtu.be/B1ekpRTwoJw" texto="VIDEO" /></a>
        </div>
       </div>
       <div className={`div8-son ${project4 ? "contrast-div8-son":""}`} onMouseEnter={() => {setProject1(false); setProject2(false); setProject3(false); setProject4(true); setProject5(false); setProject6(false)}}>
@@ -297,10 +299,9 @@ const S3Content = () => {
        </p>
        </div>
        <div className={`div8-son-socials ${project4 ? "s3c-p-opa1":"s3c-p-opa0"}`}>
-        <a><HoverText texto="LINK" /></a>
-        <a><HoverText texto="LINKEDIN" /></a>
-        <a><HoverText texto="GITHUB" /></a>
-        <a><HoverText texto="VIDEO" /></a>
+        <a><HoverText target="_blank" href="https://www.skfilms.es/" texto="LINK" /></a>
+        <a><HoverText target="_blank" href="https://www.linkedin.com/feed/update/urn:li:activity:7142846895206424577/" texto="LINKEDIN" /></a>
+        <a><HoverText target="_blank" href="https://github.com/jantgg/skfilms" texto="GITHUB" /></a>
        </div>
       </div>
       <div className={`div8-son ${project5 ? "contrast-div8-son":""}`} onMouseEnter={() => {setProject1(false); setProject2(false); setProject3(false); setProject4(false); setProject5(true); setProject6(false)}}>
@@ -313,10 +314,9 @@ const S3Content = () => {
        </p>
        </div>
        <div className={`div8-son-socials ${project5 ? "s3c-p-opa1":"s3c-p-opa0"}`}>
-        <a><HoverText texto="LINK" /></a>
-        <a><HoverText texto="LINKEDIN" /></a>
-        <a><HoverText texto="GITHUB" /></a>
-        <a><HoverText texto="VIDEO" /></a>
+        <a><HoverText target="_blank" href="https://tattoo-plum.vercel.app/" texto="LINK" /></a>
+        <a><HoverText target="_blank" href="https://www.linkedin.com/feed/update/urn:li:activity:7143194325080879104/" texto="LINKEDIN" /></a>
+        <a><HoverText target="_blank" href="https://github.com/jantgg/tattoo" texto="GITHUB" /></a>
        </div>
       </div>
       <div className={`div8-son ${project6 ? "contrast-div8-son":""}`} onMouseEnter={() => {setProject1(false); setProject2(false); setProject3(false); setProject4(false); setProject5(false); setProject6(true)}}>
@@ -329,10 +329,9 @@ const S3Content = () => {
        </p>
        </div>
        <div className={`div8-son-socials ${project6 ? "s3c-p-opa1":"s3c-p-opa0"}`}>
-        <a><HoverText texto="LINK" /></a>
-        <a><HoverText texto="LINKEDIN" /></a>
-        <a><HoverText texto="GITHUB" /></a>
-        <a><HoverText texto="VIDEO" /></a>
+        <a><HoverText target="_blank" href="https://www.linkedin.com/posts/jant-gg_video-de-muestra-netflix-clone-by-jantgg-activity-7049378127315091458-9xPs?utm_source=share&utm_medium=member_desktop" texto="LINKEDIN" /></a>
+        <a><HoverText target="_blank" href="https://github.com/jantgg/netflixclonetrial" texto="GITHUB" /></a>
+        <a><HoverText target="_blank" href="https://youtu.be/jCSWWfrvmOA" texto="VIDEO" /></a>
        </div>
       </div>
       </div>

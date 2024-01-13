@@ -1,0 +1,23 @@
+.atL-container {
+  position: relative;
+  white-space: pre; /* Asegúrate de que los espacios se mantienen */
+  display: flex;
+  overflow:hidden;
+  width: 100%;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+.opa1{
+  opacity:1;
+}
+
+.atL-linea1 {
+    display: flex;
+  position: relative;
+}
+.atL-linea2 {
+    display: flex;
+  position: absolute;
+}
+

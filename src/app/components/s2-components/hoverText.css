@@ -12,11 +12,13 @@
   .ath-linea1 {
       display: flex;
     position: relative;
+    text-decoration: none !important;
 
   }
   .ath-linea2 {
       display: flex;
     position: absolute;
+    text-decoration: none !important;
 
   }
 

@@ -1,16 +1,23 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import "./section1.css";
 import { MdArrowDownward } from "react-icons/md";
 import Circulo from "src/app/components/circulo.js";
-import AnimatedText from "src/app/components/animatedText.js";
+import AnimatedTextS1 from "src/app/components/animatedTextS1.js";
+import Loader from "src/app/components/loader/loader.js";
+import { Section1Context } from 'src/app/components/loader/s1-context.js';
+
 
 const Section1 = () => {
+    const { loaded, changeLoaded } = useContext(Section1Context);
+
   return (
     <section className="section1">
+      <Loader/>
       <div className="side-tittle">
         <span className="side-tittle-inner">
-          <AnimatedText
+          <AnimatedTextS1
+          animate={loaded}
             texto={
               <>
                 <span>01 // 04 &nbsp; - &nbsp;SCROLL&nbsp;&nbsp;</span>
@@ -27,7 +34,8 @@ const Section1 = () => {
       <div className="tittles ">
         {" "}
         <span className="t-1 light-text">
-          <AnimatedText
+          <AnimatedTextS1
+          animate={loaded}
             texto="DESARROLLADOR"
             width="100%"
             justifyContent="center"
@@ -36,7 +44,8 @@ const Section1 = () => {
           />{" "}
         </span>
         <span className="t-2 bold-text">
-          <AnimatedText
+          <AnimatedTextS1
+          animate={loaded}
             texto="FULL-STACK"
             width="100%"
             justifyContent="center"
@@ -46,7 +55,8 @@ const Section1 = () => {
         </span>
         <span className="t-3">
           <span className="t-3-1 light-text">
-            <AnimatedText
+            <AnimatedTextS1
+            animate={loaded}
               texto="ENFOCADO EN"
               width="100%"
               justifyContent="end"
@@ -55,7 +65,8 @@ const Section1 = () => {
             />
           </span>
           <span className="t-3-2 bold-text">
-            <AnimatedText
+            <AnimatedTextS1
+            animate={loaded}
               texto="FRONT"
               width="100%"
               justifyContent="end"
@@ -66,7 +77,8 @@ const Section1 = () => {
         </span>
         <span className="t-p">
           <span className="t-p-child1">
-            <AnimatedText
+            <AnimatedTextS1
+            animate={loaded}
               texto="CREO INTERFACES DE USUARIO"
               width="100%"
               justifyContent="end"
@@ -75,7 +87,8 @@ const Section1 = () => {
             />
           </span>
           <span className="t-p-child2">
-            <AnimatedText
+            <AnimatedTextS1
+            animate={loaded}
               texto="ATRACTIVAS&nbsp;&nbsp; Y &nbsp;&nbsp;FUNCIONALES&nbsp;&nbsp; CON&nbsp;UNA"
               width="auto"
               justifyContent="end"
@@ -84,7 +97,8 @@ const Section1 = () => {
             />{" "}
           </span>
           <span className="t-p-child3">
-            <AnimatedText
+            <AnimatedTextS1
+            animate={loaded}
               texto="SÓLIDA&nbsp;&nbsp;&nbsp;&nbsp;COMPRENSIÓN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DE&nbsp;&nbsp;&nbsp;&nbsp;BACK-END"
               width="auto"
               justifyContent="end"
@@ -93,7 +107,8 @@ const Section1 = () => {
             />
           </span>
           <span className="t-p-child4">
-            <AnimatedText
+            <AnimatedTextS1
+            animate={loaded}
               texto="PARA OFRECER SOLUCIONES INTEGRALES"
               width="auto"
               justifyContent="end"
@@ -102,7 +117,8 @@ const Section1 = () => {
             />
           </span>
           <span className="t-p-child5">
-            <AnimatedText
+            <AnimatedTextS1
+            animate={loaded}
               texto=" Y EFICIENTES."
               width="auto"
               justifyContent="start"
@@ -128,37 +144,6 @@ const Section1 = () => {
           </Circulo>
         </div>
       </div>
-
-      {/* <span className="first-line">
-        <span className="first-line-t">
-          <span style="">F</span>
-          <span style="">U</span>
-          <span style="">L</span>
-          <span style="">L</span>
-          <span style=""> </span>
-          <span style="">S</span>
-          <span style="">T</span>
-          <span style="">A</span>
-          <span style="">C</span>
-          <span style="">K</span>
-        </span>
-        <span className="first-line-b">
-          <span style="">D</span>
-          <span style="">E</span>
-          <span style="">V</span>
-          <span style="">E</span>
-          <span style="">L</span>
-          <span style="">O</span>
-          <span style="">P</span>
-          <span style="">E</span>
-          <span style="">R</span>
-          <span style=""></span>
-          <span style=""></span>
-          <span style=""></span>
-          <span style=""></span>
-          <span style=""></span>
-        </span>
-      </span> */}
     </section>
   );
 };

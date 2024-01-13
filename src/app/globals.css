@@ -5,6 +5,7 @@ body::-webkit-scrollbar {
 
 /* Para IE, Edge y Firefox */
 body {
+  cursor: crosshair;
   justify-content: center;
   display: flex;
   margin: 0 !important;
