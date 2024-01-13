@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./section4.css";
 import Linea2 from "src/app/components/s3-components/linea2.js";
-import CirculoS4 from "src/app/components/s4-components/circulos4.js";
+import CirculoS4 from "src/app/components/s4-components/circuloS4.js";
 import AnimatedText from "src/app/components/animatedText.js";
 
 
