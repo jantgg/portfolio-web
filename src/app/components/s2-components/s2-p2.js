@@ -25,7 +25,7 @@ const S2P2 = ({ isActive }) => {
     } else {
       setActive(false);
     }
-  }, [isActive, active]);
+  }, [isActive]);
 
   useEffect(() => {
     if (isActive) {
@@ -51,7 +51,7 @@ const S2P2 = ({ isActive }) => {
       setRow3(false);
       setRow4(false);
     }
-  }, [isActive, active, row1, row2, row3, row4]);
+  }, [isActive]);
 
   return (
     <div className={`s2c-p2 ${isActive ? "" : "opa0"}`}>
