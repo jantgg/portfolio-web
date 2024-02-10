@@ -66,7 +66,7 @@ const S2P2 = ({ isActive }) => {
           <p className={`p2-exp-p ${row1 ? "opa1" : ""}`}>
           <span className="p2-exp-p-tittle">PROGRAMADOR FULL STACK</span>
             <span className="p2-exp-p-description light-text">
-              FREELANCE
+              PRISMA DIGITAL
             </span>
             <span className="p2-exp-p-description light-text">
               DESARROLLO / DISEÑO

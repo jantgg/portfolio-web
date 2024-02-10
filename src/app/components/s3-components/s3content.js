@@ -8,6 +8,9 @@ import skfilms from "src/app/components/img/skfilms.png";
 import tatoo from "src/app/components/img/tatoo.png";
 import negocio from "src/app/components/img/negocio2.png";
 import netflix from "src/app/components/img/netflix.png";
+import maindp from "src/app/components/img/foto-dapaolo.jpg";
+import mainob from "src/app/components/img/foto-onbikes.jpg";
+import mainmn from "src/app/components/img/foto-mn.jpg";
 import AnimatedP2 from "src/app/components/s3-components/animatedP2.js";
 import HoverText from "src/app/components/s2-components/hoverText.js";
 import gsap from "gsap";
@@ -170,7 +173,7 @@ const S3Content = () => {
         }  `}
         ref={div3Ref}
       >
-        <Image alt="imagen" src={onbikes} contain="true" className="s3c-img" />
+        <Image alt="imagen" src={mainob} contain="true" className="s3c-img" />
 
       </a>
       <a
@@ -181,7 +184,7 @@ const S3Content = () => {
         }  `}
         ref={div4Ref}
       >
-        <Image alt="imagen" src={negocio} contain="true" className="s3c-img" />{" "}
+        <Image alt="imagen" src={mainmn} contain="true" className="s3c-img" />{" "}
  
       </a>
       <a
@@ -192,7 +195,7 @@ const S3Content = () => {
         }  `}
         ref={div5Ref}
       >
-        <Image alt="imagen" src={Dapaolo} contain="true" className="s3c-img" />{" "}
+        <Image alt="imagen" src={maindp} contain="true" className="s3c-img" />{" "}
     
       </a>
       <div className={`s3c-div6 ${boton3 ? "opa3" : "hided3"}`}>
