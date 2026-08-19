@@ -1,0 +1,284 @@
+{
+  "Metadata": {
+    "title": "Juan Antonio Gómez Gil — Software Engineer",
+    "description": "Frontend-focused Software Engineer. I investigate complex contexts, connect systems and build technically viable solutions."
+  },
+  "Navigation": {
+    "skip": "Skip to content",
+    "home": "Back to top",
+    "label": "Main navigation",
+    "process": "PROCESS",
+    "case": "CASES",
+    "about": "ABOUT",
+    "contact": "LET'S TALK",
+    "language": "Language",
+    "theme": "Switch theme"
+  },
+  "Hero": {
+    "index": "01 / 07",
+    "scroll": "SCROLL",
+    "line1": "Software",
+    "line2": "Engineer",
+    "line3": "Connecting systems",
+    "line4": "and teams",
+    "body1": "Specialized in frontend, I work beyond the interface to turn product complexity into technical decisions that can be built.",
+    "body2": "I investigate context, make constraints explicit and connect design, backend and business to take the solution from the initial conversation through production.",
+    "tagline": "From context to production.",
+    "action": "SEE|PROCESS",
+    "actionLabel": "Explore my process"
+  },
+  "Process": {
+    "section": "FROM CLIENT TO PRODUCTION",
+    "title": "<line>From client to production:</line><line>clarity before code,</line><line>evidence before calling it done.</line>",
+    "titleLabel": "From client to production: clarity before code, evidence before calling it done.",
+    "intro": "These are not isolated stages or a list of capabilities. They form one system that adds context, connects ownership and ends with evidence in production.",
+    "storyLabel": "Progressive assembly of an engineering system",
+    "systemLabel": "System",
+    "steps": {
+      "understand": {
+        "eyebrow": "Context",
+        "module": "Context",
+        "title": "Do not assume. Ask.",
+        "question": "The client request starts the conversation; it does not define the solution.",
+        "body": "I listen to the client and align the goal, user, product constraints and definition of success before turning a conversation into technical work.",
+        "skillsLabel": "Capabilities involved in context",
+        "tags": ["Client", "Product", "Business"]
+      },
+      "investigate": {
+        "eyebrow": "Contract",
+        "module": "Contract",
+        "title": "Make the contract explicit.",
+        "question": "If the criteria are not shared, implementation is a gamble.",
+        "body": "I turn ambiguity into scope, states, design decisions, data, ownership and acceptance criteria that the whole team can verify.",
+        "skillsLabel": "Capabilities involved in the contract",
+        "tags": ["Design", "Criteria", "Communication"]
+      },
+      "connect": {
+        "eyebrow": "System",
+        "module": "Flow",
+        "title": "Follow the whole flow.",
+        "question": "The problem does not end where the ticket does.",
+        "body": "I trace how a decision travels through content, CMS, APIs, frontend and operations. I make ownership and dependencies visible.",
+        "skillsLabel": "Capabilities involved in the system",
+        "tags": ["CMS", "APIs", "Frontend"]
+      },
+      "propose": {
+        "title": "Decide where it lives.",
+        "question": "Every responsibility needs a place and a reason.",
+        "body": "I frame alternatives, expose trade-offs and choose the simplest solution that addresses the cause without creating unnecessary debt."
+      },
+      "build": {
+        "eyebrow": "Implementation",
+        "module": "Code",
+        "title": "Build for the real world.",
+        "question": "The happy path is not the product.",
+        "body": "I turn the decision into maintainable architecture and treat states, errors, accessibility and performance as part of the product, not finishing touches.",
+        "skillsLabel": "Capabilities involved in implementation",
+        "tags": ["Architecture", "Accessibility", "Performance"]
+      },
+      "validate": {
+        "eyebrow": "Evidence",
+        "module": "Evidence",
+        "title": "Validate what matters.",
+        "question": "Without evidence, done is only an opinion.",
+        "body": "I use cross-system debugging, tests, edge cases and reviewable evidence to verify the behaviour of the whole system before calling it done.",
+        "skillsLabel": "Capabilities involved in validation",
+        "tags": ["Debugging", "Testing", "Quality"]
+      },
+      "deliver": {
+        "eyebrow": "Production",
+        "module": "Production",
+        "title": "Prove it in production.",
+        "body": "I take the solution through release, observe its behaviour, close the loop with the teams involved and leave behind the knowledge required to maintain it.",
+        "skillsLabel": "Capabilities involved in production",
+        "tags": ["Release", "Observability", "Ownership"]
+      }
+    }
+  },
+  "Case": {
+    "section": "REAL CASES",
+    "eyebrow": "ENGINEERING WITH EVIDENCE",
+    "title": "Connecting teams is also part of the solution.",
+    "intro": "Three different problems. One way of working: understand the whole system, make criteria explicit and shorten the distance between a decision and a valid implementation.",
+    "ai": {
+      "section": "AI APPLIED TO THE SYSTEM",
+      "labelPrimary": "AI",
+      "labelSecondary": "AS A SYSTEM, NOT A SHORTCUT",
+      "titleLine1": "Less ambiguity.",
+      "titleLine2": "More time for the work that creates value.",
+      "body": "I integrate AI into the engineering workflow to turn scattered context into living acceptance criteria, verifiable documentation and evidence before review. Judgement remains human; the system helps design, product and engineering share the same definition of done.",
+      "flowLabel": "AI-assisted engineering workflow",
+      "steps": {
+        "context": "Context",
+        "criteria": "Criteria",
+        "implementation": "Implementation",
+        "evidence": "Evidence"
+      },
+      "statement": "AI does not replace the engineering process. It connects to it to work with context, boundaries and evidence."
+    },
+    "items": {
+      "hic": {
+        "index": "01",
+        "label": "HIC · ENGINEERING WORKFLOW",
+        "title": "From implicit knowledge to a project operating system.",
+        "body": "An editorial platform connected CMS, APIs, frontend and several teams. I designed an AI-assisted layer of context, documentation and validation so every change started with shared criteria and ended with evidence.",
+        "result": "Living criteria · docs as code · cross-system validation",
+        "link": "VIEW HIC CASE"
+      },
+      "figma": {
+        "index": "02",
+        "label": "FIGMA PLUGIN · AUTOMATION",
+        "title": "From design system to production without rebuilding every delivery.",
+        "body": "A plugin turns controlled Figma components into HTML emails, incorporates Excel data and delivers assets to Salesforce within the same creative workflow.",
+        "result": "Figma · HTML email · Excel · Salesforce",
+        "link": "VIEW FIGMA CASE"
+      },
+      "racing": {
+        "index": "03",
+        "label": "ON RACING · CONNECTED PRODUCT",
+        "title": "Turning sports activity into a learning experience.",
+        "body": "A gamified academy connects Strava data with progress, lessons, coaches and rewards, solving authentication, synchronization and product state around an external API.",
+        "result": "Strava · progress · content · rewards",
+        "link": "VIEW ON RACING CASE"
+      }
+    }
+  },
+  "CaseDetails": {
+    "common": {
+      "back": "BACK TO CASES",
+      "overview": "REAL CASE",
+      "problem": "THE PROBLEM",
+      "system": "THE SYSTEM",
+      "decisions": "DESIGN DECISIONS",
+      "result": "THE OUTCOME",
+      "confidentiality": "ABOUT THIS CASE",
+      "confidentialityBody": "This case explains the problem, architecture and decisions without publishing client data, credentials, internal domains, identifiers or confidential metrics.",
+      "other": "OTHER CASES",
+      "read": "READ CASE"
+    },
+    "hic": {
+      "metaTitle": "HIC case — AI and an engineering operating system",
+      "metaDescription": "How I connected CMS, APIs, frontend, documentation and AI to create living acceptance criteria and verifiable evidence.",
+      "index": "01 / 03",
+      "label": "HIC · AI APPLIED TO THE ENGINEERING WORKFLOW",
+      "title": "Turning scattered knowledge into a project operating system.",
+      "intro": "The challenge was not writing code faster. It was enabling product, design and engineering to decide and implement from the same context.",
+      "facts": {
+        "scopeLabel": "SCOPE",
+        "scope": "Frontend, CMS, APIs and process",
+        "roleLabel": "CONTRIBUTION",
+        "role": "Solution architecture and engineering workflow",
+        "focusLabel": "FOCUS",
+        "focus": "Shared criteria, traceability and validation"
+      },
+      "problemTitle": "The complexity lived between systems —and between teams.",
+      "problemBody1": "The platform is built from dynamic CMS content, API contracts, data transformations and a component runtime. A seemingly local decision can cross every one of those layers.",
+      "problemBody2": "Some knowledge lived in conversations, tickets or individual people. That made it harder to detect impact, keep documentation aligned and define when an implementation was truly done.",
+      "systemTitle": "AI connects to the process with context, boundaries and evidence.",
+      "systemIntro": "I designed a working layer around the repository: it does not decide for the team or replace sources of truth; it organizes the required context and runs reproducible checks.",
+      "systemItems": {
+        "context": { "title": "Context on demand", "body": "Specialized agents and skills load relevant route, CMS, API, component or accessibility knowledge according to the task." },
+        "criteria": { "title": "Living acceptance criteria", "body": "Requirements become concrete contracts and checks that evolve with the code and clarify what done well means." },
+        "docs": { "title": "Documentation as code", "body": "Decisions, flows and ownership are versioned and validated to reduce the gap between documentation and the running product." },
+        "evidence": { "title": "Dynamic evidence", "body": "Fixtures, integration audits, comparisons and local reports turn assumptions into reviewable results before a PR is opened." },
+        "map": { "title": "Knowledge map", "body": "Routes, content types, models, transformations, components, tests and docs are related to anticipate the impact radius of a change." }
+      },
+      "flowLabel": "OPERATING FLOW",
+      "flow": { "conversation": "Conversation", "constraints": "Constraints", "criteria": "Criteria", "implementation": "Implementation", "validation": "Validation", "evidence": "Evidence" },
+      "decisionsTitle": "Automate the repeatable work to protect judgement.",
+      "decisionsBody": "The system uses bounded task catalogues, typed inputs and explicit sources of truth. It separates configuration, execution and results, avoids generic context-free instructions and keeps every validation traceable.",
+      "resultTitle": "Less uncertain delivery and higher-value conversations.",
+      "resultBody": "The outcome is a workflow that detects mismatches earlier, reduces search and rework, prepares more consistent handoffs and shortens the path from requirement to validation. Recovered time goes back to what matters most: connecting teams and making better decisions.",
+      "next": "figma"
+    },
+    "figma": {
+      "metaTitle": "Figma plugin case — Design connected to Salesforce",
+      "metaDescription": "A plugin that turns Figma components and Excel data into HTML emails ready for Salesforce.",
+      "index": "02 / 03",
+      "label": "FIGMA PLUGIN · DESIGN TO PRODUCTION",
+      "title": "Turning a visual system into a delivery tool.",
+      "intro": "The goal was to remove manual reconstruction between design and campaign without losing control over components, data or the final HTML.",
+      "facts": {
+        "scopeLabel": "SCOPE", "scope": "Plugin, backend and integration",
+        "roleLabel": "CONTRIBUTION", "role": "Frontend architecture and automation",
+        "focusLabel": "FOCUS", "focus": "Consistency, autonomy and delivery"
+      },
+      "problemTitle": "Designing the email was only part of the work.",
+      "problemBody1": "Every campaign had to follow a catalogue of blocks, metadata and regional variants while producing HTML compatible with the real constraints of the channel.",
+      "problemBody2": "When design, data and publishing live in separate tools, manual tasks, copy errors and differences appear between the approved piece and the asset that reaches production.",
+      "systemTitle": "Figma becomes the interface to a controlled pipeline.",
+      "systemIntro": "The plugin imports approved components, lets users compose a piece in an exportable frame and orchestrates the transformations required for delivery.",
+      "systemItems": {
+        "library": { "title": "Controlled library", "body": "Available blocks are imported from a shared library and instantiated with consistent structure and metadata." },
+        "composition": { "title": "Assisted composition", "body": "Users build the campaign inside a plugin-managed frame with navigation, selection and context checks." },
+        "data": { "title": "Data from Excel", "body": "Spreadsheet uploads bring links and variants through the backend instead of transferring information manually." },
+        "transform": { "title": "HTML transformation", "body": "Each component has specific renderers and normalization rules to generate an email that matches both design and channel." },
+        "delivery": { "title": "Salesforce delivery", "body": "The same workflow previews or downloads the HTML and creates the Salesforce asset with its category and metadata." }
+      },
+      "flowLabel": "DELIVERY FLOW",
+      "flow": { "conversation": "Components", "constraints": "Composition", "criteria": "Data", "implementation": "HTML", "validation": "Validation", "evidence": "Salesforce" },
+      "decisionsTitle": "Good automation starts by bounding the system.",
+      "decisionsBody": "Rather than attempting to export any design, the pipeline works with known components and specific transformations. That constraint provides autonomy without giving up quality.",
+      "resultTitle": "Less reconstruction between the approved and published piece.",
+      "resultBody": "Design, content and delivery are connected in one journey. The team can reuse blocks, apply data and produce assets more consistently, reserving review time for visual and content decisions.",
+      "next": "racing"
+    },
+    "racing": {
+      "metaTitle": "On Racing case — Strava, progress and learning",
+      "metaDescription": "A gamified academy connecting Strava activity with progress, lessons, coaches and rewards.",
+      "index": "03 / 03",
+      "label": "ON RACING · DATA-CONNECTED PRODUCT",
+      "title": "Turning sports activity into progress users can feel.",
+      "intro": "The experience had to connect real training, content and motivation without exposing users to the complexity of an external API.",
+      "facts": {
+        "scopeLabel": "SCOPE", "scope": "Web product, API and data",
+        "roleLabel": "CONTRIBUTION", "role": "Frontend and product integration",
+        "focusLabel": "FOCUS", "focus": "Synchronization, progress and resilience"
+      },
+      "problemTitle": "External activity had to become product state.",
+      "problemBody1": "The academy combines video and audio lessons, coaches, weekly challenges and rewards. But progress depends on activity happening outside the application and arriving from Strava.",
+      "problemBody2": "That means solving authentication, token refresh, webhooks, scheduled synchronization, API limits and data consistency before showing a reliable progress bar.",
+      "systemTitle": "Data, content and motivation work as one journey.",
+      "systemIntro": "The application translates sports events into persistent progress and uses that state to unlock localized content and rewards.",
+      "systemItems": {
+        "identity": { "title": "Connected identity", "body": "OAuth links the athlete to the application and handles credential refresh without turning it into an interface concern." },
+        "sync": { "title": "Resilient synchronization", "body": "Webhooks and scheduled processes update activities, account for retries and limits, and invalidate data when the source changes." },
+        "model": { "title": "Progress model", "body": "Users, activities, weeks, lessons and rewards are related in the database to keep state coherent." },
+        "experience": { "title": "Learning experience", "body": "Video, audio, coaches and unlockable content turn sports data into an experience with continuity." },
+        "signals": { "title": "Product signals", "body": "Analytics and observability make both user behavior and failures in critical integrations visible." }
+      },
+      "flowLabel": "PRODUCT FLOW",
+      "flow": { "conversation": "Activity", "constraints": "Strava", "criteria": "Synchronization", "implementation": "Progress", "validation": "Content", "evidence": "Reward" },
+      "decisionsTitle": "The integration should absorb complexity, not pass it on.",
+      "decisionsBody": "The product separates Strava communication, persistence and experience. The interface consumes stable state while integration layers handle expiry, failures and updates.",
+      "resultTitle": "A continuous experience built on systems that are not.",
+      "resultBody": "User activity becomes visible progress, access to content and rewards. Product, data and training stay connected without exposing the operational complexity that sustains the experience.",
+      "next": "hic"
+    }
+  },
+  "Tools": {
+    "section": "TOOLS, NOT IDENTITY",
+    "intro": "I work with",
+    "listLabel": "React, Next.js, TypeScript, APIs, CMS, Figma, Git and AI",
+    "items": ["React", "Next.js", "TypeScript", "APIs", "CMS", "Figma", "Git", "AI"],
+    "title": "They are tools.",
+    "statement": "The capability is understanding systems and solving problems."
+  },
+  "About": {
+    "section": "ABOUT",
+    "title": "I like working where the answer is not clear yet.",
+    "body1": "I started by specializing in frontend, but my work has progressively moved toward more transversal problems.",
+    "body2": "I want to understand the whole product: from the initial need to the data, APIs, architecture and final experience.",
+    "body3": "I especially enjoy problems that require investigation, conversations across disciplines and decisions before writing code.",
+    "statement": "My goal is not simply to implement a solution. It is to make the problem disappear.",
+    "portraitAlt": "Portrait of Juan Antonio Gómez Gil",
+    "caption": "JUAN ANTONIO GÓMEZ GIL — SOFTWARE ENGINEER"
+  },
+  "Contact": {
+    "eyebrow": "GOT AN INTERESTING PROBLEM TO SOLVE?",
+    "title": "Let's talk.",
+    "action": "SEND A|MESSAGE",
+    "actionLabel": "Email Juan Antonio",
+    "tagline": "FROM PROBLEM TO PRODUCTION."
+  }
+}
