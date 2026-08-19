@@ -112,6 +112,27 @@ export function ProcessSection() {
             <div><i /></div>
             <span>06</span>
           </div>
+
+          <nav
+            className={styles.systemStoryNavigation}
+            aria-label={t("navigation.label")}
+          >
+            <button
+              type="button"
+              data-system-previous
+              aria-label={t("navigation.previous")}
+              disabled
+            >
+              <span aria-hidden="true">←</span>
+            </button>
+            <button
+              type="button"
+              data-system-next
+              aria-label={t("navigation.next")}
+            >
+              <span aria-hidden="true">→</span>
+            </button>
+          </nav>
         </div>
       </div>
     </section>

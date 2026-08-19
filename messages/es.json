@@ -42,6 +42,11 @@
     },
     "storyLabel": "Construcción progresiva de un sistema de ingeniería",
     "systemLabel": "Sistema",
+    "navigation": {
+      "label": "Navegación por el proceso",
+      "previous": "Ir al punto anterior del proceso",
+      "next": "Ir al siguiente punto del proceso"
+    },
     "steps": {
       "understand": {
         "eyebrow": "Contexto",

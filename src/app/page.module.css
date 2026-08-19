@@ -594,6 +594,11 @@
   --chip-shadow-small-y: 0.34rem;
   --chip-tilt-x: 0deg;
   --chip-tilt-z: 0deg;
+  --board-top: calc(35% - 48px);
+  --board-right: calc(42.5% - 72px);
+  --board-bottom: calc(42.5% - 40px);
+  --board-left: calc(35% - 40px);
+  --board-detail-opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -844,7 +849,10 @@
 .chipBoardDepth,
 .chipBoardFrame {
   position: absolute;
-  inset: 5%;
+  top: var(--board-top);
+  right: var(--board-right);
+  bottom: var(--board-bottom);
+  left: var(--board-left);
   clip-path: polygon(
     0 1.6rem,
     1.6rem 0,
@@ -946,12 +954,16 @@
   color: var(--text-tertiary);
   font-size: clamp(0.38rem, 0.48vw, 0.52rem);
   letter-spacing: 0.08em;
+  opacity: var(--board-detail-opacity);
 }
 
 .chipConnectionLayer {
   position: absolute;
   z-index: 5;
   inset: 0;
+  clip-path: inset(
+    var(--board-top) var(--board-right) var(--board-bottom) var(--board-left)
+  );
   transform: translateZ(0.35rem);
   transform-style: preserve-3d;
   pointer-events: none;
@@ -993,10 +1005,10 @@
 .chipHub {
   position: absolute;
   z-index: 6;
-  top: 33.333%;
-  left: 33.333%;
-  width: 25%;
-  height: 25%;
+  top: calc(35% + 0.333px);
+  left: calc(35% + 0.333px);
+  width: calc(22.5% - 0.5px);
+  height: calc(22.5% - 0.5px);
   transform: translateZ(1.7rem);
   transform-style: preserve-3d;
 }
@@ -1091,6 +1103,7 @@
   aspect-ratio: 1;
   border: 1px solid var(--border-strong);
   background: var(--surface-raised);
+  opacity: var(--board-detail-opacity);
   transform: translate(-50%, -50%) translateZ(0.2rem);
 }
 
@@ -1158,6 +1171,8 @@
 }
 
 .systemChipContext {
+  --chip-beam-core: 0.22%;
+  --chip-beam-fade: 2.4%;
   --chip-top: 8.333%;
   --chip-left: 8.333%;
   --chip-width: 25%;
@@ -1173,6 +1188,8 @@
 }
 
 .systemChipContract {
+  --chip-beam-core: 0.58%;
+  --chip-beam-fade: 4.2%;
   --chip-top: 8.333%;
   --chip-left: 41.667%;
   --chip-width: 25%;
@@ -1180,6 +1197,8 @@
 }
 
 .systemChipFlow {
+  --chip-beam-core: 0.34%;
+  --chip-beam-fade: 3.1%;
   --chip-top: 8.333%;
   --chip-left: 66.667%;
   --chip-width: 25%;
@@ -1195,6 +1214,8 @@
 }
 
 .systemChipCode {
+  --chip-beam-core: 0.82%;
+  --chip-beam-fade: 5.4%;
   --chip-top: 58.333%;
   --chip-left: 66.667%;
   --chip-width: 25%;
@@ -1202,6 +1223,8 @@
 }
 
 .systemChipEvidence {
+  --chip-beam-core: 0.16%;
+  --chip-beam-fade: 1.8%;
   --chip-top: 66.667%;
   --chip-left: 41.667%;
   --chip-width: 16.667%;
@@ -1209,6 +1232,8 @@
 }
 
 .systemChipProduction {
+  --chip-beam-core: 0.48%;
+  --chip-beam-fade: 4.7%;
   --chip-top: 58.333%;
   --chip-left: 8.333%;
   --chip-width: 25%;
@@ -1234,7 +1259,13 @@
   justify-content: space-between;
   border: 1px solid var(--border-strong);
   background:
-    linear-gradient(135deg, transparent 0 48%, var(--ambient-line) 49% 51%, transparent 52%),
+    linear-gradient(
+      135deg,
+      transparent calc(50% - var(--chip-beam-fade)),
+      var(--ambient-line) calc(50% - var(--chip-beam-core)),
+      var(--ambient-line) calc(50% + var(--chip-beam-core)),
+      transparent calc(50% + var(--chip-beam-fade))
+    ),
     var(--surface-canvas);
   clip-path: var(--chip-shape);
   transform: translateZ(var(--chip-depth));
@@ -1259,8 +1290,11 @@
   z-index: 3;
   opacity: 0;
   transform-origin: center;
-  animation: chipDepthTrail 1.95s linear var(--chip-trail-delay) infinite;
   will-change: transform, opacity;
+}
+
+.systemChip[data-connected="true"] .systemChipDepthTrail {
+  animation: chipDepthTrail 1.95s linear var(--chip-trail-delay) infinite;
 }
 
 .systemChipDepthTrail path {
@@ -1552,8 +1586,70 @@
   background: var(--text-primary);
 }
 
+.systemStoryNavigation {
+  position: absolute;
+  z-index: 40;
+  right: var(--system-inset);
+  bottom: clamp(1.5rem, 3vw, 3rem);
+  display: none;
+  gap: 0.5rem;
+}
+
+.systemStoryNavigation button {
+  width: 3.25rem;
+  aspect-ratio: 1;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border-subtle);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--surface-canvas) 92%, transparent);
+  color: var(--text-primary);
+  font: inherit;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition:
+    border-color 180ms var(--ease-out),
+    background-color 180ms var(--ease-out),
+    color 180ms var(--ease-out),
+    opacity 180ms var(--ease-out),
+    transform 180ms var(--ease-out);
+}
+
+.systemStoryNavigation button span {
+  font-size: 1.2rem;
+  line-height: 1;
+  transform: translateY(-0.04em);
+}
+
+.systemStoryNavigation button:hover:not(:disabled),
+.systemStoryNavigation button:focus-visible {
+  border-color: var(--text-primary);
+  background: var(--text-primary);
+  color: var(--surface-canvas);
+}
+
+.systemStoryNavigation button:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.systemStoryNavigation button:focus-visible {
+  outline: 2px solid var(--surface-canvas);
+  outline-offset: 3px;
+}
+
+.systemStoryNavigation button:disabled {
+  opacity: 0.28;
+  cursor: default;
+}
+
 .systemStoryScroll[data-system-static="true"] {
   height: auto;
+}
+
+.systemStoryScroll[data-system-static="true"] .systemStoryNavigation {
+  display: none;
 }
 
 .systemStoryScroll[data-system-static="true"] .systemStorySticky {

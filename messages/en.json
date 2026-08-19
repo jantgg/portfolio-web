@@ -42,6 +42,11 @@
     },
     "storyLabel": "Progressive assembly of an engineering system",
     "systemLabel": "System",
+    "navigation": {
+      "label": "Process navigation",
+      "previous": "Go to the previous point in the process",
+      "next": "Go to the next point in the process"
+    },
     "steps": {
       "understand": {
         "eyebrow": "Context",

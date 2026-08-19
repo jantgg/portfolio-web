@@ -97,19 +97,20 @@ export function ChipPlatform() {
               <span>JANT / SYS—02</span>
               <span>01—06</span>
             </div>
-            <div className={styles.chipHub}>
-              <span className={styles.chipHubDepth} />
-              <span className={styles.chipHubMid} />
-              <div className={styles.chipHubBody} data-system-hub-target>
-                <span>CORE</span>
-                <strong>{t("systemLabel")}</strong>
-                <i />
-              </div>
-            </div>
             <span className={`${styles.chipBoardNode} ${styles.chipBoardNodeOne}`} />
             <span className={`${styles.chipBoardNode} ${styles.chipBoardNodeTwo}`} />
             <span className={`${styles.chipBoardNode} ${styles.chipBoardNodeThree}`} />
             <span className={`${styles.chipBoardNode} ${styles.chipBoardNodeFour}`} />
+          </div>
+        </div>
+
+        <div className={styles.chipHub}>
+          <span className={styles.chipHubDepth} />
+          <span className={styles.chipHubMid} />
+          <div className={styles.chipHubBody} data-system-hub-target>
+            <span>CORE</span>
+            <strong>{t("systemLabel")}</strong>
+            <i />
           </div>
         </div>
 
