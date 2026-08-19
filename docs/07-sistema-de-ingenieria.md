@@ -19,6 +19,10 @@ La IA pasa a ser el capítulo 03 independiente. Los casos reales permanecen como
 
 ## Sistema visual
 
+Antes de comenzar la secuencia editorial existe una fase 00 de `220svh`. El núcleo ocupa inicialmente todo el viewport —incluida la navegación— y funciona como portada del capítulo con el copy «Del cliente a producción». El mensaje permanece durante el primer tramo y después se desvanece de forma gradual. A continuación aparece `SISTEMA` y el núcleo simulado se reduce y se desplaza mientras toda la placa continúa completamente frontal. Al terminar el acoplamiento se oculta esa cubierta y queda visible el núcleo tridimensional original de la placa. Existe un breve tramo frontal que hace perceptible el relevo; solo después la placa completa adquiere progresivamente su inclinación y orientación 3D. Solo cuando termina el giro aparecen el primer módulo, su copy y el indicador de progreso.
+
+La portada construye su flujo de fondo exclusivamente con CSS: dos retículas elípticas de líneas finas se desplazan mediante animaciones lentas de `transform`. No existen SVG, canvas, Lottie ni repintados de cientos de paths. Las capas heredan el contraste del tema, cubren el viewport mediante recorte y vinculan su opacidad a la salida del copy, por lo que desaparecen antes de comenzar la contracción del núcleo. Con movimiento reducido no llegan a ejecutarse porque se utiliza el fallback estático del sistema.
+
 La variante activa es `ChipPlatform`: una placa cuadrada biselada con doble marco, retícula, pistas ortogonales y un núcleo central. Comienza a la derecha y termina a la izquierda. En cada momento cae un chip desde arriba, aterriza sobre la plataforma y activa su conexión con el núcleo. Cada chip representa el conocimiento o responsabilidad incorporado. La inclinación vertical conserva una base estable y la rotación horizontal responde al recorrido del scroll.
 
 En desktop la pieza usa la altura del viewport como dimensión principal: ocupa hasta `80svh`, limitada también por el ancho disponible. La inclinación de la placa es de `47deg`, lo que reduce el exceso de superficie horizontal y acerca el sistema ligeramente al espectador. La escena incorpora un foco ambiental fijo en el centro de la pantalla. Mientras la placa lo atraviesa, su sombra cambia de derecha a izquierda y se acorta al pasar por el centro; el grosor de la pieza permanece separado de esa sombra para conservar una geometría coherente.
@@ -41,11 +45,18 @@ El movimiento se ejecuta en una única isla cliente. Un listener pasivo solicita
 
 ## Fallback
 
-En móvil y con `prefers-reduced-motion` el sistema aparece completamente ensamblado y los seis momentos se presentan como una secuencia vertical. Todo el contenido sigue disponible sin depender del sticky, de la rotación o de detectar la etapa activa.
+En móvil y con `prefers-reduced-motion` se omite también la portada a pantalla completa: el sistema aparece completamente ensamblado y los seis momentos se presentan como una secuencia vertical. Todo el contenido sigue disponible sin depender del sticky, de la rotación o de detectar la etapa activa.
 
 ## Criterios de aceptación
 
 - Un único capítulo explica proceso, capas y capacidades.
+- El núcleo `SISTEMA` ocupa por completo el viewport al entrar en el capítulo.
+- El copy introductorio conserva un tramo de lectura y se desvanece antes de iniciar la contracción.
+- La placa permanece totalmente frontal durante toda la contracción del núcleo.
+- Al aterrizar, el núcleo simulado se sustituye por el componente tridimensional real antes de mover la placa.
+- La inclinación tridimensional solo comienza cuando el núcleo ya está completamente acoplado.
+- Su último frame coincide con la posición, tamaño y detalle del núcleo real de la placa.
+- Ningún módulo, copy o indicador de progreso aparece antes de terminar el acoplamiento.
 - La plataforma cruza la pantalla de derecha a izquierda y puede entrar bajo el copy sin comprometer su lectura.
 - La escala de desktop responde primero a la altura útil del viewport.
 - La sombra cambia de dirección respecto al foco central durante el recorrido.

@@ -100,7 +100,7 @@ export function ChipPlatform() {
             <div className={styles.chipHub}>
               <span className={styles.chipHubDepth} />
               <span className={styles.chipHubMid} />
-              <div className={styles.chipHubBody}>
+              <div className={styles.chipHubBody} data-system-hub-target>
                 <span>CORE</span>
                 <strong>{t("systemLabel")}</strong>
                 <i />
@@ -118,7 +118,7 @@ export function ChipPlatform() {
             <div
               className={styles.chipConnectionRoute}
               data-system-connection
-              data-connected={String(routeIndex === 0)}
+              data-connected="false"
               key={`route-${routeIndex}`}
             >
               {route.map((segment, segmentIndex) => (
@@ -140,7 +140,7 @@ export function ChipPlatform() {
           <div
             className={`${styles.systemChip} ${chipClasses[index]}`}
             data-system-chip
-            data-connected={String(index === 0)}
+            data-connected="false"
             key={stage}
           >
             <span className={styles.systemChipSideBottom} />

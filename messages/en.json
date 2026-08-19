@@ -32,6 +32,14 @@
     "title": "<line>From client to production:</line><line>clarity before code,</line><line>evidence before calling it done.</line>",
     "titleLabel": "From client to production: clarity before code, evidence before calling it done.",
     "intro": "These are not isolated stages or a list of capabilities. They form one system that adds context, connects ownership and ends with evidence in production.",
+    "introJourney": {
+      "start": "From",
+      "origin": "Client need",
+      "originDetail": "made explicit",
+      "end": "To",
+      "destination": "Production",
+      "destinationDetail": "fully validated"
+    },
     "storyLabel": "Progressive assembly of an engineering system",
     "systemLabel": "System",
     "steps": {

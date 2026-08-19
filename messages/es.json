@@ -32,6 +32,14 @@
     "title": "<line>Del cliente a producción:</line><line>claridad antes del código,</line><line>evidencia antes de darlo</line><line>por terminado.</line>",
     "titleLabel": "Del cliente a producción: claridad antes del código, evidencia antes de darlo por terminado.",
     "intro": "No son etapas aisladas ni una lista de capacidades. Es un único sistema que incorpora contexto, conecta responsabilidades y termina con evidencia en producción.",
+    "introJourney": {
+      "start": "Desde",
+      "origin": "Necesidad",
+      "originDetail": "de cliente",
+      "end": "Hasta",
+      "destination": "Producción",
+      "destinationDetail": "totalmente validado"
+    },
     "storyLabel": "Construcción progresiva de un sistema de ingeniería",
     "systemLabel": "Sistema",
     "steps": {

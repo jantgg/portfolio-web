@@ -40,7 +40,8 @@ export function ProcessSection() {
       <div
         className={styles.systemStoryScroll}
         data-system-story
-        data-system-stage="0"
+        data-system-stage="-1"
+        data-system-intro="active"
         aria-label={t("storyLabel")}
       >
         <SystemAssemblyController />
@@ -70,6 +71,40 @@ export function ProcessSection() {
           <div className={styles.systemScene} aria-hidden="true">
             <div className={styles.systemPointLight} />
             <ChipPlatform />
+          </div>
+
+          <div
+            className={styles.systemIntroChip}
+            data-system-intro-chip
+            aria-hidden="true"
+          >
+            <div className={styles.systemIntroFlow} aria-hidden="true" />
+
+            <div
+              className={styles.systemIntroNarrative}
+              data-system-intro-copy
+            >
+              <span>{t("section")}</span>
+              <div className={styles.systemIntroNarrativeTitle}>
+                <div className={styles.systemIntroPrinciple}>
+                  <span>{t("introJourney.start")}</span>
+                  <strong>{t("introJourney.origin")}</strong>
+                  <span>{t("introJourney.originDetail")}</span>
+                </div>
+                <div className={styles.systemIntroPrinciple}>
+                  <span>{t("introJourney.end")}</span>
+                  <strong>{t("introJourney.destination")}</strong>
+                  <span>{t("introJourney.destinationDetail")}</span>
+                </div>
+              </div>
+              <p>{t("intro")}</p>
+            </div>
+
+            <div className={styles.systemIntroCore} data-system-intro-core>
+              <span data-system-intro-meta>CORE</span>
+              <strong data-system-intro-title>{t("systemLabel")}</strong>
+              <i data-system-intro-signal />
+            </div>
           </div>
 
           <div className={styles.systemStoryProgress} aria-hidden="true">

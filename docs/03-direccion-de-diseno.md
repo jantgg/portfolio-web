@@ -175,6 +175,7 @@ Condiciones:
 ### Sistema de ingeniería
 
 - Unifica proceso, capas y capacidades en seis momentos acumulativos.
+- Empieza con una portada cinética que contiene el mensaje «Del cliente a producción». El copy conserva primero un tramo de lectura y se desvanece con el scroll. Después `SISTEMA` se contrae y se acopla mientras la placa continúa frontal. En ese punto la cubierta simulada se sustituye por el núcleo 3D real; solo después de ese relevo la placa adquiere profundidad e inclinación, antes de revelar los momentos del proceso o su progreso.
 - En escritorio, el scroll ensambla un objeto 3D que rota y se desplaza de derecha a izquierda. No se cancelan eventos de rueda ni se altera la dirección del dispositivo.
 - El objeto y el copy nunca compiten por el mismo espacio: contexto, contrato y sistema se leen a la izquierda; implementación, evidencia y producción, a la derecha.
 - Cada módulo hace visible qué se incorpora al sistema y qué capacidades intervienen, sin volver a enumerarlas en otro capítulo.

@@ -412,7 +412,7 @@
   --system-progress: 0;
   position: relative;
   width: 100vw;
-  height: 620svh;
+  height: 840svh;
   margin-left: calc(50% - 50vw);
 }
 
@@ -471,12 +471,18 @@
   left: auto;
 }
 
-.systemStoryScroll[data-system-stage="0"] .systemStoryCopy:nth-child(1),
-.systemStoryScroll[data-system-stage="1"] .systemStoryCopy:nth-child(2),
-.systemStoryScroll[data-system-stage="2"] .systemStoryCopy:nth-child(3),
-.systemStoryScroll[data-system-stage="3"] .systemStoryCopy:nth-child(4),
-.systemStoryScroll[data-system-stage="4"] .systemStoryCopy:nth-child(5),
-.systemStoryScroll[data-system-stage="5"] .systemStoryCopy:nth-child(6) {
+.systemStoryScroll[data-system-intro="complete"][data-system-stage="0"]
+  .systemStoryCopy:nth-child(1),
+.systemStoryScroll[data-system-intro="complete"][data-system-stage="1"]
+  .systemStoryCopy:nth-child(2),
+.systemStoryScroll[data-system-intro="complete"][data-system-stage="2"]
+  .systemStoryCopy:nth-child(3),
+.systemStoryScroll[data-system-intro="complete"][data-system-stage="3"]
+  .systemStoryCopy:nth-child(4),
+.systemStoryScroll[data-system-intro="complete"][data-system-stage="4"]
+  .systemStoryCopy:nth-child(5),
+.systemStoryScroll[data-system-intro="complete"][data-system-stage="5"]
+  .systemStoryCopy:nth-child(6) {
   opacity: 1;
   transform: translate3d(0, -50%, 0);
   pointer-events: auto;
@@ -586,6 +592,8 @@
   --chip-shadow-y: 0.9rem;
   --chip-shadow-small-x: 0.46rem;
   --chip-shadow-small-y: 0.34rem;
+  --chip-tilt-x: 0deg;
+  --chip-tilt-z: 0deg;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -596,11 +604,238 @@
   will-change: transform;
 }
 
+.systemIntroChip {
+  --intro-left: 0px;
+  --intro-top: 0px;
+  --intro-width: 100vw;
+  --intro-height: 100svh;
+  --intro-padding: max(2rem, 4vw);
+  --intro-title-size: min(15vw, 13.75rem);
+  --intro-meta-size: 0.75rem;
+  --intro-signal-size: 0.9rem;
+  --intro-content-gap: clamp(0.9rem, 1.4vw, 1.4rem);
+  --intro-copy-opacity: 1;
+  --intro-copy-shift: 0rem;
+  --intro-core-opacity: 0;
+  position: absolute;
+  z-index: 30;
+  top: var(--intro-top);
+  left: var(--intro-left);
+  width: var(--intro-width);
+  height: var(--intro-height);
+  padding: var(--intro-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  border: 1px solid var(--text-primary);
+  background: var(--text-primary);
+  color: var(--surface-canvas);
+  opacity: 1;
+  transform: translateZ(0);
+  transition: opacity 180ms linear;
+  will-change: top, left, width, height;
+  pointer-events: none;
+}
+
+.systemIntroChip::before {
+  position: absolute;
+  inset: var(--intro-padding);
+  border: 1px solid color-mix(in srgb, var(--surface-canvas) 26%, transparent);
+  content: "";
+  pointer-events: none;
+}
+
+.systemIntroFlow {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  overflow: hidden;
+  color: var(--surface-canvas);
+  opacity: calc(var(--intro-copy-opacity) * 0.18);
+  transition: opacity 120ms linear;
+  isolation: isolate;
+  pointer-events: none;
+}
+
+.systemIntroFlow::before,
+.systemIntroFlow::after {
+  position: absolute;
+  inset: -26%;
+  display: block;
+  background: repeating-radial-gradient(
+    ellipse at 50% 50%,
+    transparent 0 6.8%,
+    currentColor 6.92% 7.02%,
+    transparent 7.14% 12.8%
+  );
+  content: "";
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+.systemIntroFlow::before {
+  opacity: 0.72;
+  transform: translate3d(-7%, -2%, 0) rotate(-17deg) scale(1.06, 0.74);
+  animation: system-flow-a 44s var(--ease-in-out) infinite alternate;
+}
+
+.systemIntroFlow::after {
+  opacity: 0.4;
+  transform: translate3d(9%, 5%, 0) rotate(31deg) scale(0.88, 1.08);
+  animation: system-flow-b 57s var(--ease-in-out) infinite alternate;
+}
+
+@keyframes system-flow-a {
+  to {
+    transform: translate3d(8%, 5%, 0) rotate(-7deg) scale(0.96, 0.82);
+  }
+}
+
+@keyframes system-flow-b {
+  to {
+    transform: translate3d(-7%, -6%, 0) rotate(36deg) scale(1.02, 0.96);
+  }
+}
+
+.systemIntroNarrative {
+  position: absolute;
+  z-index: 3;
+  inset: calc(var(--intro-padding) + clamp(0.85rem, 1.1vw, 1.25rem));
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: auto 1fr auto;
+  gap: 1.5rem;
+  opacity: var(--intro-copy-opacity);
+  transform: translate3d(0, var(--intro-copy-shift), 0);
+  will-change: opacity, transform;
+}
+
+.systemIntroNarrative > span {
+  grid-column: 1 / -1;
+  font-size: clamp(0.7rem, 0.75vw, 0.82rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.systemIntroNarrativeTitle {
+  grid-column: 1 / -1;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1.25rem, 2.8svh, 2.75rem);
+  width: 100%;
+  overflow-wrap: normal;
+  word-break: keep-all;
+  hyphens: none;
+}
+
+.systemIntroPrinciple {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: max-content;
+  min-width: 0;
+  max-width: 100%;
+  text-align: left;
+}
+
+.systemIntroPrinciple:last-child {
+  margin-left: 0;
+}
+
+.systemIntroPrinciple > strong {
+  font-size: clamp(5.2rem, 9.6vw, 11.5rem);
+  font-weight: 800;
+  line-height: 0.72;
+  letter-spacing: -0.075em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.systemIntroPrinciple > span {
+  font-size: clamp(1.35rem, 2vw, 2.4rem);
+  font-weight: 250;
+  line-height: 0.9;
+  letter-spacing: -0.035em;
+  white-space: nowrap;
+}
+
+.systemIntroPrinciple > span:first-child {
+  margin-bottom: clamp(0.45rem, 0.8svh, 0.8rem);
+  font-size: clamp(0.72rem, 0.8vw, 0.9rem);
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.systemIntroPrinciple > span:last-child {
+  align-self: flex-end;
+  margin-top: clamp(0.4rem, 0.75svh, 0.75rem);
+}
+
+.systemIntroNarrative p {
+  grid-column: 9 / -1;
+  align-self: end;
+  max-width: 31rem;
+  margin: 0 0 clamp(3rem, 6svh, 5rem);
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
+}
+
+.systemIntroCore {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  padding: var(--intro-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: var(--intro-core-opacity);
+}
+
+.systemIntroCore > span {
+  margin: var(--intro-content-gap) 0 0 var(--intro-content-gap);
+  font-size: var(--intro-meta-size);
+  letter-spacing: 0.12em;
+}
+
+.systemIntroCore > strong {
+  margin: 0 0 var(--intro-content-gap) var(--intro-content-gap);
+  font-size: var(--intro-title-size);
+  font-weight: 600;
+  line-height: 0.78;
+  letter-spacing: -0.065em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.systemIntroCore > i {
+  position: absolute;
+  z-index: 2;
+  top: calc(var(--intro-padding) + var(--intro-content-gap));
+  right: calc(var(--intro-padding) + var(--intro-content-gap));
+  width: var(--intro-signal-size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--surface-canvas);
+  box-shadow: 0 0 0 calc(var(--intro-signal-size) * 0.65)
+    color-mix(in srgb, var(--surface-canvas) 16%, transparent);
+}
+
+.systemStoryScroll[data-system-intro="docked"] .systemIntroChip,
+.systemStoryScroll[data-system-intro="complete"] .systemIntroChip,
+.systemStoryScroll[data-system-static="true"] .systemIntroChip {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .chipPlane {
   position: relative;
   width: 100%;
   height: 100%;
-  transform: rotateX(47deg) rotateY(var(--chip-facing-y)) rotateZ(-3deg);
+  transform: rotateX(var(--chip-tilt-x)) rotateY(var(--chip-facing-y))
+    rotateZ(var(--chip-tilt-z));
   transform-style: preserve-3d;
   will-change: transform;
 }
@@ -818,20 +1053,30 @@
   transform: translateZ(1.6rem);
 }
 
+.chipHubBody::before {
+  position: absolute;
+  inset: 0.65rem;
+  border: 1px solid color-mix(in srgb, var(--surface-canvas) 26%, transparent);
+  content: "";
+  pointer-events: none;
+}
+
 .chipHubBody > span {
+  margin: 0.18rem 0 0 0.18rem;
   font-size: 0.46rem;
   letter-spacing: 0.12em;
 }
 
 .chipHubBody strong {
+  margin: 0 0 0.18rem 0.18rem;
   font-size: clamp(0.62rem, 0.8vw, 0.82rem);
   text-transform: uppercase;
 }
 
 .chipHubBody i {
   position: absolute;
-  top: 0.65rem;
-  right: 0.65rem;
+  top: calc(0.65rem + 0.18rem);
+  right: calc(0.65rem + 0.18rem);
   width: 0.45rem;
   aspect-ratio: 1;
   border-radius: 50%;
@@ -1283,6 +1528,15 @@
   gap: 1rem;
   color: var(--text-tertiary);
   font-size: 0.65rem;
+  transition: opacity 300ms var(--ease-out);
+}
+
+.systemStoryScroll[data-system-intro="active"] .systemStoryProgress {
+  opacity: 0;
+}
+
+.systemStoryScroll[data-system-intro="docked"] .systemStoryProgress {
+  opacity: 0;
 }
 
 .systemStoryProgress div {
@@ -1326,6 +1580,8 @@
 
 .systemStoryScroll[data-system-static="true"] .chipAssembly {
   --system-x: 0vw;
+  --chip-tilt-x: 47deg;
+  --chip-tilt-z: -3deg;
 }
 
 .systemStoryScroll[data-system-static="true"] .systemStoryCopies {
@@ -2551,8 +2807,14 @@
   .chipAssembly,
   .systemStoryScroll[data-system-static="true"] .chipAssembly {
     --system-x: 0vw;
+    --chip-tilt-x: 47deg;
+    --chip-tilt-z: -3deg;
     width: min(92vw, 27rem);
     height: min(92vw, 27rem);
+  }
+
+  .systemIntroChip {
+    display: none;
   }
 
   .systemStoryCopy::before {
@@ -3008,6 +3270,19 @@
   }
 }
 
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .systemStoryLead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
 @media (min-width: 1800px) {
   .heroTitle,
   .heroComposition {
@@ -3016,6 +3291,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .systemIntroChip {
+    display: none;
+  }
+
   .splitFlapGlyph {
     transform: none;
     animation: none;
