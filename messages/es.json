@@ -1,0 +1,383 @@
+{
+  "Metadata": {
+    "title": "Juan Antonio Gómez Gil — Software Engineer",
+    "description": "Software Engineer especializado en frontend. Investigo contextos complejos, conecto sistemas y construyo soluciones técnicamente viables."
+  },
+  "Navigation": {
+    "skip": "Saltar al contenido",
+    "home": "Volver al inicio",
+    "label": "Navegación principal",
+    "process": "PROCESO",
+    "case": "CASOS",
+    "about": "SOBRE MÍ",
+    "contact": "HABLEMOS",
+    "language": "Idioma",
+    "theme": "Cambiar tema"
+  },
+  "Hero": {
+    "index": "01 / 07",
+    "scroll": "SCROLL",
+    "line1": "Software",
+    "line2": "Engineer",
+    "line3": "Conecto sistemas",
+    "line4": "y equipos",
+    "body1": "Especializado en frontend, trabajo más allá de la interfaz para convertir complejidad de producto en decisiones técnicas que se pueden construir.",
+    "body2": "Investigo el contexto, hago explícitas las restricciones y conecto diseño, backend y negocio para llevar la solución desde la conversación inicial hasta producción.",
+    "tagline": "Del contexto a producción.",
+    "action": "VER|PROCESO",
+    "actionLabel": "Conocer mi proceso"
+  },
+  "Process": {
+    "section": "DEL CLIENTE A PRODUCCIÓN",
+    "title": "<line>Del cliente a producción:</line><line>claridad antes del código,</line><line>evidencia antes de darlo</line><line>por terminado.</line>",
+    "titleLabel": "Del cliente a producción: claridad antes del código, evidencia antes de darlo por terminado.",
+    "intro": "No son etapas aisladas ni una lista de capacidades. Es un único sistema que incorpora contexto, conecta responsabilidades y termina con evidencia en producción.",
+    "introJourney": {
+      "start": "Desde",
+      "origin": "Necesidad",
+      "originDetail": "de cliente",
+      "end": "Hasta",
+      "destination": "Producción",
+      "destinationDetail": "totalmente validado"
+    },
+    "storyLabel": "Construcción progresiva de un sistema de ingeniería",
+    "systemLabel": "Sistema",
+    "navigation": {
+      "label": "Navegación por el proceso",
+      "previous": "Ir al punto anterior del proceso",
+      "next": "Ir al siguiente punto del proceso"
+    },
+    "aiBridge": {
+      "question": "¿Cómo mantengo mi foco y energía en tareas más cercanas al cliente y menos en código repetitivo?",
+      "action": "VER EL SISTEMA"
+    },
+    "steps": {
+      "understand": {
+        "eyebrow": "Contexto",
+        "module": "Contexto",
+        "title": "No asumas. Pregunta.",
+        "question": "La petición del cliente abre la conversación; no define la solución.",
+        "body": "Escucho al cliente y alineo objetivo, usuario, restricciones de producto y qué significa éxito antes de convertir una conversación en trabajo técnico.",
+        "skillsLabel": "Capacidades implicadas en contexto",
+        "tags": ["Cliente", "Producto", "Negocio"]
+      },
+      "investigate": {
+        "eyebrow": "Contrato",
+        "module": "Contrato",
+        "title": "Haz explícito el contrato.",
+        "question": "Si el criterio no es compartido, la implementación es una apuesta.",
+        "body": "Convierto ambigüedad en alcance, estados, decisiones de diseño, datos, responsables y criterios de aceptación que todo el equipo pueda verificar.",
+        "skillsLabel": "Capacidades implicadas en contrato",
+        "tags": ["Diseño", "Criterios", "Comunicación"]
+      },
+      "connect": {
+        "eyebrow": "Sistema",
+        "module": "Flujo",
+        "title": "Sigue el flujo completo.",
+        "question": "El problema no termina donde acaba el ticket.",
+        "body": "Trazo cómo viaja una decisión entre contenido, CMS, APIs, frontend y operación. Hago visible dónde vive cada responsabilidad y qué depende de qué.",
+        "skillsLabel": "Capacidades implicadas en sistema",
+        "tags": ["CMS", "APIs", "Frontend"]
+      },
+      "propose": {
+        "title": "Decide dónde vive.",
+        "question": "Toda responsabilidad necesita un lugar y una razón.",
+        "body": "Planteo alternativas, hago visibles los trade-offs y elijo la solución más sencilla que resuelve la causa sin añadir deuda innecesaria."
+      },
+      "build": {
+        "eyebrow": "Implementación",
+        "module": "Código",
+        "title": "Construye para el mundo real.",
+        "question": "El happy path no es el producto.",
+        "body": "Convierto la decisión en una arquitectura mantenible e integro estados, errores, accesibilidad y rendimiento como parte del producto, no como remates.",
+        "skillsLabel": "Capacidades implicadas en implementación",
+        "tags": ["Arquitectura", "Accesibilidad", "Rendimiento"]
+      },
+      "validate": {
+        "eyebrow": "Evidencia",
+        "module": "Evidencia",
+        "title": "Valida lo que importa.",
+        "question": "Sin evidencia, terminado es solo una opinión.",
+        "body": "Uso debugging transversal, pruebas, casos límite y evidencia revisable para comprobar el comportamiento del sistema completo antes de llamarlo terminado.",
+        "skillsLabel": "Capacidades implicadas en validación",
+        "tags": ["Debugging", "Pruebas", "Calidad"]
+      },
+      "deliver": {
+        "eyebrow": "Producción",
+        "module": "Producción",
+        "title": "Demuestra en producción.",
+        "body": "Llevo la solución hasta release, observo su comportamiento, cierro el circuito con los equipos implicados y dejo el conocimiento necesario para mantenerla.",
+        "skillsLabel": "Capacidades implicadas en producción",
+        "tags": ["Release", "Observabilidad", "Ownership"]
+      }
+    }
+  },
+  "Case": {
+    "section": "CASOS REALES",
+    "eyebrow": "INGENIERÍA CON EVIDENCIA",
+    "title": "Conectar equipos también es parte de la solución.",
+    "intro": "Tres problemas distintos. Una misma forma de trabajar: entender el sistema completo, hacer explícitos los criterios y reducir la distancia entre una decisión y una implementación válida.",
+    "ai": {
+      "section": "IA APLICADA AL SISTEMA",
+      "labelPrimary": "IA",
+      "titleLine1": "Menos ambigüedad.",
+      "titleLine2": "Más tiempo para lo que aporta valor.",
+      "flowLabel": "Flujo de ingeniería asistido por IA",
+      "steps": {
+        "context": {
+          "title": "Contexto versionado",
+          "description": "Las decisiones, reglas y mapas del sistema viven junto al código. Agentes y skills cargan solo la información relevante para cada tarea, sin depender de memoria individual ni prompts interminables."
+        },
+        "criteria": {
+          "title": "Flujos gobernados",
+          "description": "Un registro conecta cada cambio con especialistas, documentación, límites, riesgo y checks. La IA no improvisa el proceso: sigue rutas versionadas y proporcionales al impacto."
+        },
+        "implementation": {
+          "title": "Validación automática",
+          "description": "Documentación, contratos, fixtures, integraciones y reglas se auditan durante el desarrollo. El drift aparece antes de la revisión, cuando todavía es barato corregirlo."
+        },
+        "evidence": {
+          "title": "Evidencia revisable",
+          "description": "Cada entrega produce reportes, resúmenes y resultados persistentes. Quien revisa recibe alcance, decisiones y checks verificables, no solo un diff y una explicación reconstruida."
+        }
+      },
+      "statement": "La IA no sustituye el proceso de ingeniería. Se conecta a él para trabajar con contexto, límites y evidencia."
+    },
+    "items": {
+      "hic": {
+        "index": "01",
+        "label": "HIC · FLUJO DE INGENIERÍA",
+        "title": "Del conocimiento implícito a un sistema operativo de proyecto.",
+        "body": "Una plataforma editorial conectaba CMS, APIs, frontend y varios equipos. Diseñé una capa de contexto, documentación y validaciones asistidas por IA para que cada cambio partiera de criterios compartidos y terminara con evidencia.",
+        "result": "Criterios vivos · documentación como código · validación transversal",
+        "link": "VER CASO HIC"
+      },
+      "figma": {
+        "index": "02",
+        "label": "PLUGIN DE FIGMA · AUTOMATIZACIÓN",
+        "title": "Del sistema de diseño a producción sin reconstruir cada entrega.",
+        "body": "Un plugin convierte componentes controlados de Figma en emails HTML, incorpora datos desde Excel y entrega los assets a Salesforce dentro del mismo flujo creativo.",
+        "result": "Figma · HTML email · Excel · Salesforce",
+        "link": "VER CASO FIGMA"
+      },
+      "racing": {
+        "index": "03",
+        "label": "ON RACING · PRODUCTO CONECTADO",
+        "title": "Convertir actividad deportiva en una experiencia de aprendizaje.",
+        "body": "Una academia gamificada conecta datos de Strava con progreso, lecciones, entrenadores y recompensas, resolviendo autenticación, sincronización y estados de producto alrededor de una API externa.",
+        "result": "Strava · progreso · contenido · recompensas",
+        "link": "VER CASO ON RACING"
+      }
+    }
+  },
+  "CaseDetails": {
+    "common": {
+      "back": "VOLVER A CASOS",
+      "overview": "CASO REAL",
+      "problem": "EL PROBLEMA",
+      "system": "EL SISTEMA",
+      "decisions": "DECISIONES DE DISEÑO",
+      "result": "EL RESULTADO",
+      "confidentiality": "SOBRE ESTE CASO",
+      "confidentialityBody": "El caso describe el problema, la arquitectura y las decisiones sin publicar datos del cliente, credenciales, dominios internos, identificadores ni métricas confidenciales.",
+      "other": "OTROS CASOS",
+      "read": "LEER CASO"
+    },
+    "hic": {
+      "metaTitle": "Caso HIC — IA y sistema operativo de ingeniería",
+      "metaDescription": "Cómo conecté CMS, APIs, frontend, documentación e IA para crear criterios de aceptación vivos y evidencia verificable.",
+      "index": "01 / 03",
+      "label": "HIC · IA APLICADA AL FLUJO DE INGENIERÍA",
+      "title": "Convertir conocimiento disperso en un sistema operativo de proyecto.",
+      "intro": "El reto no era escribir código más rápido. Era conseguir que producto, diseño e ingeniería pudieran decidir e implementar sobre el mismo contexto.",
+      "facts": {
+        "scopeLabel": "ÁMBITO",
+        "scope": "Frontend, CMS, APIs y proceso",
+        "roleLabel": "APORTACIÓN",
+        "role": "Arquitectura de solución y flujo de ingeniería",
+        "focusLabel": "FOCO",
+        "focus": "Criterio compartido, trazabilidad y validación"
+      },
+      "problemTitle": "La complejidad estaba entre sistemas —y entre equipos.",
+      "problemBody1": "La plataforma se construye a partir de contenido dinámico de CMS, contratos de API, transformaciones de datos y un runtime de componentes. Una decisión aparentemente local puede atravesar todas esas capas.",
+      "problemBody2": "Parte del conocimiento vivía en conversaciones, tickets o personas concretas. Eso hacía más difícil detectar impactos, mantener la documentación alineada y definir cuándo una implementación estaba realmente terminada.",
+      "systemTitle": "La IA se conecta al proceso con contexto, límites y evidencia.",
+      "systemIntro": "Diseñé una capa de trabajo alrededor del repositorio: no decide por el equipo ni sustituye las fuentes de verdad; organiza el contexto necesario y ejecuta comprobaciones reproducibles.",
+      "systemItems": {
+        "context": {
+          "title": "Contexto bajo demanda",
+          "body": "Agentes y skills especializados cargan la información relevante de rutas, CMS, APIs, componentes o accesibilidad según el tipo de tarea."
+        },
+        "criteria": {
+          "title": "Criterios de aceptación vivos",
+          "body": "Los requisitos se convierten en contratos y comprobaciones concretas que evolucionan junto al código y hacen visible qué significa terminar bien."
+        },
+        "docs": {
+          "title": "Documentación como código",
+          "body": "Decisiones, flujos y responsabilidades quedan versionados y se validan para reducir la distancia entre lo documentado y lo que realmente ejecuta el producto."
+        },
+        "evidence": {
+          "title": "Evidencia dinámica",
+          "body": "Fixtures, auditorías de integraciones, comparaciones y reportes locales convierten supuestos en resultados revisables antes de abrir una PR."
+        },
+        "map": {
+          "title": "Mapa de conocimiento",
+          "body": "Relaciona rutas, tipos de contenido, modelos, transformaciones, componentes, tests y documentación para anticipar el radio de impacto de un cambio."
+        }
+      },
+      "flowLabel": "FLUJO OPERATIVO",
+      "flow": {
+        "conversation": "Conversación",
+        "constraints": "Restricciones",
+        "criteria": "Criterios",
+        "implementation": "Implementación",
+        "validation": "Validación",
+        "evidence": "Evidencia"
+      },
+      "decisionsTitle": "Automatizar lo repetible para proteger el criterio.",
+      "decisionsBody": "El sistema usa catálogos cerrados de tareas, entradas tipadas y fuentes de verdad explícitas. Separa configuración, ejecución y resultados; evita instrucciones genéricas sin contexto y deja trazabilidad de cada validación.",
+      "resultTitle": "Entregas con menos incertidumbre y conversaciones de mayor valor.",
+      "resultBody": "El resultado es un flujo capaz de detectar desalineaciones antes, reducir búsquedas y retrabajo, preparar handoffs más consistentes y acortar el camino entre requisito y validación. El tiempo recuperado vuelve a donde más importa: conectar equipos y tomar mejores decisiones.",
+      "next": "figma"
+    },
+    "figma": {
+      "metaTitle": "Caso plugin de Figma — Diseño conectado a Salesforce",
+      "metaDescription": "Un plugin que convierte componentes de Figma y datos de Excel en emails HTML preparados para Salesforce.",
+      "index": "02 / 03",
+      "label": "PLUGIN DE FIGMA · DISEÑO A PRODUCCIÓN",
+      "title": "Convertir un sistema visual en una herramienta de entrega.",
+      "intro": "El objetivo era eliminar la reconstrucción manual entre diseño y campaña sin perder control sobre los componentes, los datos o el HTML final.",
+      "facts": {
+        "scopeLabel": "ÁMBITO",
+        "scope": "Plugin, backend e integración",
+        "roleLabel": "APORTACIÓN",
+        "role": "Arquitectura frontend y automatización",
+        "focusLabel": "FOCO",
+        "focus": "Consistencia, autonomía y entrega"
+      },
+      "problemTitle": "Diseñar el email era solo una parte del trabajo.",
+      "problemBody1": "Cada campaña necesitaba respetar un catálogo de bloques, metadatos y variaciones regionales, además de transformar el resultado a HTML compatible con las restricciones reales del canal.",
+      "problemBody2": "Cuando diseño, datos y publicación viven en herramientas separadas aparecen tareas manuales, errores de copia y diferencias entre la pieza aprobada y el asset que termina en producción.",
+      "systemTitle": "Figma se convierte en la interfaz de un pipeline controlado.",
+      "systemIntro": "El plugin importa componentes autorizados, permite componer una pieza en un frame exportable y orquesta las transformaciones necesarias hasta su entrega.",
+      "systemItems": {
+        "library": {
+          "title": "Biblioteca controlada",
+          "body": "Los bloques disponibles se importan desde una librería compartida y se instancian con estructura y metadatos consistentes."
+        },
+        "composition": {
+          "title": "Composición asistida",
+          "body": "El usuario construye la campaña dentro de un frame gestionado por el plugin, con navegación, selección y validaciones de contexto."
+        },
+        "data": {
+          "title": "Datos desde Excel",
+          "body": "La carga de hojas de cálculo incorpora enlaces y variaciones a través del backend, evitando trasladar información a mano."
+        },
+        "transform": {
+          "title": "Transformación a HTML",
+          "body": "Cada componente tiene renderizadores y normalizaciones específicas para generar un email coherente con el diseño y el canal."
+        },
+        "delivery": {
+          "title": "Entrega a Salesforce",
+          "body": "El mismo flujo permite previsualizar o descargar el HTML y crear el asset en Salesforce con su categoría y metadatos."
+        }
+      },
+      "flowLabel": "FLUJO DE ENTREGA",
+      "flow": {
+        "conversation": "Componentes",
+        "constraints": "Composición",
+        "criteria": "Datos",
+        "implementation": "HTML",
+        "validation": "Validación",
+        "evidence": "Salesforce"
+      },
+      "decisionsTitle": "La automatización empieza por limitar bien el sistema.",
+      "decisionsBody": "En lugar de intentar exportar cualquier diseño, el pipeline trabaja con componentes conocidos y transformaciones específicas. Esa restricción hace posible ofrecer autonomía sin renunciar a la calidad del resultado.",
+      "resultTitle": "Menos reconstrucción entre la pieza aprobada y la pieza publicada.",
+      "resultBody": "Diseño, contenido y entrega quedan conectados en un único recorrido. El equipo puede reutilizar bloques, aplicar datos y producir assets de forma más consistente, reservando la revisión para decisiones visuales y de contenido.",
+      "next": "racing"
+    },
+    "racing": {
+      "metaTitle": "Caso On Racing — Strava, progreso y aprendizaje",
+      "metaDescription": "Una academia gamificada que conecta actividad de Strava con progreso, lecciones, entrenadores y recompensas.",
+      "index": "03 / 03",
+      "label": "ON RACING · PRODUCTO CONECTADO A DATOS",
+      "title": "Convertir actividad deportiva en progreso que el usuario puede sentir.",
+      "intro": "La experiencia necesitaba unir entrenamiento real, contenido y motivación sin que la complejidad de una API externa llegara al usuario.",
+      "facts": {
+        "scopeLabel": "ÁMBITO",
+        "scope": "Producto web, API y datos",
+        "roleLabel": "APORTACIÓN",
+        "role": "Frontend e integración de producto",
+        "focusLabel": "FOCO",
+        "focus": "Sincronización, progreso y resiliencia"
+      },
+      "problemTitle": "Una actividad externa tenía que convertirse en estado de producto.",
+      "problemBody1": "La academia combina lecciones de vídeo y audio, entrenadores, retos semanales y recompensas. Pero el avance depende de actividad que ocurre fuera de la aplicación y llega desde Strava.",
+      "problemBody2": "Eso obliga a resolver autenticación, renovación de tokens, webhooks, sincronizaciones periódicas, límites de API y consistencia de datos antes de poder enseñar una barra de progreso fiable.",
+      "systemTitle": "Datos, contenido y motivación funcionan como un solo recorrido.",
+      "systemIntro": "La aplicación traduce eventos deportivos en progreso persistente y usa ese estado para desbloquear contenido y recompensas dentro de una experiencia localizada.",
+      "systemItems": {
+        "identity": {
+          "title": "Identidad conectada",
+          "body": "OAuth enlaza al atleta con la aplicación y gestiona la renovación de credenciales sin convertirla en una preocupación de interfaz."
+        },
+        "sync": {
+          "title": "Sincronización resiliente",
+          "body": "Webhooks y procesos programados actualizan actividades, contemplan reintentos y límites, e invalidan datos cuando cambia la fuente."
+        },
+        "model": {
+          "title": "Modelo de progreso",
+          "body": "Usuarios, actividades, semanas, lecciones y recompensas se relacionan en base de datos para mantener un estado coherente."
+        },
+        "experience": {
+          "title": "Experiencia de aprendizaje",
+          "body": "Vídeo, audio, entrenadores y contenido desbloqueable convierten el dato deportivo en una experiencia con continuidad."
+        },
+        "signals": {
+          "title": "Señales de producto",
+          "body": "Analítica y observabilidad hacen visibles tanto el comportamiento del usuario como los fallos de integraciones críticas."
+        }
+      },
+      "flowLabel": "FLUJO DE PRODUCTO",
+      "flow": {
+        "conversation": "Actividad",
+        "constraints": "Strava",
+        "criteria": "Sincronización",
+        "implementation": "Progreso",
+        "validation": "Contenido",
+        "evidence": "Recompensa"
+      },
+      "decisionsTitle": "La integración debe absorber la complejidad, no trasladarla.",
+      "decisionsBody": "El producto separa la comunicación con Strava, la persistencia y la experiencia. La interfaz consume un estado estable mientras las capas de integración gestionan expiraciones, fallos y actualizaciones.",
+      "resultTitle": "Una experiencia continua construida sobre sistemas que no lo son.",
+      "resultBody": "La actividad del usuario se convierte en avance visible, acceso a contenidos y recompensas. Producto, datos y entrenamiento quedan conectados sin exponer al usuario la complejidad operativa que sostiene la experiencia.",
+      "next": "hic"
+    }
+  },
+  "Tools": {
+    "section": "HERRAMIENTAS, NO IDENTIDAD",
+    "intro": "Trabajo con",
+    "listLabel": "React, Next.js, TypeScript, APIs, CMS, Figma, Git e IA",
+    "items": ["React", "Next.js", "TypeScript", "APIs", "CMS", "Figma", "Git", "IA"],
+    "title": "Son herramientas.",
+    "statement": "La capacidad es entender sistemas y resolver problemas."
+  },
+  "About": {
+    "section": "SOBRE MÍ",
+    "title": "Me gusta trabajar donde todavía no está clara la respuesta.",
+    "body1": "Empecé especializándome en frontend, pero progresivamente mi trabajo se ha desplazado hacia problemas más transversales.",
+    "body2": "Me interesa entender el producto completo: desde la necesidad inicial hasta los datos, las APIs, la arquitectura y la experiencia final.",
+    "body3": "Disfruto de los problemas que requieren investigar, hablar con distintos perfiles y tomar decisiones antes de escribir código.",
+    "statement": "Mi objetivo no es implementar una solución. Es conseguir que el problema deje de existir.",
+    "portraitAlt": "Retrato de Juan Antonio Gómez Gil",
+    "caption": "JUAN ANTONIO GÓMEZ GIL — SOFTWARE ENGINEER"
+  },
+  "Contact": {
+    "eyebrow": "¿HAY UN PROBLEMA INTERESANTE QUE RESOLVER?",
+    "title": "Hablemos.",
+    "action": "ESCRIBIR|MENSAJE",
+    "actionLabel": "Enviar un email a Juan Antonio",
+    "tagline": "DEL PROBLEMA A PRODUCCIÓN."
+  }
+}

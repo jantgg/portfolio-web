@@ -1,82 +1,529 @@
-
-body::-webkit-scrollbar {
-  display: none; /* Oculta la barra de desplazamiento */
+@font-face {
+  font-family: "Telegraf";
+  src: url("/fonts/PPTelegraf-UltraLight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* Para IE, Edge y Firefox */
+@font-face {
+  font-family: "Telegraf";
+  src: url("/fonts/PPTelegraf-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Telegraf";
+  src: url("/fonts/PPTelegraf-UltraBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --surface-canvas: #040200;
+  --surface-raised: #11100f;
+  --text-primary: #f8fafb;
+  --text-secondary: rgba(248, 250, 251, 0.68);
+  --text-tertiary: rgba(248, 250, 251, 0.5);
+  --border-subtle: rgba(248, 250, 251, 0.24);
+  --border-strong: rgba(248, 250, 251, 0.72);
+  --surface-glass: rgba(255, 255, 255, 0.018);
+  --ambient-glow: rgba(255, 255, 255, 0.035);
+  --ambient-line: rgba(255, 255, 255, 0.045);
+  --ambient-beam: rgba(255, 255, 255, 0.12);
+  --ambient-light: rgb(248, 250, 251);
+  --ambient-light-glow: rgba(227, 228, 229, 0.65);
+  --network-line: rgba(248, 250, 251, 0.48);
+  --network-node: rgba(248, 250, 251, 0.88);
+  --network-glow: rgba(248, 250, 251, 0.42);
+  --orbital-edge: rgba(248, 250, 251, 0.035);
+  --orbital-core: rgba(248, 250, 251, 0.12);
+  --ambient-frame: rgba(248, 250, 251, 0.55);
+  --contact-surface: rgba(4, 2, 0, 0.88);
+  --noise-blend: screen;
+  --page-gutter: clamp(1.25rem, 3.2vw, 3.5rem);
+  --content-max: 100rem;
+  --header-height: clamp(5.5rem, 9vw, 8rem);
+  --radius-media: clamp(1rem, 2.4vw, 2.5rem);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+:root[data-theme="light"] {
+  --surface-canvas: #f0ece2;
+  --surface-raised: #e4ded1;
+  --text-primary: #1d1a17;
+  --text-secondary: rgba(29, 26, 23, 0.7);
+  --text-tertiary: rgba(29, 26, 23, 0.68);
+  --border-subtle: rgba(29, 26, 23, 0.22);
+  --border-strong: rgba(29, 26, 23, 0.68);
+  --surface-glass: rgba(29, 26, 23, 0.025);
+  --ambient-glow: rgba(140, 102, 62, 0.07);
+  --ambient-line: rgba(29, 26, 23, 0.065);
+  --ambient-beam: rgba(151, 105, 61, 0.13);
+  --ambient-light: rgba(92, 61, 36, 0.78);
+  --ambient-light-glow: rgba(113, 76, 42, 0.38);
+  --network-line: rgba(29, 26, 23, 0.48);
+  --network-node: rgba(92, 61, 36, 0.82);
+  --network-glow: rgba(116, 80, 44, 0.4);
+  --orbital-edge: rgba(92, 61, 36, 0.035);
+  --orbital-core: rgba(92, 61, 36, 0.13);
+  --ambient-frame: rgba(29, 26, 23, 0.48);
+  --contact-surface: rgba(240, 236, 226, 0.9);
+  --noise-blend: multiply;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--surface-canvas);
+  color-scheme: dark;
+  overflow-x: clip;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+}
+
 body {
-  cursor: crosshair;
-  justify-content: center;
-  display: flex;
-  margin: 0 !important;
-  -ms-overflow-style: none;  /* Para Internet Explorer y Edge */
-  overflow-y: scroll; /* Mantiene la funcionalidad de desplazamiento */
+  min-width: 20rem;
+  margin: 0;
+  overflow-x: clip;
+  background: var(--surface-canvas);
+  color: var(--text-primary);
+  font-family: "Telegraf", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  transition:
+    background-color 500ms var(--ease-out),
+    color 500ms var(--ease-out);
 }
-a{
+
+button,
+a {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
   text-decoration: none;
 }
-@font-face {
-  font-family: 'Telegraf';
-  src: url('/fonts/PPTelegraf-Regular.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
-@font-face {
-  font-family: 'Telegraf';
-  src: url('/fonts/PPTelegraf-UltraBold.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 5px;
 }
 
-@font-face {
-  font-family: 'Telegraf';
-  src: url('/fonts/PPTelegraf-UltraLight.otf') format('opentype');
-  font-weight: 200; /* o el valor que corresponda a "UltraLight" */
-  font-style: normal;
-  font-display: swap;
+::selection {
+  background: var(--text-primary);
+  color: var(--surface-canvas);
 }
 
-
-body {
-  font-family: 'Telegraf', sans-serif;
-  background-color: rgb(4, 2, 0);
+.skipLink {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  transform: translateY(-200%);
+  border-radius: 999px;
+  background: var(--text-primary);
+  color: var(--surface-canvas);
+  font-size: 0.875rem;
+  transition: transform 180ms ease;
 }
 
-.telegraf{
-  font-family: 'Telegraf', sans-serif;
+.skipLink:focus {
+  transform: translateY(0);
 }
 
-.bold-text {
-  font-family: 'Telegraf';
-  font-weight: bold;
-  color: #f8fafb !important;
-}
-.white-text{
-  color: #f8fafb !important;
-}
-
-.light-text {
-  font-family: 'Telegraf';
-  font-weight: 200;
-}
-.normal-text{
-  font-family: 'Telegraf';
-  font-weight: 400;
-}
-.bold{
-  font-weight: bold;
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-.linea-roja {
-  position: absolute; /* O 'fixed' si necesitas que permanezca en su lugar durante el desplazamiento */
+.ambientBackground {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 25%, var(--ambient-glow), transparent 38%),
+    var(--surface-canvas);
+  transition:
+    inset 900ms var(--ease-in-out),
+    border-color 700ms ease,
+    border-radius 900ms var(--ease-in-out),
+    background-color 700ms ease;
+}
+
+.ambientGrid,
+.ambientNoise,
+.ambientLights {
+  position: absolute;
+  inset: 0;
+}
+
+.ambientGrid {
+  opacity: 0.2;
+  background-image: linear-gradient(
+    90deg,
+    transparent 0,
+    transparent calc(50% - 0.5px),
+    var(--ambient-line) 50%,
+    transparent calc(50% + 0.5px)
+  );
+}
+
+.ambientNoise {
+  opacity: 0.035;
+  mix-blend-mode: var(--noise-blend);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+}
+
+.ambientNetwork {
+  --network-scene-scale: 1.22;
+
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  perspective: clamp(48rem, 82vw, 86rem);
+  perspective-origin: 50% 48%;
+}
+
+.networkScene,
+.networkConnections,
+.networkPoints {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+}
+
+.networkScene {
+  animation: ambient-network-orbit 26s var(--ease-in-out) infinite alternate;
+  will-change: transform;
+}
+
+.networkConnection {
+  position: absolute;
   top: 0;
-  left: 50%; /* Ajusta esto para alinear con tu sección */
-  width: 1px; /* O el grosor que desees para la línea */
-  height: 100vh;
-  background-color: red;
-  z-index: 10; /* Asegúrate de que esté por encima de otros elementos si es necesario */
+  left: 0;
+  display: block;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--network-line) 70%, transparent),
+    var(--network-line) 50%,
+    color-mix(in srgb, var(--network-line) 70%, transparent)
+  );
+  transform-origin: left center;
+  backface-visibility: hidden;
 }
-/* <div className="linea-roja"></div> */
+
+.networkPoint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+}
+
+.networkPointCore {
+  position: absolute;
+  top: -0.24rem;
+  left: -0.24rem;
+  display: block;
+  width: 0.48rem;
+  height: 0.48rem;
+  border: 1px solid var(--network-node);
+  border-radius: 50%;
+  background: var(--surface-canvas);
+  box-shadow:
+    0 0 0.4rem var(--network-glow),
+    0 0 1.2rem color-mix(in srgb, var(--network-glow) 55%, transparent);
+  animation: ambient-network-node-oscillation 4.6s var(--ease-in-out) infinite;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+}
+
+.ambientOrbital {
+  position: absolute;
+  inset: -8vmax;
+  opacity: 0.16;
+  transform: scale(1.08);
+}
+
+.ambientOrbital svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+  transform: rotate(-1.2deg) scale(1.05);
+  transform-origin: center;
+  animation: ambient-orbital-spin 72s linear infinite;
+  will-change: transform;
+}
+
+.orbitalShape {
+  fill: none;
+}
+
+.ambientLights {
+  overflow: hidden;
+}
+
+.ambientLight {
+  --light-duration: 4s;
+  --light-opacity: 0.72;
+  --light-scale: 1;
+  --light-x: 50%;
+
+  position: absolute;
+  bottom: 0;
+  left: var(--light-x);
+  width: 1px;
+  height: 200svh;
+  opacity: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--ambient-light) 18%,
+    var(--ambient-light) 82%,
+    transparent
+  );
+  box-shadow: 0 0 1.5rem 0.15rem var(--ambient-light-glow);
+  filter: blur(16px);
+  transform-origin: 50% 100%;
+  animation: ambient-float-up var(--light-duration) linear infinite;
+  will-change: transform, opacity;
+}
+
+.ambientLight:nth-child(1) {
+  --light-duration: 4s;
+  --light-scale: 1;
+  animation-delay: -1.4s;
+}
+
+.ambientLight:nth-child(2) {
+  --light-duration: 7s;
+  --light-scale: 1.6;
+  --light-x: 57.5%;
+  animation-delay: -5.1s;
+}
+
+.ambientLight:nth-child(3) {
+  --light-duration: 2.5s;
+  --light-opacity: 0.54;
+  --light-scale: 0.5;
+  --light-x: 42.5%;
+  animation-delay: -0.6s;
+}
+
+.ambientLight:nth-child(4) {
+  --light-duration: 4.5s;
+  --light-scale: 1.2;
+  --light-x: 33%;
+  animation-delay: -3.7s;
+}
+
+.ambientLight:nth-child(5) {
+  --light-duration: 8s;
+  --light-scale: 2.2;
+  --light-x: 21.5%;
+  animation-delay: -2.8s;
+}
+
+.ambientLight:nth-child(6) {
+  --light-duration: 3s;
+  --light-opacity: 0.6;
+  --light-scale: 0.8;
+  --light-x: 9.5%;
+  animation-delay: -2.1s;
+}
+
+.ambientLight:nth-child(7) {
+  --light-duration: 5.3s;
+  --light-scale: 3.2;
+  --light-x: 68.5%;
+  animation-delay: -4.2s;
+}
+
+.ambientLight:nth-child(8) {
+  --light-duration: 4.7s;
+  --light-scale: 1.7;
+  --light-x: 81%;
+  animation-delay: -1.9s;
+}
+
+.ambientLight:nth-child(9) {
+  --light-duration: 4.1s;
+  --light-opacity: 0.64;
+  --light-scale: 0.9;
+  --light-x: 92.5%;
+  animation-delay: -3.2s;
+}
+
+html[data-contact-active="true"] .ambientBackground {
+  inset: clamp(2rem, 9vh, 6rem) clamp(1.25rem, 3.2vw, 3.5rem);
+  border-color: var(--ambient-frame);
+  border-radius: clamp(1.5rem, 3vw, 3.5rem);
+  background-color: var(--contact-surface);
+}
+
+.motion-ready [data-reveal] {
+  opacity: 0;
+  transform: translateY(2.25rem);
+  transition:
+    opacity 700ms var(--ease-out),
+    transform 850ms var(--ease-out);
+}
+
+.motion-ready [data-reveal][data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes ambient-float-up {
+  0% {
+    opacity: 0;
+    transform: translate3d(-50%, 0, 0) scaleX(var(--light-scale)) scaleY(0);
+  }
+  25% {
+    opacity: var(--light-opacity);
+  }
+  50% {
+    opacity: calc(var(--light-opacity) - 0.12);
+    transform: translate3d(-50%, 0, 0) scaleX(var(--light-scale)) scaleY(0.5);
+  }
+  75% {
+    opacity: var(--light-opacity);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(-50%, 0, 0) scaleX(var(--light-scale)) scaleY(1);
+  }
+}
+
+@keyframes ambient-network-orbit {
+  0% {
+    transform: rotateX(-10deg) rotateY(-18deg) rotateZ(-2deg)
+      scale(var(--network-scene-scale));
+  }
+  50% {
+    transform: rotateX(7deg) rotateY(2deg) rotateZ(0deg)
+      scale(var(--network-scene-scale));
+  }
+  100% {
+    transform: rotateX(-4deg) rotateY(20deg) rotateZ(2deg)
+      scale(var(--network-scene-scale));
+  }
+}
+
+@keyframes ambient-network-node-oscillation {
+  0%,
+  100% {
+    opacity: 0.38;
+    transform: scale(0.72);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.35);
+  }
+}
+
+@keyframes ambient-orbital-spin {
+  to {
+    transform: rotate(358.8deg) scale(1.05);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .ambientLight {
+    animation: none;
+    opacity: 0.08;
+    transform: translate3d(-50%, 0, 0) scaleX(var(--light-scale)) scaleY(0.5);
+  }
+
+  .networkScene,
+  .networkPointCore,
+  .ambientOrbital svg {
+    animation: none;
+  }
+
+  .networkScene {
+    transform: rotateX(-5deg) rotateY(8deg) scale(var(--network-scene-scale));
+  }
+
+  .networkPointCore {
+    opacity: 0.72;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 56.25rem) {
+  .ambientNetwork {
+    --network-scene-scale: 0.86;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .ambientNetwork {
+    --network-scene-scale: 0.74;
+  }
+}
+
+@media (min-width: 112.5rem) {
+  .ambientNetwork {
+    --network-scene-scale: 1.5;
+  }
+}
+
+@media (min-width: 150rem) {
+  .ambientNetwork {
+    --network-scene-scale: 1.9;
+  }
+}
