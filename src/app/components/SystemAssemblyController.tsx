@@ -1,10 +1,27 @@
 "use client";
 
+import Lenis from "lenis";
 import { useEffect } from "react";
 
 const MOTION_QUERY = "(min-width: 768px) and (prefers-reduced-motion: no-preference)";
 const INTRO_NAVIGATION_DURATION = 2100;
 const STAGE_NAVIGATION_DURATION = 350;
+const AI_NAVIGATION_DURATION = 1200;
+const PROCESS_END = 0.7;
+const BRIDGE_START = 0.7;
+const BRIDGE_END = 0.77;
+const CHIP_EXIT_END = 0.755;
+const HUB_EXIT_START = 0.735;
+const HUB_EXIT_END = 0.775;
+const PROMPT_IN_START = 0.75;
+const PROMPT_IN_END = 0.79;
+const PROMPT_OUT_START = 0.82;
+const PROMPT_OUT_END = 0.86;
+const AI_EXPAND_START = 0.84;
+const AI_EXPAND_END = 0.94;
+const AI_TARGET_PROGRESS = 0.94;
+const WHEEL_GESTURE_GAP = 180;
+const DISCRETE_WHEEL_THRESHOLD = 72;
 
 function clamp(value: number, minimum = 0, maximum = 1) {
   return Math.min(maximum, Math.max(minimum, value));
@@ -62,17 +79,24 @@ export function SystemAssemblyController() {
     const nextButton = story.querySelector<HTMLButtonElement>(
       "[data-system-next]",
     );
+    const aiPanel = story.querySelector<HTMLElement>("[data-system-ai-panel]");
+    const aiTrigger = story.querySelector<HTMLButtonElement>(
+      "[data-system-ai-trigger]",
+    );
     const chips = Array.from(
       story.querySelectorAll<HTMLElement>("[data-system-chip]"),
     );
     const connections = Array.from(
       story.querySelectorAll<HTMLElement>("[data-system-connection]"),
     );
-    if (!assembly || !hubTarget || !introChip || chips.length === 0) return;
+    if (!assembly || !hubTarget || !introChip || !aiPanel || chips.length === 0) {
+      return;
+    }
     const storyElement: HTMLElement = story;
     const assemblyElement: HTMLElement = assembly;
     const hubTargetElement: HTMLElement = hubTarget;
     const introChipElement: HTMLElement = introChip;
+    const aiPanelElement: HTMLElement = aiPanel;
 
     const mediaQuery = window.matchMedia(MOTION_QUERY);
     let frame: number | null = null;
@@ -81,8 +105,13 @@ export function SystemAssemblyController() {
     let introDistance = 1;
     let navigationPoint = 0;
     let navigationFrame: number | null = null;
+    let smoothScroll: Lenis | null = null;
+    let wheelInput: "native" | "smooth" | null = null;
+    let lastWheelEvent = 0;
     let hubMetrics: HubMetrics | null = null;
     let boardSize = 1;
+    let contentWidth = 1;
+    let panelParentLeft = 0;
 
     function setNavigationPoint(point: number) {
       navigationPoint = Math.round(clamp(point, 0, chips.length));
@@ -90,27 +119,12 @@ export function SystemAssemblyController() {
       if (nextButton) nextButton.disabled = navigationPoint === chips.length;
     }
 
-    function scrollToPoint(point: number) {
-      if (!mediaQuery.matches) return;
-
-      const targetPoint = Math.round(clamp(point, 0, chips.length));
-      const storyTop = window.scrollY + storyElement.getBoundingClientRect().top;
-      const stageDistance = Math.max(1, distance - introDistance);
-      const targetOffset = targetPoint === 0
-        ? 0
-        : introDistance
-          + ((targetPoint - 0.5) / chips.length) * stageDistance;
+    function animateScrollTo(targetPosition: number, duration: number) {
       const startPosition = window.scrollY;
-      const targetPosition = storyTop + targetOffset;
-      const includesIntro = navigationPoint === 0 || targetPoint === 0;
-      const duration = includesIntro
-        ? INTRO_NAVIGATION_DURATION
-        : STAGE_NAVIGATION_DURATION;
       const startTime = performance.now();
 
       cancelNavigationAnimation();
-
-      setNavigationPoint(targetPoint);
+      resetSmoothScroll();
 
       function animateNavigation(time: number) {
         const progress = clamp((time - startTime) / duration);
@@ -131,10 +145,41 @@ export function SystemAssemblyController() {
       navigationFrame = window.requestAnimationFrame(animateNavigation);
     }
 
+    function scrollToPoint(point: number) {
+      if (!mediaQuery.matches) return;
+
+      const targetPoint = Math.round(clamp(point, 0, chips.length));
+      const storyTop = window.scrollY + storyElement.getBoundingClientRect().top;
+      const processDistance = Math.max(
+        1,
+        (distance - introDistance) * PROCESS_END,
+      );
+      const targetOffset = targetPoint === 0
+        ? 0
+        : introDistance
+          + ((targetPoint - 0.5) / chips.length) * processDistance;
+      const includesIntro = navigationPoint === 0 || targetPoint === 0;
+      const duration = includesIntro
+        ? INTRO_NAVIGATION_DURATION
+        : STAGE_NAVIGATION_DURATION;
+
+      setNavigationPoint(targetPoint);
+      animateScrollTo(storyTop + targetOffset, duration);
+    }
+
     function cancelNavigationAnimation() {
       if (navigationFrame === null) return;
       window.cancelAnimationFrame(navigationFrame);
       navigationFrame = null;
+    }
+
+    function resetSmoothScroll() {
+      smoothScroll?.scrollTo(window.scrollY, { immediate: true });
+    }
+
+    function cancelInteractiveMotion() {
+      cancelNavigationAnimation();
+      resetSmoothScroll();
     }
 
     function goToPreviousPoint() {
@@ -143,6 +188,17 @@ export function SystemAssemblyController() {
 
     function goToNextPoint() {
       scrollToPoint(navigationPoint + 1);
+    }
+
+    function goToAi() {
+      if (!mediaQuery.matches) return;
+
+      const storyTop = window.scrollY + storyElement.getBoundingClientRect().top;
+      const tailDistance = Math.max(1, distance - introDistance);
+      animateScrollTo(
+        storyTop + introDistance + AI_TARGET_PROGRESS * tailDistance,
+        AI_NAVIGATION_DURATION,
+      );
     }
 
     function setStage(stage: number) {
@@ -266,29 +322,132 @@ export function SystemAssemblyController() {
       const introTiltProgress = clamp((introProgress - 0.78) / 0.22);
       const easedTilt =
         introTiltProgress * introTiltProgress * (3 - 2 * introTiltProgress);
-      const progress = clamp(
+      const storyProgress = clamp(
         (scrolled - introDistance) / Math.max(1, distance - introDistance),
       );
+      const processProgress = clamp(storyProgress / PROCESS_END);
+      const bridgeProgress = smoothstep(
+        (storyProgress - BRIDGE_START) / (BRIDGE_END - BRIDGE_START),
+      );
+      const chipExitProgress = smoothstep(
+        (storyProgress - BRIDGE_START) / (CHIP_EXIT_END - BRIDGE_START),
+      );
+      const hubExitProgress = smoothstep(
+        (storyProgress - HUB_EXIT_START) / (HUB_EXIT_END - HUB_EXIT_START),
+      );
+      const promptInProgress = smoothstep(
+        (storyProgress - PROMPT_IN_START) / (PROMPT_IN_END - PROMPT_IN_START),
+      );
+      const promptOutProgress = smoothstep(
+        (storyProgress - PROMPT_OUT_START) / (PROMPT_OUT_END - PROMPT_OUT_START),
+      );
+      const promptOpacity = promptInProgress * (1 - promptOutProgress);
+      const aiExpandProgress = smoothstep(
+        (storyProgress - AI_EXPAND_START) / (AI_EXPAND_END - AI_EXPAND_START),
+      );
+      const aiContentOpacity = smoothstep((aiExpandProgress - 0.42) / 0.32);
       const introComplete = introProgress >= 0.999;
       const chipDocked = introMorphProgress >= 0.999;
       const stage = introComplete
-        ? Math.min(chips.length - 1, Math.floor(progress * chips.length))
+        ? Math.min(
+            chips.length - 1,
+            Math.floor(processProgress * chips.length),
+          )
         : -1;
-      const horizontalPosition = 26 - progress * 52;
-      const targetFacingRotation = -horizontalPosition * 0.8;
+      const processHorizontalPosition = 26 - processProgress * 52;
+      const horizontalPosition = lerp(
+        processHorizontalPosition,
+        0,
+        bridgeProgress,
+      );
+      const targetFacingRotation = -processHorizontalPosition * 0.8;
       const facingRotation = introComplete
-        ? targetFacingRotation
+        ? lerp(targetFacingRotation, 0, bridgeProgress)
         : lerp(0, -26 * 0.8, easedTilt);
-      const shadowPosition = 2.1 - progress * 4.2;
-      const shadowDepth = 0.45 + Math.abs(progress - 0.5) * 0.9;
+      const shadowPosition = lerp(
+        2.1 - processProgress * 4.2,
+        0,
+        bridgeProgress,
+      );
+      const shadowDepth = lerp(
+        0.45 + Math.abs(processProgress - 0.5) * 0.9,
+        0.25,
+        bridgeProgress,
+      );
+      const tiltX = introComplete
+        ? lerp(47, 0, bridgeProgress)
+        : lerp(0, 47, easedTilt);
+      const tiltZ = introComplete
+        ? lerp(-3, 0, bridgeProgress)
+        : lerp(0, -3, easedTilt);
 
       storyElement.dataset.systemIntro = introComplete
         ? "complete"
         : chipDocked
           ? "docked"
           : "active";
+      storyElement.dataset.systemPhase = !introComplete
+        ? "intro"
+        : aiExpandProgress > 0
+          ? "ai"
+          : storyProgress >= PROMPT_IN_START
+            ? "prompt"
+            : bridgeProgress > 0
+              ? "bridge"
+              : "process";
       setNavigationPoint(introComplete ? stage + 1 : 0);
-      storyElement.style.setProperty("--system-progress", String(progress));
+      storyElement.style.setProperty(
+        "--system-progress",
+        String(processProgress),
+      );
+      storyElement.style.setProperty(
+        "--ai-prompt-opacity",
+        String(promptOpacity),
+      );
+      storyElement.style.setProperty(
+        "--ai-prompt-shift",
+        `${(1 - promptOpacity) * 2}rem`,
+      );
+      storyElement.style.setProperty(
+        "--ai-expand-progress",
+        String(aiExpandProgress),
+      );
+      storyElement.style.setProperty(
+        "--ai-ambient-opacity",
+        String(aiContentOpacity * 0.2),
+      );
+      storyElement.style.setProperty(
+        "--chip-exit-progress",
+        String(chipExitProgress),
+      );
+      storyElement.style.setProperty(
+        "--chip-exit-z",
+        `${lerp(1.7, 34, chipExitProgress)}rem`,
+      );
+      storyElement.style.setProperty(
+        "--chip-exit-scale",
+        String(lerp(1, 1.08, chipExitProgress)),
+      );
+      storyElement.style.setProperty(
+        "--chip-exit-blur",
+        `${lerp(0, 10, chipExitProgress)}px`,
+      );
+      storyElement.style.setProperty(
+        "--hub-exit-progress",
+        String(hubExitProgress),
+      );
+      storyElement.style.setProperty(
+        "--hub-exit-z",
+        `${lerp(1.7, 24, hubExitProgress)}rem`,
+      );
+      storyElement.style.setProperty(
+        "--hub-exit-scale",
+        String(lerp(1, 1.06, hubExitProgress)),
+      );
+      storyElement.style.setProperty(
+        "--hub-exit-blur",
+        `${lerp(0, 8, hubExitProgress)}px`,
+      );
       assemblyElement.style.setProperty("--system-x", `${horizontalPosition}vw`);
       assemblyElement.style.setProperty(
         "--chip-facing-y",
@@ -296,11 +455,11 @@ export function SystemAssemblyController() {
       );
       assemblyElement.style.setProperty(
         "--chip-tilt-x",
-        `${introComplete ? 47 : lerp(0, 47, easedTilt)}deg`,
+        `${tiltX}deg`,
       );
       assemblyElement.style.setProperty(
         "--chip-tilt-z",
-        `${introComplete ? -3 : lerp(0, -3, easedTilt)}deg`,
+        `${tiltZ}deg`,
       );
       assemblyElement.style.setProperty("--chip-shadow-x", `${shadowPosition}rem`);
       assemblyElement.style.setProperty("--chip-shadow-y", `${shadowDepth}rem`);
@@ -312,7 +471,64 @@ export function SystemAssemblyController() {
         "--chip-shadow-small-y",
         `${shadowDepth * 0.38}rem`,
       );
-      updateBoardReveal(easedTilt, progress);
+      updateBoardReveal(easedTilt, processProgress);
+
+      if (introComplete && bridgeProgress > 0) {
+        const boardOverscan = 48;
+        const fullBoardInset = boardSize * 0.05;
+        const viewportHorizontalInset =
+          (boardSize - window.innerWidth - boardOverscan * 2) / 2;
+        const viewportVerticalInset =
+          (boardSize - window.innerHeight - boardOverscan * 2) / 2;
+        const horizontalInset = lerp(
+          fullBoardInset,
+          viewportHorizontalInset,
+          bridgeProgress,
+        );
+        const verticalInset = lerp(
+          fullBoardInset,
+          viewportVerticalInset,
+          bridgeProgress,
+        );
+
+        assemblyElement.style.setProperty(
+          "--board-top",
+          `${verticalInset}px`,
+        );
+        assemblyElement.style.setProperty(
+          "--board-right",
+          `${horizontalInset}px`,
+        );
+        assemblyElement.style.setProperty(
+          "--board-bottom",
+          `${verticalInset}px`,
+        );
+        assemblyElement.style.setProperty(
+          "--board-left",
+          `${horizontalInset}px`,
+        );
+      }
+
+      if (aiExpandProgress > 0) {
+        const panelVerticalPadding = Math.max(
+          72,
+          Math.min(104, window.innerHeight * 0.09),
+        );
+        const targetWidth = contentWidth;
+        const targetHeight = window.innerHeight - panelVerticalPadding * 2;
+        const targetLeft = (window.innerWidth - targetWidth) / 2;
+        const targetTop = panelVerticalPadding;
+
+        aiPanelElement.style.cssText = [
+          `--ai-panel-left: ${targetLeft - panelParentLeft}px`,
+          `--ai-panel-top: ${targetTop}px`,
+          `--ai-panel-width: ${targetWidth}px`,
+          `--ai-panel-height: ${targetHeight}px`,
+          `--ai-panel-content-opacity: ${aiContentOpacity}`,
+          `--ai-panel-content-shift: ${lerp(2, 0, aiContentOpacity)}rem`,
+          `--ai-panel-content-scale: ${lerp(0.96, 1, aiContentOpacity)}`,
+        ].join(";");
+      }
 
       if (!introComplete && !chipDocked && storyRect.top <= 0) {
         hubMetrics ??= measureHubTarget();
@@ -344,11 +560,38 @@ export function SystemAssemblyController() {
       cancelNavigationAnimation();
       hubMetrics = null;
       boardSize = Math.max(1, assemblyElement.offsetWidth);
+      panelParentLeft =
+        aiPanelElement.offsetParent?.getBoundingClientRect().left ?? 0;
+      const chapterElement = storyElement.closest<HTMLElement>("section");
+      const chapterStyles = chapterElement
+        ? window.getComputedStyle(chapterElement)
+        : null;
+      contentWidth = chapterElement
+        ? Math.max(
+            1,
+            chapterElement.getBoundingClientRect().width
+              - Number.parseFloat(chapterStyles?.paddingLeft ?? "0")
+              - Number.parseFloat(chapterStyles?.paddingRight ?? "0"),
+          )
+        : Math.max(1, window.innerWidth - 96);
 
       if (!mediaQuery.matches) {
         storyElement.dataset.systemStatic = "true";
         storyElement.dataset.systemIntro = "complete";
+        storyElement.dataset.systemPhase = "static";
         storyElement.style.removeProperty("--system-progress");
+        storyElement.style.removeProperty("--ai-prompt-opacity");
+        storyElement.style.removeProperty("--ai-prompt-shift");
+        storyElement.style.removeProperty("--ai-expand-progress");
+        storyElement.style.removeProperty("--ai-ambient-opacity");
+        storyElement.style.removeProperty("--chip-exit-progress");
+        storyElement.style.removeProperty("--chip-exit-z");
+        storyElement.style.removeProperty("--chip-exit-scale");
+        storyElement.style.removeProperty("--chip-exit-blur");
+        storyElement.style.removeProperty("--hub-exit-progress");
+        storyElement.style.removeProperty("--hub-exit-z");
+        storyElement.style.removeProperty("--hub-exit-scale");
+        storyElement.style.removeProperty("--hub-exit-blur");
         assemblyElement.style.removeProperty("--system-x");
         assemblyElement.style.removeProperty("--chip-facing-y");
         assemblyElement.style.removeProperty("--chip-tilt-x");
@@ -364,6 +607,7 @@ export function SystemAssemblyController() {
         assemblyElement.style.setProperty("--board-left", `${fullBoardInset}px`);
         assemblyElement.style.setProperty("--board-detail-opacity", "1");
         introChipElement.removeAttribute("style");
+        aiPanelElement.removeAttribute("style");
         lastStage = -2;
         setStage(chips.length - 1);
         setNavigationPoint(chips.length);
@@ -379,29 +623,70 @@ export function SystemAssemblyController() {
 
     const resizeObserver = new ResizeObserver(measure);
     resizeObserver.observe(storyElement);
+    smoothScroll = new Lenis({
+      autoRaf: true,
+      eventsTarget: storyElement,
+      lerp: 0.14,
+      overscroll: false,
+      smoothWheel: true,
+      syncTouch: false,
+      virtualScroll: ({ deltaX, deltaY, event }) => {
+        if (!(event instanceof WheelEvent)) return false;
+
+        cancelNavigationAnimation();
+
+        const now = performance.now();
+        if (now - lastWheelEvent > WHEEL_GESTURE_GAP) wheelInput = null;
+        lastWheelEvent = now;
+
+        if (wheelInput === null) {
+          const verticalDelta = Math.abs(event.deltaY);
+          const verticalGesture = verticalDelta > Math.abs(event.deltaX);
+          const discreteWheel = verticalGesture
+            && !event.ctrlKey
+            && (event.deltaMode !== 0
+              || verticalDelta >= DISCRETE_WHEEL_THRESHOLD);
+          wheelInput = mediaQuery.matches && discreteWheel
+            ? "smooth"
+            : "native";
+        }
+
+        const shouldSmooth = mediaQuery.matches
+          && wheelInput === "smooth"
+          && Math.abs(deltaY) > Math.abs(deltaX)
+          && !event.ctrlKey;
+
+        if (!shouldSmooth && smoothScroll?.isScrolling === "smooth") {
+          resetSmoothScroll();
+        }
+        return shouldSmooth;
+      },
+    });
     window.addEventListener("scroll", requestUpdate, { passive: true });
-    window.addEventListener("wheel", cancelNavigationAnimation, { passive: true });
-    window.addEventListener("touchstart", cancelNavigationAnimation, {
+    window.addEventListener("touchstart", cancelInteractiveMotion, {
       passive: true,
     });
-    window.addEventListener("pointerdown", cancelNavigationAnimation, {
+    window.addEventListener("pointerdown", cancelInteractiveMotion, {
       passive: true,
     });
     previousButton?.addEventListener("click", goToPreviousPoint);
     nextButton?.addEventListener("click", goToNextPoint);
+    aiTrigger?.addEventListener("click", goToAi);
     mediaQuery.addEventListener("change", measure);
     measure();
 
     return () => {
       if (frame !== null) window.cancelAnimationFrame(frame);
       cancelNavigationAnimation();
+      smoothScroll?.destroy();
+      smoothScroll = null;
       resizeObserver.disconnect();
       window.removeEventListener("scroll", requestUpdate);
-      window.removeEventListener("wheel", cancelNavigationAnimation);
-      window.removeEventListener("touchstart", cancelNavigationAnimation);
-      window.removeEventListener("pointerdown", cancelNavigationAnimation);
+      window.removeEventListener("touchstart", cancelInteractiveMotion);
+      window.removeEventListener("pointerdown", cancelInteractiveMotion);
       previousButton?.removeEventListener("click", goToPreviousPoint);
       nextButton?.removeEventListener("click", goToNextPoint);
+      aiTrigger?.removeEventListener("click", goToAi);
       mediaQuery.removeEventListener("change", measure);
     };
   }, []);

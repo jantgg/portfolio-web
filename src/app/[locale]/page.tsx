@@ -1,5 +1,4 @@
 import { AboutSection } from "../components/AboutSection";
-import { AiSection } from "../components/AiSection";
 import { CaseStudySection } from "../components/CaseStudySection";
 import { ContactSection } from "../components/ContactSection";
 import { Hero } from "../components/Hero";
@@ -12,7 +11,6 @@ export default function Home() {
     <main className={styles.page} id="main-content">
       <Hero />
       <ProcessSection />
-      <AiSection />
       <CaseStudySection />
       <ToolsSection />
       <AboutSection />

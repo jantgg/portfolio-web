@@ -47,6 +47,10 @@
       "previous": "Ir al punto anterior del proceso",
       "next": "Ir al siguiente punto del proceso"
     },
+    "aiBridge": {
+      "question": "¿Cómo mantengo mi foco y energía en tareas más cercanas al cliente y menos en código repetitivo?",
+      "action": "VER EL SISTEMA"
+    },
     "steps": {
       "understand": {
         "eyebrow": "Contexto",
@@ -116,16 +120,26 @@
     "ai": {
       "section": "IA APLICADA AL SISTEMA",
       "labelPrimary": "IA",
-      "labelSecondary": "COMO SISTEMA, NO COMO ATAJO",
       "titleLine1": "Menos ambigüedad.",
       "titleLine2": "Más tiempo para lo que aporta valor.",
-      "body": "Integro IA en el flujo de ingeniería para convertir contexto disperso en criterios de aceptación vivos, documentación verificable y evidencia antes de revisión. El criterio sigue siendo humano; el sistema ayuda a que diseño, producto e ingeniería trabajen sobre la misma definición de terminado.",
       "flowLabel": "Flujo de ingeniería asistido por IA",
       "steps": {
-        "context": "Contexto",
-        "criteria": "Criterios",
-        "implementation": "Implementación",
-        "evidence": "Evidencia"
+        "context": {
+          "title": "Contexto versionado",
+          "description": "Las decisiones, reglas y mapas del sistema viven junto al código. Agentes y skills cargan solo la información relevante para cada tarea, sin depender de memoria individual ni prompts interminables."
+        },
+        "criteria": {
+          "title": "Flujos gobernados",
+          "description": "Un registro conecta cada cambio con especialistas, documentación, límites, riesgo y checks. La IA no improvisa el proceso: sigue rutas versionadas y proporcionales al impacto."
+        },
+        "implementation": {
+          "title": "Validación automática",
+          "description": "Documentación, contratos, fixtures, integraciones y reglas se auditan durante el desarrollo. El drift aparece antes de la revisión, cuando todavía es barato corregirlo."
+        },
+        "evidence": {
+          "title": "Evidencia revisable",
+          "description": "Cada entrega produce reportes, resúmenes y resultados persistentes. Quien revisa recibe alcance, decisiones y checks verificables, no solo un diff y una explicación reconstruida."
+        }
       },
       "statement": "La IA no sustituye el proceso de ingeniería. Se conecta a él para trabajar con contexto, límites y evidencia."
     },

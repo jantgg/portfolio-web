@@ -138,11 +138,21 @@ Los radios deben ser pocos y consistentes. No todos los bloques necesitan conten
 
 ### Textura y fondo
 
-El fondo puede conservar:
+El fondo global conserva:
 
 - grano de muy baja opacidad;
-- haces o columnas verticales lentas;
+- una variante de nueve líneas de luz verticales heredadas de la V1;
+- una variante de malla vectorial basada en nodos, conexiones y señales;
+- una variante orbital construida a partir de `Background01.svg`;
 - variación tonal casi imperceptible.
+
+Las líneas recuperan las posiciones, escalas y duraciones distintas del portfolio original. Nacen bajo el viewport, lo atraviesan y desaparecen por arriba. La V2 conserva ese ritmo irregular, pero sustituye la animación de `top` por `transform` y elimina el listener React que comprobaba el final de página: la transición de contacto actual ya recoge el mismo fondo global.
+
+La malla parte del concepto SVG aportado durante la iteración y se reconstruye como una nube determinista de nodos con coordenadas X, Y y Z. Las conexiones se orientan en el espacio mediante transformaciones CSS 3D y la escena oscila bajo una perspectiva real. Los nodos permanecen anclados y respiran con ritmos distintos; no existen señales ni puntos recorriendo las líneas. No hay estado cliente ni cálculo por frame. Ambos fondos comparten tokens específicos para dark y light.
+
+La variante orbital conserva las treinta capas y la silueta del SVG de referencia, pero reutiliza un único trazado. Sus colores proceden de tokens del tema y el movimiento SMIL repetido se sustituye por una animación CSS lineal que puede desactivarse con las preferencias de accesibilidad.
+
+La variante se elige en `src/app/config/background.ts` mediante `ACTIVE_BACKGROUND`: `network`, `background-01`, `legacy-lights` o `none`. El registro conserva las propuestas para compararlas sin modificar el layout ni duplicar lógica ambiental.
 
 Condiciones:
 

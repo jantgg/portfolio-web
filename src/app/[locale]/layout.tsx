@@ -4,6 +4,7 @@ import { hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import Script from "next/script";
+import { AmbientBackground } from "../components/AmbientBackground";
 import { MotionController } from "../components/MotionController";
 import { SiteHeader } from "../components/SiteHeader";
 import { routing } from "@/i18n/routing";
@@ -79,13 +80,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
           {t("skip")}
         </a>
         <MotionController />
-        <div className="ambientBackground" aria-hidden="true">
-          <div className="ambientGrid" />
-          <div className="ambientBeam ambientBeamOne" />
-          <div className="ambientBeam ambientBeamTwo" />
-          <div className="ambientBeam ambientBeamThree" />
-          <div className="ambientNoise" />
-        </div>
+        <AmbientBackground />
         <SiteHeader />
         {children}
       </body>

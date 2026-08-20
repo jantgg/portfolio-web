@@ -47,6 +47,10 @@
       "previous": "Go to the previous point in the process",
       "next": "Go to the next point in the process"
     },
+    "aiBridge": {
+      "question": "How do I keep my focus and energy closer to client work and away from repetitive code?",
+      "action": "SEE THE SYSTEM"
+    },
     "steps": {
       "understand": {
         "eyebrow": "Context",
@@ -116,16 +120,26 @@
     "ai": {
       "section": "AI APPLIED TO THE SYSTEM",
       "labelPrimary": "AI",
-      "labelSecondary": "AS A SYSTEM, NOT A SHORTCUT",
       "titleLine1": "Less ambiguity.",
       "titleLine2": "More time for the work that creates value.",
-      "body": "I integrate AI into the engineering workflow to turn scattered context into living acceptance criteria, verifiable documentation and evidence before review. Judgement remains human; the system helps design, product and engineering share the same definition of done.",
       "flowLabel": "AI-assisted engineering workflow",
       "steps": {
-        "context": "Context",
-        "criteria": "Criteria",
-        "implementation": "Implementation",
-        "evidence": "Evidence"
+        "context": {
+          "title": "Versioned context",
+          "description": "Decisions, rules and system maps live beside the code. Agents and skills load only the information each task needs, without relying on individual memory or endless prompts."
+        },
+        "criteria": {
+          "title": "Governed workflows",
+          "description": "A registry connects every change to specialists, documentation, boundaries, risk and checks. AI does not improvise the process: it follows versioned routes proportional to impact."
+        },
+        "implementation": {
+          "title": "Automated validation",
+          "description": "Documentation, contracts, fixtures, integrations and rules are audited during development. Drift appears before review, while it is still inexpensive to correct."
+        },
+        "evidence": {
+          "title": "Reviewable evidence",
+          "description": "Each delivery produces persistent reports, summaries and results. Reviewers receive scope, decisions and verifiable checks, not only a diff and a reconstructed explanation."
+        }
       },
       "statement": "AI does not replace the engineering process. It connects to it to work with context, boundaries and evidence."
     },

@@ -27,6 +27,8 @@ Esta carpeta define la versión 2.0 del portfolio antes de modificar la aplicaci
    Define la narrativa de HIC, el plugin de Figma y On Racing, junto con los límites de confidencialidad y el papel de la IA.
 7. [Sistema de ingeniería y arquitectura narrativa](./07-sistema-de-ingenieria.md)
    Documenta la unificación de proceso, capas y capacidades, además del nuevo ensamblaje 3D ligado al scroll.
+8. [IA como sistema de ingeniería](./08-ia-como-sistema-de-ingenieria.md)
+   Extrae los patrones transversales de una implementación real y los convierte en cuatro pilares públicos sin exponer casuística privada.
 
 ## Principios de trabajo
 

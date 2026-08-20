@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
+import { AiContent } from "./AiSection";
+import { AiSystemLottie } from "./AiSystemLottie";
 import { ChipPlatform } from "./ChipPlatform";
-import { SectionHeader } from "./SectionHeader";
 import { SystemAssemblyController } from "./SystemAssemblyController";
 import styles from "../page.module.css";
 
@@ -15,6 +16,7 @@ const stages = [
 
 export function ProcessSection() {
   const t = useTranslations("Process");
+  const aiT = useTranslations("Case.ai");
 
   return (
     <section
@@ -22,8 +24,6 @@ export function ProcessSection() {
       id="process"
       aria-labelledby="process-title"
     >
-      <SectionHeader index="02" title={t("section")} />
-
       <div className={styles.systemStoryLead}>
         <h2 id="process-title" aria-label={t("titleLabel")} data-reveal>
           {t.rich("title", {
@@ -84,7 +84,10 @@ export function ProcessSection() {
               className={styles.systemIntroNarrative}
               data-system-intro-copy
             >
-              <span>{t("section")}</span>
+              <div className={styles.systemIntroNarrativeMeta}>
+                <span>02 / 07</span>
+                <span>{t("section")}</span>
+              </div>
               <div className={styles.systemIntroNarrativeTitle}>
                 <div className={styles.systemIntroPrinciple}>
                   <span>{t("introJourney.start")}</span>
@@ -133,6 +136,32 @@ export function ProcessSection() {
               <span aria-hidden="true">→</span>
             </button>
           </nav>
+
+          <div className={styles.systemAiPrompt} data-system-ai-prompt>
+            <p>{t("aiBridge.question")}</p>
+            <button type="button" data-system-ai-trigger>
+              <span>{t("aiBridge.action")}</span>
+              <span aria-hidden="true">↘</span>
+            </button>
+          </div>
+
+          <div className={styles.systemAiAmbient} aria-hidden="true">
+            <AiSystemLottie />
+          </div>
+
+          <section
+            className={styles.systemAiPanel}
+            data-system-ai-panel
+            id="ai"
+            aria-labelledby="ai-title"
+          >
+            <div className={styles.systemAiPanelHeader}>
+              <span>03</span>
+              <span>{aiT("section")}</span>
+            </div>
+            <AiContent embedded />
+          </section>
+
         </div>
       </div>
     </section>
